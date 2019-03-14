@@ -1,0 +1,4446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="generator" content=
+"HTML Tidy for Linux/x86 (vers 1st April 2002), see www.w3.org">
+<meta content="text/html; charset=us-ascii" http-equiv=
+"content-type">
+<title>Giana-Sisters-Construction-Set Anleitung</title>
+
+<style type="text/css">
+
+  body {
+    background: #ffffff;
+    color: #000000;
+    font-size: 120%;
+  }
+
+  .e { color: #880000; }
+
+  .n { font-size: smaller; }
+
+  .points { text-align: right; }
+
+  .i, .iddb, .idb, .ib, .ilb, .ig, .idg  { text-align: center; vertical-align: middle; }
+
+  .idb { background-color: #000099; }
+
+  .iddb {background-color: #000066; }
+
+  .ib { background-color: #3333ff; }
+
+  .ilb { background-color: #4477ff; }
+
+  .idg { background-color: #444444; }
+
+  .ig { background-color: #666666; }
+
+  :link { color: #0000ee; }
+  :visited { color: #551a8b; }
+
+  .line {
+    width: 100%;
+    height: 2px;
+  }
+
+  h1 { 
+    font-size: 400%;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 300%; 
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 220%;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  h4 {
+    font-size: 150%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  table { font-size: 100%; }
+
+  table.e {
+    text-align: left;
+    vertical-align: top;
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+<br>
+<br>
+<br>
+<hr class="line">
+<br>
+<br>
+<br>
+<br>
+<br>
+<div style="text-align: center;">
+<h3><font color="#666666"><span style="font-weight: bold;">The
+Great Giana-Sisters-Construction-Set V3.1</span></font></h3>
+<span style=
+"font-style: italic; color: rgb(192, 192, 192); font-weight: bold;"><font color="#666666">written
+by Merlin 1992-1995, 2016</font></span><br></div>
+<br>
+<br>
+<br>
+<br>
+<hr class="line">
+<br>
+<a name="Inhalt" id="Inhalt"></a><br>
+<br>
+<br>
+<br>
+<span style="font-size: larger;">Inhaltsverzeichnis:<br></span>
+<ol>
+<li><a href="#Vorwort">Vorwort:</a>
+<ol>
+<li><a href="#Auf_der_Disk">Auf der Diskette</a></li>
+<li><a href="#Zum_Leveldesign">Zum Leveldesign</a></li>
+<li><a href=
+"Giana-C-Set-Anleitung-%28main%29.html#Stages_veroeffentlichen">Stages
+ver&ouml;ffentlichen</a></li>
+<li><a href=
+"Giana-C-Set-Anleitung-%28main%29.html#Credits">Credits</a></li>
+</ol>
+</li>
+<li><span style="font-size: larger;"><a href=
+"#Das_Construction_Kit">Das Construction-Kit :</a></span>
+<ol>
+<li><a href="#Main_Menu">Main Menu :</a>
+<ol>
+<li><a href="#Create_Stage_:">Create Stage :</a>
+<ol>
+<li><a href="#Objektbeschreibungen">Objektbeschreibungen</a></li>
+<li><a href="#Ausgang_bauen">Ausgang bauen</a></li>
+<li><a href="#Dungeonmauern_zusammensetzen">Dungeonmauern
+zusammensetzen</a></li>
+</ol>
+</li>
+<li><a href="#Set_Sprites">Set Sprites :</a>
+<ol>
+<li><a href="#Liste_Sprites">Liste der Sprites</a>
+<ol>
+<li><a href="#Liste_Nachlademonster">Liste Nachlademonster</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="#Set_Startpoints">Set Startpoints :</a></li>
+<li><a href="#Play_Stage">Play Stage :</a>
+<ol>
+<li><a href="#HotKeys_PlayStage">Hot-Keys f&uuml;r "Play
+Stage"</a></li>
+<li><a href="#Unterschiede_zwischen_Play_Stage_und">Unterschiede
+zwischen "Play Stage" und fertigem Spiel</a></li>
+</ol>
+</li>
+<li><a href="#Load_Menu">Load Menu :</a>
+<ol>
+<li><a href="#Directory_and">Directory and load from
+Directory</a></li>
+<li><a href="#Load_Stage">Load Stage</a></li>
+<li><a href="#Load_Load_Monster_or_Sprite">Load Load-Monster or
+Sprite</a></li>
+</ol>
+</li>
+<li><a href="#Save_Stage">Save Stage:</a></li>
+<li><a href="#Options">Options:</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><span style="font-size: larger;"><a href="#Der_Game_Maker">Der
+Game-Maker</a></span></li>
+<li><a href="#Das_Programm:"><span style="font-size: larger;">Das
+Programm (f&uuml;r Fortgeschrittene)</span></a>
+<ol>
+<li><a href="#Nachlademonster_kreieren">Nachlademonster
+kreieren</a>
+<ol>
+<li><a href="#NLM_vorgegebener_Weg">Nachlademonster mit
+vorgegebenem Weg</a></li>
+</ol>
+</li>
+<li><a href="#Speicheraufbau:">Speicher-Aufbau</a></li>
+<li><a href="#Stage-Aufbau_im_Speicher_:">Stage-Aufbau im
+Speicher</a>
+<ol>
+<li><a href="#Aufbau_Sprite-Daten">Aufbau der Sprite-Daten</a></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr class="line">
+<br>
+<br>
+<br>
+<br>
+<div>
+<h3><a name="Vorwort" id="Vorwort"></a>Vorwort:</h3>
+<br>
+Zuerst einmal Herzlichen Gl&uuml;ckwunsch, da&szlig; Ihr Euch einen
+der besten Level-Editoren heruntergeladen habt, die es gibt und die
+f&uuml;r kein Geld zu haben sind. ;-)<br>
+<br>
+Ich will mich mal (wenigstens hier) kurz fassen und etwas zur
+Beschreibung sagen:<br>
+Der relevante Text ist normal gro&szlig; geschrieben wie hier,
+evtl. sind wichtige Sachen fett geschrieben und &Uuml;berschriften
+sind je nach Wichtigkeit gr&ouml;&szlig;er geschrieben.<br>
+<span class="n">Klein geschrieben sind eher unwichtige Dinge, wie
+Anf&auml;ngertips, genauere Erkl&auml;rungen zu etwas, da&szlig;
+man vielleicht nicht verstanden hat, Beispiele oder sonstige
+Anmerkungen.</span><br>
+<span class="e">Rot geschrieben sind Tips f&uuml;r Experten, die
+sich schon sehr gut mit dem Construction-Set auskennen oder sogar
+vorhaben das Programm zu ver&auml;ndern.<br></span><br>
+Noch ein Hinweis: Im Folgenden wird Construction-Set oder
+Constuction-Kit erw&auml;hnt. Das C-Kit ist nur der reine
+Level-Editor, w&auml;hrend mit C-Set auch das ganze darum herum
+gemeint ist, also auch der Game-Maker und die dazugeh&ouml;rigen
+Dateien.<br>
+<br>
+Ach ja, bitte entschuldigt den etwas seltsamen Mix aus deutschen
+und englischen W&ouml;rtern im C-Set. Anfangs hatte ich das
+Construction-Set nur f&uuml;r unseren eigenen Gebrauch geplant und
+deswegen die W&ouml;rter einfach wie es mir gerade in den Sinn kam
+eingegeben. Dabei sind immerhin die wichtigsten - und auch
+einfachsten - Worte in Englisch und die spezielleren in
+Deutsch.<br>
+<br>
+Ich hoffe, Ihr habt mit dem Construction-Set ann&auml;hrend soviel
+Spa&szlig; wie wir, als wir die Stages f&uuml;r Giana-Sisters II
+konstruiert haben.<br>
+<br>
+Merlin&nbsp; [The 7th Sign] / [The Seven-A-Three]<br>
+<br>
+<br>
+<small>P.S.: Wenn Ihr die Anleitung drucken wollt, d&uuml;rft Ihr
+nur das rechte Frame ausw&auml;hlen. Oder ganz einfach: Nur die
+Textdatei &ouml;ffnen: "CSetText(de).html"</small><br>
+<br>
+<br>
+<br>
+<a name="Auf_der_Disk" id="Auf_der_Disk"></a><br>
+<h4>Auf der Diskette:</h4>
+Die wichtigsten Werkzeuge, um ein eigenes Giana-Spiel zu erschaffen
+sind gleich die ersten beiden Dateien auf der Diskette:<br>
+"GIANA-CSET V3.0", ist die erste Datei, also das Construction-Kit,
+mit dem man die einzelnen Stages konstruieren kann.<br>
+"GIANA GAME-MAKER", die zweite Datei, wird ben&ouml;tigt um die
+konstruierten Stages zu einem eigenst&auml;ndigen Spiel
+zusammenzuf&uuml;gen.<br>
+Diese beiden Programme kann man direkt laden und starten, alle
+weiteren Dateien k&ouml;nnen oder m&uuml;ssen von diesen
+nachgeladen werden.<br>
+"TRAINER" und "GAME PART 2" geh&ouml;ren zum Game-Maker, und werden
+nachgeladen w&auml;hrend man diesen benutzt.<br>
+<br>
+Danach kommen 3 Programme, die nicht zum C-Set geh&ouml;ren, aber
+sehr hilfreich sind, wenn man seine Spiel-Diskette erstellt:<br>
+"FILE-MASTER V1.2" ist ein Kopierprogramm, damit k&ouml;nnt Ihr
+alle ben&ouml;tigten Dateien f&uuml;r Euer Spiel auf eine Disk
+kopieren.<br>
+"DIR-MASTER V1" um die Directory zu bearbeiten. Damit k&ouml;nnt
+Ihr eure Dateien in die gew&uuml;nschte Reihenfolge bringen und vor
+allem die Stage-Dateien umbenennen, damit sie den richtigen Namen
+haben, um von eurem Spiel aus nach-geladen zu werden. siehe
+Abschnitt <a href="#Der_Game_Maker">Game-Maker.</a><br>
+"SUPERCRUNCH" ist ein Packer (Komprimierprogramm) nur f&uuml;r's
+Action-Replay, falls Ihr dieses mit dem Game-Maker benutzt und euer
+Spiel noch nicht gepackt habt.<br>
+<br>
+Als n&auml;chstes folgen die Dateien f&uuml;r die Nachlademonster:
+"01 BIG MBALL.SPR", "01 BIG MBALL.NLM", "02
+FISH&nbsp;&nbsp;&nbsp;&nbsp; .SPR", "01
+FISH&nbsp;&nbsp;&nbsp;&nbsp; .NLM", "03 INSECT&nbsp;&nbsp; .SPR",
+"03 INSECT&nbsp;&nbsp; .NLM", "04 DEMON&nbsp;&nbsp;&nbsp; .SPR",
+"04 DEMON&nbsp;&nbsp;&nbsp; .NLM".&nbsp; und weitere.&nbsp;
+Genaueres hierzu bei <a href=
+"#32_Nachlademonster">Nachlademonster</a>. Die Nachlademonster sind
+etwas kompliziert zu handhaben, aber man wird diese anfangs noch
+nicht ben&ouml;tigen.<br>
+<br>
+Diese ersten Dateien sind alle schreibgesch&uuml;tzt, weil sie
+unbedingt ben&ouml;tigt werden, also belasst sie so wie sie sind!
+<small>(Au&szlig;er die 3 oben genannten Extra-Programme,
+vielleicht kennt Ihr ja bessere gleicherer Art und wollt sie
+ersetzen.)</small><br>
+<br>
+Was jetzt folgt ist Bonus:<br>
+Zum einen Bonus-Stages von verschiedenen Leuten, die f&uuml;r Giana
+II nicht geeignet waren. Deswegen sind die meisten davon auch nicht
+besonders toll, &uuml;bertrieben schwer oder noch garnicht fertig.
+Also erwartet nicht zuviel davon. Evtl. gibt es aber in der einen
+oder anderen dieser Stages eine gute Idee, die nur besser umgesetzt
+werden m&uuml;sste.<br>
+Als besonderer Bonus folgen dann alle Stages von Giana-Sisters I in
+einem Format, das vom Construction-Set geladen werden kann. Daraus
+k&ouml;nnte man also Giana I ohne die nervigen Bugs in der
+Kollisionsabfrage rekonstruieren. Es gibt dann auch Punkte f&uuml;r
+die Endmonster und die Leben, die man am Ende &uuml;brig hat.
+Au&szlig;erdem wurden bei diesen Stages die Fehler im Aufbau
+behoben. <span class="n">(Das waren zwar nicht viele, aber an
+einigen Stellen wurden Extras falsch gesetzt, so da&szlig; man
+diese nicht einsammeln konnte. - Dieses war bei der Amiga-Version
+auch richtig.)</span><br>
+Dann sind noch alle 15 Schatzkammern von Giana I + II auf der
+Diskette. <span class="n">(Da offenbar viele Leute Probleme haben
+selbst eine gute Schatzkammer zu entwerfen, kann man diese f&uuml;r
+sein Spiel verwenden, wenn man keine besseren Ideen
+hat.)<br></span> Zum Schlu&szlig; gibt es noch alle alten Monster
+von Giana I + II , die durch neue Grafiken ersetzt wurden, als
+Nachlade-Monster + 2 Bonus-Sprites.<br>
+<br>
+P.S: Die Diskette ist beinahe voll (144 Dateien sin Maximum), d.h.
+wenn Ihr eure Stages auch darauf speichern wollt, m&uuml;sst Ihr
+Dateien, die Ihr nicht braucht l&ouml;schen, bzw auf eine andere
+Disk kopieren.<br>
+<br>
+<a name="Zum_Leveldesign" id="Zum_Leveldesign"></a><br>
+<h4>Zum Leveldesign:</h4>
+(Braucht man erst zu lesen, sobald man ernsthaft beginnt Stages zu
+bauen.) Man sollte auf jeden Fall darauf achten, da&szlig; ein
+Spiel fair bleibt. Der Schwierigkeitsgrad sollte dabei
+m&ouml;glichst von der ersten bis zur letzten Stage langsam
+ansteigen.<br>
+OK, ich gebe zu, da&szlig; der Schwierigkeitsgrad bei Giana-Sisters
+II am Anfang schon recht hoch ist, <span class="n">(aber mit ein
+bi&szlig;chen &Uuml;bung sollten auch Anf&auml;nger in der Lage
+sein mindestens Stage 15 zu erreichen,)</span> dennoch steigt er
+langsam bis zur vorletzten Stage an, wobei dieses manchmal ein
+wenig schwankt. Es gibt auch ein paar unfaire Stellen, aber ich
+denke wir haben es nicht &uuml;bertrieben, da man mit etwas
+Nachdenken fast alle Fallen vermeiden kann. Wer Giana II zu
+schwierig findet, und ein einfacheres Spiel konstruieren
+m&ouml;chte, sollte bedenken, das man als Erbauer einer Stage diese
+immer einfacher findet als andere. Also lasst sie am besten von
+m&ouml;glichst vielen Leuten testen und zwar ohne dabei Tips zu
+geben.<br>
+<br>
+Was man vermeiden sollte, sind z.B. Abzweigungen, bei denen man
+sich f&uuml;r einen Weg entscheiden mu&szlig; und stirbt, wenn man
+den falschen Weg genommen hat. Denn das Spiel sollte durch Geschick
+und Intelligenz schaffbar sein, nicht aber mit Gl&uuml;ck, oder
+dadurch, da&szlig; man sich erstmal den richtigen Weg merken
+mu&szlig;. Man kann nat&uuml;rlich ab und zu mal eine t&ouml;dliche
+Sackgasse einbauen, sollte dann aber wenigstens irgendeinen Hinweis
+f&uuml;r den richtigen Weg geben. <span class="n">Beispiel: In der
+Mitte von Stage 31 von Giana II mu&szlig; man sich entscheiden, ob
+man oben oder unten hergehen sollte. Zun&auml;chst kann man sich
+schonmal denken, da&szlig; der einfache Weg der falsche ist und
+zweitens: Wenn man den falschen Weg gerade betreten hat und unter
+den ersten Bonusblock springt, wird man merken, da&szlig; dies nur
+ein falscher Bonusblock ist weil kein Diamant herauskommt und wenn
+man wei&szlig;, da&szlig; man alle Diamanten im Spiel einsammeln
+kann (und das wei&szlig; man, wenn man den Intro-Scroll gelesen
+hat), sollte einem dieses zu denken geben.<br></span> Man sollte
+auch vermeiden &uuml;bertrieben viele unsichtbare W&auml;nde oder
+versteckte G&auml;nge einzubauen. Schon garnicht, wenn man stirbt,
+weil man den richtigen Weg nicht kennt. Auch ein Labyrinth aus
+solchen Teilen ist ziemlich unspielbar. - Selbst wenn man dabei
+nicht draufgeht. Das w&uuml;rde zu sehr in ein Ratespiel ausarten.
+- Ein gutes Beispiel daf&uuml;r, wie man es nicht machen sollte,
+ist die Stage "XX MERLIN3&nbsp; .STG", die sich auch auf der
+C-Set-Diskette befindet. <span class="n">(Ich habe die Stage nicht
+zu Ende gebaut, nachdem mir auffiel, wie unspielbar das
+war.)</span><br>
+Was man ohne weiteres sehr gut verstecken kann ist Bonus, den man
+nicht ben&ouml;tigt, um eine Stage zu schaffen.<br>
+<br>
+Es war &uuml;brigens bei Giana-Sisters I schon so, da&szlig; man
+alle Diamanten im Spiel einsammeln konnte, ohne zu sterben. Ob man
+dies &uuml;bernehmen will ist nat&uuml;rlich Geschmackssache, ich
+finde das jedenfalls besser.<br>
+<br>
+SEHR WICHTIG ist auch das folgende: Achtet darauf, da&szlig; man in
+einer Stage weniger als&nbsp; 100 Diamanten (Bonus) einsammeln
+kann. Wenn man sich n&auml;mlich am Ende der Stage "Time out" gehen
+l&auml;sst, 1 Leben verliert und wieder von vorne anf&auml;ngt,
+bekommt man dadurch, da&szlig; man 100 Diamanten einsammelt wieder
+1 Leben dazu. Dann k&ouml;nnte man nochmal auf "Time out" warten
+u.s.w., womit man theoretisch die Stage unendlich oft spielen und
+so unendlich Punkte machen k&ouml;nnte. Bedenkt dabei auch die
+Diamanten, die man in Schatzkammern bekommt. (Bei den Schatzkammern
+von Giana II, die auch auf der Diskette sind, sind das
+durchschnittlich um die 40.) <span class="e">Wenn man am Anfang
+einer Stage noch kein Extra bekommt, kann man allerdings auch mehr
+als 100 Diamanten in einer Stage verteilen, indem man einige so
+setzt, da&szlig; man ohne Extra nicht drankommt. Also so, da&szlig;
+Giana zu Beginn einer Stage schon Punkerin sein mu&szlig;, um alle
+Diamanten kriegen zu k&ouml;nnen.<br></span><br>
+<br>
+HIER NOCH EINE LISTE DER VER&Auml;NDERUNGEN SEIT GIANA-SISTERS I
+(gilt gr&ouml;&szlig;tenteils auch f&uuml;r Giana II):<br>
+- 1 bis 99 Stages pro Spiel sind m&ouml;glich<br>
+- bis zu 40 Schatzkammern (anstatt nur 5 in Giana I)<br>
+- Neues Sprite-Kontroll-Programm (von Chrille, dies war ein
+gro&szlig;er Teil des Programms). Das bedeutet:<br>
+&nbsp; - Giana kann auf bewegliche Plattformen springen
+(Fahrst&uuml;hle)<br>
+&nbsp; - Giana kann im Wasser schwimmen<br>
+&nbsp; - Giana kann fliegen wenn sie das Jet-Pack-Extra
+einsammelt<br>
+&nbsp; - Wenn das Maximum an Sprites im Bild ist, kann einer davon
+verschwinden, wenn ein neuer Sprite erscheint (bei Giana I konnte
+in dem Fall kein weiterer Sprite erscheinen). Wenn m&ouml;glich
+werden zuerst tote Gegner Sprites gel&ouml;scht.<br>
+&nbsp; - Schatztruhen, welche die &uuml;blichen Extras enthalten,
+k&ouml;nnen aber eingesammelt werden, ohne unter einen Extra-Block
+springen zu m&uuml;ssen<br>
+&nbsp; - viele neue Gegner (manche sterben erst nach 2 oder 3
+Sch&uuml;ssen)<br>
+&nbsp; - ein optionaler Gegner (Nachlade-Monster) kann pro Stage
+verwendet werden (aus einer Liste von - bis jetzt - 26)<br>
+&nbsp; - Einige Gegner verfolgen Giana<br>
+&nbsp; - Springende Gegner fallen jetzt 'runter, wenn sie den Boden
+verlieren oder prallen an der Decke ab, wenn wenig Platz ist<br>
+&nbsp; - Einige der springenden Gegner springen auch zur Seite<br>
+&nbsp; - Gegner (und andere Sprites erscheinen auch schon im
+Startbildschirm (und m&uuml;ssen nicht erst hineingescrollt werden,
+wie in Giana I)<br>
+&nbsp; - Der Drache spuckt jetzt Feuer<br>
+&nbsp; - Man bekommt Tausende von Punkten, wenn man ein End-Monster
+t&ouml;tet (anstatt nichts :-( in Giana I)<br>
+&nbsp; - Weichere Kollisions-Abfrage mit Monstern (nur im Spiel,
+nicht im C-Kit/Level-Editor)<br>
+&nbsp; - Fehler behoben: Giana stirbt nun nicht mehr, BEVOR sie
+einen Gegner ber&uuml;hrt (nur im Spiel, nicht im C-Kit)<br>
+&nbsp; - Das nervige schnelle K&auml;fer-/Schildkr&ouml;ten-(was
+auch immer)Monster wurde durch einen richtigen Gegner ersetzt, so
+da&szlig; der Schu&szlig; nicht mehr von diesem festgehalten
+wird)<br>
+&nbsp; - Der Ausgangs-Fahrstuhl wird nicht mehr falsch (in
+Multicolour) dargestellt<br>
+&nbsp; - Das Bomben-Extra t&ouml;tet jetzt alle kleinen Gegner (wie
+auch W&uuml;rmer oder B&auml;lle) und nicht nur diejenigen, die man
+auch abschie&szlig;en kann. (Wer braucht schon die Bombe, wenn man
+die Gegner genauso gut abschie&szlig;en kann). F&uuml;r Endmonster
+gilt dies aber nicht. (Das w&auml;re nun wirklich zu einfach) (nur
+im Spiel, nicht im C-Kit)<br>
+&nbsp; - Fehler behoben: Bei Giana I konnte man in den Kopf des
+Drachen laufen ohne zu sterben, jetzt nicht mehr.<br>
+- Neues Stage-Initialisirungs-Programm (von Merlin) D.h.:<br>
+&nbsp; - Ihr k&ouml;nnt eine der Stages, die Ihr im Spiel erreicht
+habt im Trainings-Modus &uuml;ben<br>
+&nbsp; - Die Stages (und Nachlade-Monster) werden von Disk geladen,
+damit die Anzahl der Stages nicht durch den RAM-Speicher begrenzt
+ist.<br>
+&nbsp; - Das Zeitlimit kann f&uuml;r jede Stage anders gesetzt
+werden zwischen 1 und 9999 Sekunden<br>
+&nbsp; - Warps teleportieren Giana nicht einfach 3 Stages weiter,
+sondern auch weniger oder mehr<br>
+&nbsp; - Diamanten (und ein paar andere Objekte) k&ouml;nnen
+unterschiedliche Farben in verschiedenen Stages haben<br>
+&nbsp; - In einzelnen Stages sind Spezial-Einstellungen
+m&ouml;glich, z.B. auf Wolken laufen<br>
+- Schnellere und k&uuml;rzere Scroll-Routine (von Merlin)<br>
+- Au&szlig;erdem wurde ein Problem in der Scroll-Routine behoben,
+wegen dem Giana von R&auml;ndern abrutschte auf denen sie gerade
+gelandet war (w&auml;hrend Scrolling).<br>
+- Neue Stage-Aufbau-Routine (von Merlin)<br>
+- Neue Objekte wie neue Mauern oder umgedrehte Spitzen<br>
+- Giana kann nicht mehr "mogeln", indem sie sich auf die roten
+Spitzen stellt.<br>
+- Versteckte G&auml;nge, Diamanten, Extras und unsichtbare
+Br&uuml;cken sind m&ouml;glich<br>
+- Man beginnt mit 5 Leben anstatt 3<br>
+- Ihr k&ouml;nnt Euch jeder Zeit die High-Scores ansehen, indem Ihr
+"H" im Titel-Bild dr&uuml;ckt<br>
+- Jetzt kann man auch die versteckte Musik aus Giana-Sisters
+benutzen (Friedhof-Musik).<br>
+<br>
+<br>
+<br>
+<a name="Stages_veroeffentlichen" id=
+"Stages_veroeffentlichen"></a><br>
+<h4>Was tun mit selbstgebauten Stages:</h4>
+Wollt Ihr Eure Stages und/oder Giana-Spiele der &Ouml;ffentlichkeit
+bereitstellen, dann k&ouml;nnt Ihr diese gerne an mich (Merlin)
+schicken. (E-Mail: SoulBladeGottNr1(&auml;t=)gmx.de)<br>
+<br>
+In Zukunft werde ich mir vielleicht noch mal eine Webseite zulegen
+und dann die besten Stages dort zum Download anbieten <small>(Das
+w&auml;re dann wahrscheinlich The7thSign.de.)</small> Es mu&szlig;
+nicht gleich ein komplettes Spiel sein, einzelne Stages sind
+eigentlich noch interessanter, denn wenn genug zusammenkommen,
+k&ouml;nnten wir mit den besten Stages weitere Giana-Spiele
+konstruieren. - Es w&auml;re g&uuml;nstig von verschiedenen Leuten
+Stages in ein Spiel zu bringen, da dies mehr Abwechslung
+garantiert.<br>
+<br>
+<br>
+<a name="Credits" id="Credits"></a><br></div>
+<br>
+<h4>Credits:</h4>
+<br>
+<br>
+<br>
+<table style="text-align: center;" border="0" cellpadding="0"
+cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td valign="top" width="45%">Construction-Set:</td>
+<td valign="top">Anleitung:</td>
+</tr>
+<tr>
+<td valign="top" width="45%"><br>
+Programmierung/Design: Merlin (mail to:
+SoulBladeGottNr1(&auml;t=)gmx.de)<br></td>
+<td valign="top"><br>
+Deutscher Text: Merlin<br></td>
+</tr>
+<tr>
+<td valign="top" width="45%"><br>
+Zus&auml;tzliche Programmierung: Chrille (mail to:
+7thSign(&auml;t=)gmx.de), Armin Gessert</td>
+<td valign="top"><br>
+&Uuml;bersetzung ins Englische: Thorsten Hessler aka Rockford (mail
+to: der.hessi(&auml;t=)web.de),&nbsp; Merlin<br></td>
+</tr>
+<tr>
+<td valign="top" width="45%"><br>
+Grafik: Manfred Trenz</td>
+<td valign="top"><br>
+HTML-Optimierung: Chrille</td>
+</tr>
+<tr>
+<td valign="top" width="45%"><br>
+Zus&auml;tzliche Grafiken: Merlin, Neue Eule von
+TheRealWanderer<br></td>
+<td valign="top"><br></td>
+</tr>
+<tr>
+<td valign="top" width="45%"><br>
+Sound und Musik: Chris Huelsbeck<br></td>
+<td><br></td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<br>
+(&auml;t=) ersetzen mit @<br>
+<br>
+<br>
+<br>
+<br>
+<hr class="line">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<a name="Das_Construction_Kit" id="Das_Construction_Kit"></a><br>
+<br>
+<br>
+<h1>Das Construction-Kit :</h1>
+<br>
+<br>
+<br>
+<br>
+<a name="Main_Menu" id="Main_Menu"></a>
+<h3>Main Menu :&nbsp;</h3>
+(Steuerung mit Joystick in Port2)<br>
+<br>
+<table style=
+"text-align: center; height: 88px; width: 100%; font-weight: bold;"
+border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td><a href="#Create_Stage_:">Create Stage</a></td>
+<td><a href="#Set_Sprites">Set Sprites</a></td>
+<td><a href="#Load_Menu">Load Menu</a></td>
+</tr>
+<tr>
+<td><a href="#Set_Startpoints">Set Startpoints</a></td>
+<td><a href="#Play_Stage">Play Stage</a></td>
+<td><a href="#Save_Stage">Save Stage</a></td>
+</tr>
+<tr>
+<td><a href="#Options">Options</a></td>
+<td><br></td>
+<td><br></td>
+</tr>
+</tbody>
+</table>
+<div style="text-align: center;">(Einfach mit linker Maustaste auf
+den Men&uuml;punkt klicken, zu dem man eine Erkl&auml;rung
+m&ouml;chte.)<br></div>
+<br>
+<br>
+<h4><a name="Hot-Keys_im_Main_Menu" id=
+"Hot-Keys_im_Main_Menu"></a>Hot-Keys im Main Menu:</h4>
+<br>
+<br>
+&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; , .&nbsp; = Stage links/rechts scrollen<br>
+&nbsp;&nbsp;&nbsp; Joystick Port1 = Stage links/rechts scrollen<br>
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; F1 = Hintergrundfarbe
+&auml;ndern*<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; F3 = Multicolor1
+&auml;ndern*<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; F5 = Multicolor2
+&auml;ndern*<br>
+<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; *geht besser bei
+Men&uuml;punkt "Options"<br>
+<br>
+Desweiteren sieht man rechts unter den Men&uuml;punkten 2 Anzeigen
+:
+<ul>
+<li><span style="color: rgb(51, 204, 255); font-weight: bold;">Pos
+:&nbsp;&nbsp;&nbsp;&nbsp;</span> Gibt an, an welcher Levelposition
+der linke Bildschirmrand steht<span class="n">&nbsp;
+(Hexadezimal)</span>. Die Farbe von "Pos" &auml;ndert sich sobald
+man in den 2. Teil der Stage scrollt. <span class="n">(Also ab 58,
+wo sich auch Gianas 2. Startposition befindet)</span><br></li>
+</ul>
+<ul>
+<li><span style=
+"font-weight: bold; color: rgb(51, 204, 255);">Adress:</span> Die
+Endadresse<span class="n">(Hexadezimal)</span> des aktuellen
+Levels(Stage) im Speicher(Startadresse=8400). Darf&nbsp; nicht
+h&ouml;her werden als 8BFF (das reicht aber locker,au&szlig;er Ihr
+habt schlampig gebaut). <span class="e">Wer's ganz genau wissen
+will: <a href="#Stage-Aufbau_im_Speicher_:">Stage-Aufbau im
+Speicher</a>.<br></span></li>
+</ul>
+<br>
+<br>
+P.S.: Nach einem Reset kann man das Programm mit SYS 2061 neu
+starten.<br>
+<br>
+<br>
+<br>
+<br>
+<hr class="line">
+<br>
+&nbsp;<br>
+<br>
+<h2><a name="Create_Stage_:" id="Create_Stage_:"></a>Create Stage
+:<br></h2>
+Hier werden alle unbeweglichen Objekte (wie
+Erde,Mauern,B&auml;ume,Feuer,Ausgang,...) in eine Stage
+gesetzt.<br>
+Das Setzen eines Objekts oder einer Gruppe des gleichen Objekts
+erfolgt in drei Schritten :<br>
+<br>
+<span style="font-weight: bold;"><big>1.</big> Objekt
+w&auml;hlen</span><br>
+Zuerst w&auml;hlt man ein Objekt mittels Joystick <span class=
+"n">(Port2)</span> rechts/links um in Einzelschritten
+vor/zur&uuml;ck zu schalten oder Joystick hoch/runter f&uuml;r
+16-er Schritte. (Alle Objektnummern in Hexadezimal) Das Objekt wird
+in der Mitte des Men&uuml;s angezeigt, links der Name, Nr. und
+Gr&ouml;&szlig;e (in 8x8 Pixel Characters).<br>
+Rechts steht noch Adress und Pos - siehe <a href="#Main_Menu">Main
+Menu.</a><br>
+<br>
+Hier gelten die gleichen <a href="#Hot-Keys_im_Main_Menu">Hot-Keys
+wie im Hauptmen&uuml;</a> und "Ctrl" + "d" um das zuletzt gesetzte
+Objekt zu l&ouml;schen. Vorsicht, nur KURZ dr&uuml;cken sonst
+l&ouml;scht ihr immer weiter.<span class="n">("Ctrl" is bei den
+meisten C-64-Emulatoren auf der Tab-Taste.)</span><br>
+"Ctrl + "Clr/Home" l&ouml;scht die komplette Stage !!!<br>
+<br>
+Die Objekte die Ihr hier ausw&auml;hlen k&ouml;nnt sprechen
+eigentlich f&uuml;r sich selbst, aber falls Ihr's genauer wissen
+wollt, oder Euch fragt wie man die Randteile an Mauern setzt bzw.
+einen Ausgang aus mehreren Teilen richtig zusammenbaut, gibt's
+weiter unten die <a href=
+"#Objektbeschreibungen">Objektbeschreibungen</a>.<br>
+Wenn Ihr hier "End Stage" (Nummer FF) w&auml;hlt kehrt Ihr zum Main
+Menu zur&uuml;ck.<br>
+Zwischen Nr.46 (Stein) und Nr.FF (End Stage) gibt es noch die
+Option "DELETE ANY OBJEKT" (ohne Nr.), um ein Objekt (oder mehrere)
+zu l&ouml;schen. Dazu mehr <a href=
+"#XX_Delete_any_Objekt">hier</a>. Ansonsten w&auml;hlt einfach das
+Teil mit dem Ihr die Gegend verschandeln wollt und dr&uuml;ckt
+FEUER.<br>
+<br>
+<span style="font-weight: bold;"><big>2.</big> Objekt an Position
+setzen</span><br>
+Dann k&ouml;nnt Ihr das Objekt mit dem Joystick an jeder beliebigen
+Stelle der Stage platzieren. <span class="n">(Evtl. scrollen mit
+dem anderen Joystick oder "," und ".")</span><br>
+Ist das Teil an der gew&uuml;nschten Position&nbsp; wieder
+FEUER&nbsp; dr&uuml;cken.<br>
+<br>
+&nbsp; <span style="font-weight: bold;"><big>3.</big> Objekt nach
+rechts und/oder unten verl&auml;ngern</span><br>
+Da es ziemlich nervig w&auml;re, jedes Teil einzeln zu setzen, kann
+man jetzt das Teil nach rechts und nach unten verl&auml;ngern, und
+zwar durch Objekte des gleichen Typs <span class="n">(so kann man
+z.B. eine Reihe Mauern ziehen)</span> indem man den Joystick nach
+rechts oder unten bewegt. Joystick links oder oben verk&uuml;rzen
+wieder.<br>
+Denkt daran das Ihr nicht nach oben oder links verl&auml;ngern
+k&ouml;nnt. Das Objekt das Ihr bei Schritt 2 setzt ist immer das
+oberste linke von einer Gruppe.<br>
+Wenn Ihr jetzt soweit verl&auml;ngert habt wie Ihr wollt,
+dr&uuml;ckt FEUER und w&auml;hlt bei Schritt 1 das n&auml;chste
+Objekt.<br>
+<br>
+<br>
+<h4><a name="Objektbeschreibungen" id=
+"Objektbeschreibungen"></a>Objektbeschreibungen:</h4>
+(Einige Objekte sehen hier anders aus als beim Spiel: z.B. bei
+Nr.03 Mauer mit Stein ist ein "S" drauf oder Nr.30 Exitmauer ist
+blau unterlegt. Das ist so, damit man die Objekte in der Bauphase
+von anderen, die sonst genauso aussehen unterscheiden kann.)<br>
+<table style="text-align: left; width: 100%;" border="1"
+cellpadding="2" cellspacing="2">
+<tbody style="vertical-align: top;">
+<tr>
+<td>Nr. &amp; Name</td>
+<td>Aussehen</td>
+<td>Gr&ouml;&szlig;e:<br>
+X x Y<br></td>
+<td>Beschreibung</td>
+</tr>
+<tr>
+<td>00 gro&szlig;er Kasten</td>
+<td class="ib"><img style="width: 48px; height: 48px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2000%20grosser%20Kasten.png"></td>
+<td>3 x 3</td>
+<td>unzerst&ouml;rbar - Eigentlich sind dies 1 1/2 K&auml;sten Ist
+dazu gedacht, ganz unten in die Stage gesetzt zu werden. Damit kann
+man z.B. einen &Uuml;bergang zwischen Erde und Wasser schaffen, da
+die Erde nun mal 3 Char. hoch ist und die normalen K&auml;sten nur
+2 oder gleich 4 <small>(,wenn man 2 &uuml;bereinander
+setzt)</small>.</td>
+</tr>
+<tr>
+<td>01 Erde</td>
+<td class="ib"><img style="width: 48px; height: 48px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2001%20Erde.png"></td>
+<td>3 x 3</td>
+<td>unzerst&ouml;rbar</td>
+</tr>
+<tr>
+<td>02 Loch</td>
+<td class="ib"><img style="width: 80px; height: 48px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2002%20Loch.png"></td>
+<td>5 x 3</td>
+<td>Dieses kann man auf die Erde setzen, um ein Loch darin zu
+erzeugen. Wenn man ein gr&ouml;&szlig;eres Loch m&ouml;chte,
+mu&szlig; man 2 davon setzen und die st&ouml;renden Erdteile in der
+Mitte mit Objekt <a href="#2F_Nichts">Nr.2F "Nichts"</a>
+&uuml;berschreiben.</td>
+</tr>
+<tr>
+<td>03 Mauer mit Stein</td>
+<td class="idg"><img style="width: 48px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2003%20Mauer%20mit%20Stein.png"></td>
+<td>3 x 2</td>
+<td>Wenn Giana Punkerin ist und darunter springt, verwandelt sich
+diese Mauer in einen Stein und f&auml;llt runter.<br>
+F&auml;llt der Stein auf Giana bekommt man Zeit abgezogen, bis man
+sich befreit hat.<br>
+Wenn vorher auf der Mauer schon andere Steine gelegen haben, fallen
+diese dann auch runter.<br>
+Gibt 50 Punkte<br></td>
+</tr>
+<tr>
+<td>04 Bonusblock</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2004%20Bonusblock.png"></td>
+<td>3 x 2</td>
+<td>Wenn Giana unter diesen springt, wird er zu einem Kasten
+(Nr.05). Gibt au&szlig;erdem<br>
++1 Bonus (Diamanten)<br>
++25 Punkte</td>
+</tr>
+<tr>
+<td>05 Kasten</td>
+<td class="idg"><img style="width: 48px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2005%20Kasten.png"><br>
+</td>
+<td>3 x 2</td>
+<td>unzerst&ouml;rbar</td>
+</tr>
+<tr>
+<td>06 kleiner Kasten</td>
+<td class="idg"><img style="width: 32px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2006%20kleiner%20Kasten.png"></td>
+<td>2 x 2</td>
+<td>unzerst&ouml;rbar</td>
+</tr>
+<tr>
+<td>07 Br&ouml;selplattform</td>
+<td class="idg"><img style="width: 32px; height: 12px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2007%20Broeselzeug.png"></td>
+<td>2 x 1</td>
+<td>l&ouml;st sich auf, wenn Giana darauf steht oder
+l&auml;uft</td>
+</tr>
+<tr>
+<td>08 H&auml;ngebr&uuml;cke</td>
+<td class="idg"><img style="width: 48px; height: 14px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2008%20Haengebruecke.png"></td>
+<td>3 x 1</td>
+<td>unzerst&ouml;rbar</td>
+</tr>
+<tr>
+<td>09 S&auml;ule</td>
+<td class="ig"><img style="width: 96px; height: 48px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2009%20Saeule.png"></td>
+<td>6 x 3</td>
+<td>unzerst&ouml;rbar</td>
+</tr>
+<tr>
+<td>0A magische Mauer</td>
+<td class="idg"><img style="width: 48px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%200A%20magische%20Mauer.png"></td>
+<td>3 x 2</td>
+<td>Wenn Giana Punkerin ist kann sie ein paar Mal unter diese Mauer
+springen, und bekommt jedes Mal 1 Diamanten und 25 Punkte, bevor
+sich die Mauer in einen Kasten (Nr.05) verwandelt. Je &ouml;fter
+man in dieser Zeit drunterspringt, desto mehr Diamanten.</td>
+</tr>
+<tr>
+<td>0B Nagelbrett</td>
+<td class="idg"><img style="width: 96px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%200B%20Nagelbrett.png"></td>
+<td>6 x 2</td>
+<td>t&ouml;dlich (die N&auml;gel), das Brett ist
+unzerst&ouml;rbar</td>
+</tr>
+<tr>
+<td>0C unknown</td>
+<td class="ilb"><img style="width: 48px; height: 64px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%200C%20unknown.png"></td>
+<td>3 x 4</td>
+<td>unzerst&ouml;rbar</td>
+</tr>
+<tr>
+<td>0D Moos l</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 64px; height: 16px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%200D%20Moos%20l.png"></td>
+<td>4 x 1</td>
+<td>unzerst&ouml;rbar</td>
+</tr>
+<tr>
+<td>0E Moos r</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 64px; height: 16px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%200E%20Moos%20r.png"></td>
+<td>4 x 1</td>
+<td>unzerst&ouml;rbar</td>
+</tr>
+<tr>
+<td>0F Moos</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 16px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%200F%20Moos.png"></td>
+<td>3 x 1</td>
+<td>unzerst&ouml;rbar</td>
+</tr>
+<tr>
+<td>10 Diamant</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 32px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2010%20Diamant.png"></td>
+<td>3 x 2</td>
+<td>Diamant mit L&uuml;cke nach rechts<br>
+<small>Die Gr&ouml;&szlig;e 3 x 2, obwohl ein Diamant nur 2 x 2
+Characters gro&szlig; ist, kommt daher, da&szlig; man wenn man
+mehrere dieser Diamanten nebeneinander setzt, jeweils eine
+L&uuml;cke von 1 Char. zwischen ihnen ist.</small></td>
+</tr>
+<tr>
+<td>11 Mauer</td>
+<td class="idg"><img style="width: 48px; height: 31px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2011%20Mauer.png"></td>
+<td>3 x 2</td>
+<td>Wenn Giana Punkerin ist kann sie diese Mauern durch
+drunterspringen zerst&ouml;ren. Gibt 50 Punkte.</td>
+</tr>
+<tr>
+<td>12 Busch e</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 64px; height: 46px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2012%20Busch%20e.png"></td>
+<td>4 x 3</td>
+<td>Hintergrundgrafik <small>(kann man durchlaufen)</small></td>
+</tr>
+<tr>
+<td>13 Busch d</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 80px; height: 46px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2013%20Busch%20d.png"></td>
+<td>5 x 3</td>
+<td>Hintergrundgrafik <small>(kann man durchlaufen)</small></td>
+</tr>
+<tr>
+<td>14 Geflecht</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 32px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2014%20Geflecht.png"></td>
+<td>2 x 2</td>
+<td>unzerst&ouml;rbar</td>
+</tr>
+<tr>
+<td>15 Fliegenpilz</td>
+<td class="ib"><img style="width: 64px; height: 48px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2015%20Fliegenpilz.png"></td>
+<td>4 x 3</td>
+<td>Hintergrundgrafik <small>(kann man durchlaufen)</small></td>
+</tr>
+<tr>
+<td>16 Diamant</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 32px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2010%20Diamant.png"></td>
+<td>2 x 2</td>
+<td>Diamant (ohne L&uuml;cke)</td>
+</tr>
+<tr>
+<td><a name="Schatzk" id="Schatzk"></a>17 Schatzkammereingang</td>
+<td class="ilb"><img style="width: 16px; height: 4px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2017%20SK-Eingang.png"><br>
+</td>
+<td>1 x 1</td>
+<td>Wenn Giana hier reinspringt kommt sie in eine Schatzkammer.
+Nachdem sie diese wieder verlassen hat ist der Schatzkammereingang
+zu einer Br&ouml;selplattform (Nr.07) geworden.<br>
+Sollte m&ouml;glichst ganz unten in die Stage gesetzt werden.
+Mu&szlig; zwar nicht, aber dann f&auml;llt Giana nach Verlassen der
+Schatzkammer von oben in die Stage, anstatt von unten
+hochgeschleudert zu werden.<br>
+ACHTUNG: Im C-Kit kann man Stages mit Schatzkammer nicht richtig
+testen, da anstatt einer regul&auml;ren Schatzkammer nur der
+Startbildschirm der Stage erscheint. Dadurch ist evtl. der Weg zum
+Fahrstuhl, den man braucht, um die "Schatzkammer" zu verlassen,
+versperrt. Dann hilft nur noch "Restore" dr&uuml;cken.<br>
+Am Besten setzt man zum Testen erstmal keinen Schatzkammereingang
+und baut diesen erst ein, wenn die Stage fertig ist.<br>
+<small>Normalerweise ist eine Schatzkammer zum Testen der Stage ja
+auch nicht n&ouml;tig. Die einzige Ausnahme w&auml;re, wenn man
+ohne die Schatzkammer in der Stage nicht weiterkommt (z.B. als
+&Uuml;berbr&uuml;ckung f&uuml;r einen zu weiten Sprung). In dem
+Fall k&ouml;nnte man anstatt eines Eingangs erstmal (07)
+Br&ouml;selzeug setzen oder den Startbildschirm (tempor&auml;r) so
+ver&auml;ndern, das man den Fahrstuhl erreichen
+kann.</small><br></td>
+</tr>
+<tr>
+<td>18 kleiner Baum</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 48px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2018%20kleiner%20Baum.png"></td>
+<td>3 x 3</td>
+<td>Hintergrundgrafik <small>(kann man durchlaufen)</small></td>
+</tr>
+<tr>
+<td>19 gro&szlig;er Baum</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 80px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2019%20grosser%20Baum.png"></td>
+<td>3 x 5</td>
+<td>Hintergrundgrafik <small>(kann man durchlaufen)</small></td>
+</tr>
+<tr>
+<td>1A gro&szlig;er Busch</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 160px; height: 44px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%201A%20grosser%20Busch.png"></td>
+<td>A x 3</td>
+<td>Hintergrundgrafik <small>(kann man durchlaufen)</small></td>
+</tr>
+<tr>
+<td>1B kleiner Busch</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 96px; height: 28px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%201B%20kleiner%20Busch.png"></td>
+<td>6 x 2</td>
+<td>Hintergrundgrafik <small>(kann man durchlaufen)</small></td>
+</tr>
+<tr>
+<td><a name="1C_Wasser"></a>1C Wasser</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 24px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%201C%20Wasser.png"></td>
+<td>3 x 2</td>
+<td>Dies ist die Wasseroberfl&auml;che. Um das Wasser tiefer zu
+machen ben&ouml;tigt man noch Wasserteile (Nr. 3E).<br>
+Damit Giana schwimmen kann, mu&szlig; das Wasser mindestens 4
+Char.-Felder vom unteren Bildschirmrand hoch sein.<br>
+Ist es zu niedrig st&uuml;rzt Giana ab.<br></td>
+</tr>
+<tr>
+<td>1D Ausgang 1</td>
+<td class="idg"><img style="width: 128px; height: 92px;" alt=""
+src="Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%201D%20Ausgang.png"></td>
+<td>8 x 6</td>
+<td>Diesen Ausgang kann man so wie er ist in die Landschaft setzen.
+- Im Gegensatz zu den anderen, die aus mehreren Teilen
+zusammengesetzt sind. (siehe dazu: <a href="#Ausgang_bauen">Ausgang
+bauen</a>)</td>
+</tr>
+<tr>
+<td>1E Wolke</td>
+<td class="ilb"><img style="width: 64px; height: 30px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%201E%20Wolke.png"></td>
+<td>4 x 2</td>
+<td>Hintergrundgrafik <small>(kann man durchlaufen)</small></td>
+</tr>
+<tr>
+<td>1F Wolke</td>
+<td class="ilb"><img style="width: 80px; height: 30px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%201F%20Wolke.png"></td>
+<td>5 x 2</td>
+<td>Hintergrundgrafik <small>(kann man durchlaufen)</small></td>
+</tr>
+<tr>
+<td>20 kleine S&auml;ule</td>
+<td class="ig"><img style="width: 48px; height: 48px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2020%20kleine%20Saeule.png"></td>
+<td>3 x 3</td>
+<td>unzerst&ouml;rbar</td>
+</tr>
+<tr>
+<td>21 Dungeonmauer 04</td>
+<td class="ig"><img style="width: 64px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2021%20Dungeonmauer%2004.png"></td>
+<td>4 x 2</td>
+<td>unzerst&ouml;rbar - siehe hierzu: <a href=
+"#Dungeonmauern_zusammensetzen">Dungeonmauern
+zusammensetzen</a></td>
+</tr>
+<tr>
+<td>22 Randteile L1 04</td>
+<td class="ig"><img style="width: 16px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2022%20Randteile%2004%20L1.png"></td>
+<td>1 x 2</td>
+<td>unzerst&ouml;rbar- siehe hierzu: <a href=
+"#Dungeonmauern_zusammensetzen">Dungeonmauern
+zusammensetzen</a></td>
+</tr>
+<tr>
+<td>23 Randteile R1 04</td>
+<td class="ig"><img style="width: 16px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2023%20Randteile%2004%20R1.png"></td>
+<td>1 x 2</td>
+<td>unzerst&ouml;rbar- siehe hierzu: <a href=
+"#Dungeonmauern_zusammensetzen">Dungeonmauern
+zusammensetzen</a></td>
+</tr>
+<tr>
+<td>24 gro&szlig;er Ausgang</td>
+<td class="ig"><img style="width: 64px; height: 64px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2024%20grosser%20Ausgang.png"></td>
+<td>4 x 4</td>
+<td colspan="1" rowspan="2">Diese Ausg&auml;nge sollten noch mit
+Mauerteilen kombiniert werden, damit es nicht so abgehackt
+aussieht. Siehe dazu: <a href="#Ausgang_bauen">Ausgang
+bauen</a>.</td>
+</tr>
+<tr>
+<td>25 kleiner Ausgang</td>
+<td class="ig"><img style="width: 32px; height: 48px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2025%20kleiner%20Ausgang.png"></td>
+<td>2 x 3</td>
+</tr>
+<tr>
+<td>26 Dungeonmauer 01</td>
+<td class="ig"><img style="width: 32px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2026%20Dungeonmauer%2001.png"></td>
+<td>2 x 2</td>
+<td>unzerst&ouml;rbar - siehe hierzu: <a href=
+"#Dungeonmauern_zusammensetzen">Dungeonmauern
+zusammensetzen</a></td>
+</tr>
+<tr>
+<td>27 Randteile 01</td>
+<td class="ig"><img style="width: 16px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2027%20Randteile%2001.png"></td>
+<td>2 x 1</td>
+<td>unzerst&ouml;rbar- siehe hierzu: <a href=
+"#Dungeonmauern_zusammensetzen">Dungeonmauern
+zusammensetzen</a></td>
+</tr>
+<tr>
+<td>28 Extrablock</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2028%20Extrablock.png"></td>
+<td>3 x 2</td>
+<td>Wenn Giana unter diesen springt, springt ein Extra daraus
+[vorausgesetzt man hat vorher ein Ball-Extra (Sprite Nr.0B) darauf
+platziert] und er wird zu einem Kasten (Nr.05)</td>
+</tr>
+<tr>
+<td>29 Spitze</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 50px; height: 49px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2029%20Spitze.png"></td>
+<td>4 x 3</td>
+<td>T&ouml;dlich, wenn man draufspringt. Von der Seite kann man
+darangehen.</td>
+</tr>
+<tr>
+<td>2A mittlere S&auml;ule</td>
+<td class="idg"><img style="width: 64px; height: 64px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%202A%20mittlere%20Saeule.png"></td>
+<td>4 x 4</td>
+<td>unzerst&ouml;rbar</td>
+</tr>
+<tr>
+<td>2B Plattform u</td>
+<td class="idg"><img style="width: 96px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%202B%20Plattform%20u.png"></td>
+<td>6 x 2</td>
+<td>unzerst&ouml;rbar</td>
+</tr>
+<tr>
+<td>2C Plattform n</td>
+<td class="idg"><img style="width: 96px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%202C%20Plattform%20n.png"></td>
+<td>6 x 2</td>
+<td>unzerst&ouml;rbar</td>
+</tr>
+<tr>
+<td>2D gro&szlig;e S&auml;ule</td>
+<td class="idb"><img style="width: 96px; height: 96px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%202D%20grosse%20Saeule.png"></td>
+<td>6 x 6</td>
+<td>unzerst&ouml;rbar</td>
+</tr>
+<tr>
+<td>2E Erde</td>
+<td class="idb"><img style="width: 16px; height: 48px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%202E%20Erde.png"></td>
+<td>1 x 3</td>
+<td>unzerst&ouml;rbar - Normalerweise wird dieses Objekt nicht
+ben&ouml;tigt. <small>War mal daf&uuml;r gedacht, da&szlig; man
+wenn man &uuml;ber die ganze L&auml;nge der Stage eine Reihe Erde
+gezogen hat, das letzte Feld auch mit Erde f&uuml;llt. [255 geteilt
+durch 3 (die Breite der Erde (Nr.01)) geht auf. Die Stage ist aber
+256 breit.] Da aber normalerweise, wenn die Stage bis zum Ende
+scrollt die letzte Character-Spalte garnichtmehr sichtbar wird,
+kann man sich's sparen. Einzige Ausnahme: Die Stage f&uuml;r's
+Titelbild.</small></td>
+</tr>
+<tr>
+<td><a name="2F_Nichts"></a>2F Nichts</td>
+<td><br></td>
+<td>1 x 1</td>
+<td>Hintergrundgrafik <small>(kann man durchlaufen)<br></small>
+M&uuml;&szlig;te eigentlich "Leerfeld" hei&szlig;en. Damit kann man
+z.B. Teile von Objekten &uuml;berschreiben, die im Weg sind. Oder
+man kann, wenn man eine Dungeon-Stage baut, zuerst die ganze Stage
+mit Dungeonmauer f&uuml;llen und dann G&auml;nge mit Leerfeldern in
+die Mauer schneiden.<br>
+Auf keinen Fall darf man dieses "Nichts" mit L&ouml;schen
+verwechseln, denn wenn Ihr Objekte die Ihr nicht mehr in der Stage
+haben wollt, einfach mit Leerfeldern &uuml;berschreibt, um neue zu
+setzen, sind die &uuml;berschriebenen Objekte trotzdem noch im
+Speicher, da jede(s) gesetzte Objekt(-gruppe) 5 Bytes Speicher
+fri&szlig;t.<br>
+Zum L&ouml;schen benutzt man <a href=
+"#XX_Delete_any_Objekt">"Delete any Objekt"</a> oder "Ctrl" + "D",
+um das zuletzt gesetzte Objekt zu l&ouml;schen.</td>
+</tr>
+<tr>
+<td>30 Exitmauer</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 32px; height: 16px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2030%20Exitmauer.png"></td>
+<td>2 x 1</td>
+<td>Hintergrundgrafik <small>(kann man durchlaufen) -</small>Wird
+f&uuml;r Ausg&auml;nge ben&ouml;tigt. (siehe: <a href=
+"#Ausgang_bauen">Ausgang bauen</a>)</td>
+</tr>
+<tr>
+<td>31 Fahrstuhls&auml;ule</td>
+<td class="ilb"><img style="width: 48px; height: 16px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2031%20Fahrstuhlsaeule.png"></td>
+<td>3 x 1</td>
+<td>unzerst&ouml;rbar</td>
+</tr>
+<tr>
+<td>32 Ausgangsteile</td>
+<td class="ilb"><img style="width: 16px; height: 16px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2032%20Ausgangsteile.png"></td>
+<td>1 x 1</td>
+<td>einzelne Teile eines Ausgangs. In Stages mit schwarzem
+Hintergrund, ben&ouml;tigt man keine weiteren Objekte f&uuml;r
+einen Ausgang. (siehe auch: <a href="#Ausgang_bauen">Ausgang
+bauen</a>)<br>
+Tip: Man sollte beim Setzen der Teile die Hintergrundfarbe nicht
+schwarz lassen (l&auml;sst mit "F1" auch w&auml;hrenddessen
+&auml;ndern), damit man sieht, was man macht.<br></td>
+</tr>
+<tr>
+<td>33 Feuer</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 50px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2033%20Feuer.png"></td>
+<td>4 x 2</td>
+<td>Normalerweise t&ouml;dlich, aber wenn Giana einen Wassertropfen
+als Extra hat kann sie einfach durchgehen.</td>
+</tr>
+<tr>
+<td>34 Warp</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 16px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2034%20Warp.png"></td>
+<td>3 x 1</td>
+<td>Wenn Giana drunterspringt, wird sie (im Spiel) in eine andere
+Stage gewarpt. Von oben f&auml;llt man durch.<br>
+Die Warps sind nur im C-Kit sichtbar, damit der Erbauer wei&szlig;,
+wo sie sich befinden. Im Spiel sind sie nat&uuml;rlich
+unsichtbar.</td>
+</tr>
+<tr>
+<td>35 Spitze u</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 50px; height: 49px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2035%20Spitze%20u.png"></td>
+<td>4 x 3</td>
+<td>T&ouml;dlich, wenn Giana drunterspringt, aber nicht im Fallen.
+Von der Seite kann man durchlaufen. <small>(Bei Giana-Sisters II
+war's noch so, da&szlig; man daran erst gestorben ist wenn man sie
+mit den F&uuml;&szlig;en ber&uuml;hrt hat, aber auch von der Seite
+und von oben. D. h. auf jeden Fall braucht man jetzt mehr Platz
+unter Spitzen, unter denen man springen
+mu&szlig;.)<br></small></td>
+</tr>
+<tr>
+<td>36 Scheinmauer 16</td>
+<td class="idg"><img style="width: 32px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2036%20Scheinmauer%2016.png"></td>
+<td>2 x 2</td>
+<td>Hintergrundgrafik <small>(kann man durchlaufen)</small> - siehe
+hierzu: <a href="#Dungeonmauern_zusammensetzen">Dungeonmauern
+zusammensetzen</a></td>
+</tr>
+<tr>
+<td>37 Randteile L1 16</td>
+<td class="idg"><img style="width: 16px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2037%20Randteile%2016%20L1.png"></td>
+<td>1 x 2</td>
+<td>Hintergrundgrafik <small>(kann man durchlaufen)</small> - siehe
+hierzu: <a href="#Dungeonmauern_zusammensetzen">Dungeonmauern
+zusammensetzen</a></td>
+</tr>
+<tr>
+<td>38 Randteile R1 16</td>
+<td class="idg"><img style="width: 16px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2038%20Randteile%2016%20R1.png"></td>
+<td>1 x 2</td>
+<td>Hintergrundgrafik <small>(kann man durchlaufen)</small> - siehe
+hierzu: <a href="#Dungeonmauern_zusammensetzen">Dungeonmauern
+zusammensetzen</a></td>
+</tr>
+<tr>
+<td>39 Randteile L2 16</td>
+<td class="idg"><img style="width: 16px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2039%20Randteile%2016%20L2.png"></td>
+<td>1 x 2</td>
+<td>Hintergrundgrafik <small>(kann man durchlaufen)</small> - siehe
+hierzu: <a href="#Dungeonmauern_zusammensetzen">Dungeonmauern
+zusammensetzen</a></td>
+</tr>
+<tr>
+<td>3A Randteile R2 16</td>
+<td class="idg"><img style="width: 16px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%203A%20Randteile%2016%20R2.png"></td>
+<td>1 x 2</td>
+<td>Hintergrundgrafik <small>(kann man durchlaufen)</small> - siehe
+hierzu: <a href="#Dungeonmauern_zusammensetzen">Dungeonmauern
+zusammensetzen</a></td>
+</tr>
+<tr>
+<td>3B Dungeonmauer 04</td>
+<td class="idg"><img style="width: 32px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%203B%20Dungeonmauer%2004.png"></td>
+<td>2 x 2</td>
+<td>unzerst&ouml;rbar- siehe hierzu: <a href=
+"#Dungeonmauern_zusammensetzen">Dungeonmauern
+zusammensetzen</a></td>
+</tr>
+<tr>
+<td>3C Randteile L2 04</td>
+<td class="idg"><img style="width: 16px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%203C%20Randteile%2004%20L2.png"></td>
+<td>1 x 2</td>
+<td>unzerst&ouml;rbar- siehe hierzu: <a href=
+"#Dungeonmauern_zusammensetzen">Dungeonmauern
+zusammensetzen</a></td>
+</tr>
+<tr>
+<td>3D Randteile R2 04</td>
+<td class="idg"><img style="width: 16px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%203D%20Randteile%2004%20R2.png"></td>
+<td>1 x 2</td>
+<td>unzerst&ouml;rbar- siehe hierzu: <a href=
+"#Dungeonmauern_zusammensetzen">Dungeonmauern
+zusammensetzen</a></td>
+</tr>
+<tr>
+<td>3E Wasserteile</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 16px; height: 16px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%203E%20Wasserteile.png"></td>
+<td>1 x 1</td>
+<td>Wasserteile, um eine beliebige Fl&auml;che mit Wasser zu
+f&uuml;llen. siehe auch <a href="#1C_Wasser">Nr.1C</a></td>
+</tr>
+<tr>
+<td>3F Dungeonmauer 99</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 32px; height: 28px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%203F%20Dungeonmauer%2099.png"></td>
+<td>2 x 2</td>
+<td>unzerst&ouml;rbar- siehe hierzu: <a href=
+"#Dungeonmauern_zusammensetzen">Dungeonmauern
+zusammensetzen</a></td>
+</tr>
+<tr>
+<td>40 Randteile L1 99</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 16px; height: 28px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2040%20Randteile%2099%20L1.png"></td>
+<td>1 x 2</td>
+<td>unzerst&ouml;rbar- siehe hierzu: <a href=
+"#Dungeonmauern_zusammensetzen">Dungeonmauern
+zusammensetzen</a></td>
+</tr>
+<tr>
+<td>41 Randteile R1 99</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 12px; height: 28px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2041%20Randteile%2099%20R1.png"></td>
+<td>1 x 2</td>
+<td>unzerst&ouml;rbar- siehe hierzu: <a href=
+"#Dungeonmauern_zusammensetzen">Dungeonmauern
+zusammensetzen</a></td>
+</tr>
+<tr>
+<td>42 Randteile L2 99</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 16px; height: 28px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2042%20Randteile%2099%20L2.png"></td>
+<td>1 x 2</td>
+<td>unzerst&ouml;rbar- siehe hierzu: <a href=
+"#Dungeonmauern_zusammensetzen">Dungeonmauern
+zusammensetzen</a></td>
+</tr>
+<tr>
+<td>43 Randteile R2 99</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 12px; height: 28px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2043%20Randteile%2099%20R2.png"></td>
+<td>1 x 2</td>
+<td>unzerst&ouml;rbar- siehe hierzu: <a href=
+"#Dungeonmauern_zusammensetzen">Dungeonmauern
+zusammensetzen</a></td>
+</tr>
+<tr>
+<td>44 Randteile 01</td>
+<td class="idg"><img style="width: 16px; height: 16px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2044%20Randteile%2001.png"></td>
+<td>1 x 1</td>
+<td>unzerst&ouml;rbar- siehe hierzu: <a href=
+"#Dungeonmauern_zusammensetzen">Dungeonmauern
+zusammensetzen</a></td>
+</tr>
+<tr>
+<td>45 schwarze Br&uuml;cke</td>
+<td class="ig"><img style="width: 16px; height: 16px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2045%20schw%20Bruecke.png"></td>
+<td>1 x 1</td>
+<td>unzerst&ouml;rbar - Ist dazu gedacht um in einer Stage mit
+schwarzem Hintergrund unsichtbare Mauern oder Br&uuml;cken zu
+bauen. <small>(Tip: Wenn man schwarze Br&uuml;cken setzt ist es
+hilfreich kurzzeitig die Hintergrundfarbe zu
+&auml;ndern.)</small></td>
+</tr>
+<tr>
+<td>46 Stein</td>
+<td class="idg"><img style="width: 48px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2046%20Stein.png"></td>
+<td>3 x 2</td>
+<td>Unzerst&ouml;rbar. Kann man auch auf Mauern mit Stein (Nr.03)
+setzen, damit alle Steine auf der Mauer mit dem Stein aus der Mauer
+herunterfallen, wenn diese zerst&ouml;rt wird.</td>
+</tr>
+<tr>
+<td><a name="XX_Delete_any_Objekt" id="XX_Delete_any_Objekt"></a>XX
+Delete any Objekt</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 16px; height: 16px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%20XX%20Delete%20Objekt.png"></td>
+<td>-</td>
+<td>Damit kann man ein beliebiges Objekt (bzw. eine Gruppe eines
+Objekts) l&ouml;schen.<br>
+Der Diamant den man hier sieht ist nur ein Cursor. Den bewegt man
+auf den oberen linken Character des Objekts, das man l&ouml;schen
+m&ouml;chte und dr&uuml;ckt FEUER.<br>
+Danach sollte die Meldung FOUND gefolgt von 5 Hexadezimalzahlen
+(und der Adresse) erscheinen.<br>
+Als n&auml;chstes kann man "Delete" (L&ouml;schen) oder "Go on"
+(Weitersuchen<small>(und nicht l&ouml;schen)</small>)
+ausw&auml;hlen, da es sein k&ouml;nnte, das mehrere Objekte an der
+gleichen Position stehen. (z.B. Randteile die auf Mauern gesetzt
+sind)<br>
+Die Zahlen die hinter FOUND stehen bedeuten (v. l. n. r.):
+Objekt-Nr., X-Pos, Y-Pos, Nebeneinander, &Uuml;bereinander.
+<span class="e">Die kompletten Stage Daten sind in solchen
+5-er-Gruppen aufgebaut. Siehe auch <a href=
+"#Stage-Aufbau_im_Speicher_:">Stage-Aufbau im
+Speicher</a>.</span><br>
+Wenn nichts (mehr) gefunden wird erscheint die Meldung "NOTHING
+FOUND".</td>
+</tr>
+<tr>
+<td>FF End Stage</td>
+<td><br></td>
+<td>-</td>
+<td>End-Byte setzen und zur&uuml;ck zum Main Menu</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<br>
+<br>
+<h4><a name="Ausgang_bauen" id="Ausgang_bauen"></a> Ausgang
+bauen:</h4>
+<br>
+<table style=
+"height: 1822px; width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td colspan="2" rowspan="1">Wenn man die Ausg&auml;nge Nr.24 oder
+25 einfach so in die Landschaft setzt, sieht das ziemlich
+sch&auml;big aus. Also sollte man vorher eine Gruppe von Mauern
+(Nr.03 oder Nr.11) auf diese Position setzen, und den Ausgang darin
+integrieren. Und damit man nicht gegen eine Wand l&auml;uft, wenn
+man in den Ausgang will, mu&szlig; man vorher noch auf die Seite,
+von der der Ausgang offen sein soll, eine senkrechte Reihe
+Exitmauer (Nr.30)(kann man durchlaufen) setzen.</td>
+</tr>
+<tr>
+<td>Hier zwei Beispiele f&uuml;r Ausgang Nr.24 :<br>
+v. l. n. r.: Schritt 1 (Mauern), Schritt 2 (Exitmauer setzen)
+Schritt 3 (Ausgang)<br>
+<img style="width: 577px; height: 287px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/Bsp%20Exit%2024.png">
+</td>
+<td>
+<div style="text-align: center;">Das gleiche mit Ausgang
+Nr.25:<br></div>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img style=
+"width: 437px; height: 251px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/Bsp%20Exit%2025.png">
+<br>
+<br></td>
+</tr>
+<tr>
+<td colspan="2" rowspan="1">
+<div style="margin-left: 680px;"><br></div>
+<img style="width: 655px; height: 417px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/Bsp%20Exit%20G1%20Stg31.png"
+align="right">Man kann dann evtl. noch ein St&uuml;ck der Mauern
+wieder abschneiden, indem man es mit "Nichts"(Nr.2F)
+&uuml;berschreibt, oder auch mit beliebigen Objekten seinen Ausgang
+verzieren. Der Phantasie sind hier kaum Grenzen gesetzt. So kann
+man auch eine ganze Burg um den Ausgang bauen, wie z.B. in
+Giana-Sisters I, Stage 31:</td>
+</tr>
+<tr>
+<td colspan="2" rowspan="1"><br>
+<br>
+<img src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/Bsp%20Exit%20G1%20Stg14.png"
+alt="" style="width: 675px; height: 433px;" align="right">Dann gibt
+es noch den Ausgang mit Nr.1D, der ohne Mauern darum schon
+vollst&auml;ndig ist. Wenn man m&ouml;chte kann man diesen aber
+auch mit Dungeonmauer 01 (Objekt Nr.26) kombinieren, wie z.B. in
+Giana-Sisters I Stage 14:</td>
+</tr>
+<tr>
+<td colspan="2" rowspan="1">Schlie&szlig;lich w&auml;ren da noch
+die Ausgangsteile Nr.32. Diese kann man in einer Stage mit
+schwarzem Hintergrund einfach ans rechte Ende der Stage setzen,
+da&szlig; es so aussieht als w&uuml;rde man den Bildschirm rechts
+verlassen k&ouml;nnen. Aber Vorsicht: Da die Stage beim Spielen
+nicht bis ganz nach rechts ans Ende scrollt, darf die X-Position
+des ersten Ausgangsteils nicht gr&ouml;&szlig;er als FD sein, um
+den Ausgang erreichen zu k&ouml;nnen.<br>
+Ihr k&ouml;nnt den Ausgang auch in ein Loch unten in der Stage
+setzen, wobei man allerdings beachten mu&szlig;, das die Y-Position
+des obersten Ausgangsteils h&ouml;chstens 12 betragen darf. Bei
+Y-Pos = 13 stirbt Giana im Abgrund bevor das Programm erkennen
+kann, das hier ein Ausgang ist.<br>
+<small class="e">Dieser Ausgang ist &uuml;brigens perfekt geeignet,
+um einen versteckten Ausgang einzubauen. Siehe Giana-Sisters II
+Stage 27 (Hier sind schon 2 Ausg&auml;nge versteckt bevor man das
+Ende mit dem 3. Ausgang erreicht) oder Stage 28 (Ausgang in
+S&auml;ule versteckt). Versteht sich von selbst, da&szlig; man den
+Ausgang nicht so gut versteckt, da&szlig; man erst die ganze Stage
+danach absuchen mu&szlig;. Das w&uuml;rde den Spielspa&szlig; doch
+erheblich mindern. (Dies ist Giana-Sisters, nicht Schiffe
+versenken!)</small><br>
+Nat&uuml;rlich kann man auch diesen Ausgang mit anderen Objekten
+kombinieren oder einfach einen rechteckigen Ausgang in eine Mauer
+bauen.<br></td>
+</tr>
+<tr>
+<td colspan="2" rowspan="1">Der Vollst&auml;ndigkeit halber sollte
+Ich hier noch den Exitfahrstuhl (Sprite Nr.16) erw&auml;hnen, den
+man am Besten mit der Fahrstuhls&auml;ule (Objekt Nr.31)
+kombiniert. Hierf&uuml;r gibt es zahlreiche Beispiele. <span class=
+"n">(Giana-Sisters I: Stage 5,9,10,15,19,25,29 ; Giana-Sisters II:
+Stage 9,13,14,23,38)</span></td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<br>
+<br>
+<h4><a name="Dungeonmauern_zusammensetzen" id=
+"Dungeonmauern_zusammensetzen"></a> Dungeonmauern zusammensetzen
+:</h4>
+<br>
+<table style=
+"width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+border="1" cellpadding="2" cellspacing="2">
+<tbody style="vertical-align: top;">
+<tr>
+<td colspan="7" rowspan="1">Wenn Ihr die Dungeonmauern benutzt,
+wird Euch wahrscheinlich auffallen, da&szlig; die linken und
+rechten R&auml;nder sehr abgehackt aussehen. Dem kann man Abhilfe
+schaffen, indem man Randteile benutzt. Da die Menge an Objekten,
+die hierf&uuml;r ben&ouml;tigt werden, verwirrend sein kann,
+erkl&auml;re ich Euch hier nach welchem System die Objekte benannt
+sind:<br>
+<br>
+Jeder Typ Dungeonmauer hat eine Zahl im Namen. <span class="n">(Die
+Zahl steht einfach f&uuml;r die erste Stage in Giana II, in der die
+Mauer vorkommt.)</span> Diese Zahl findet man auch im Namen der
+dazugeh&ouml;rigen Randteile. F&uuml;r jeden Typ Mauer gibt es
+allerdings 4 verschiedene Randteile: L1, R1, L2 oder R2 steht darum
+auch noch im Namen. Dabei steht L f&uuml;r links und R f&uuml;r
+rechts.<br>
+Die Randteile L1 und R1 werden links und rechts direkt neben die
+Mauer gesetzt und verbreitern sie so noch um 1 Character-Feld.<br>
+Die Randteile L2 und R2 werden links und rechts genau auf den Rand
+der Mauer gesetzt, wobei sie nat&uuml;rlich nicht breiter wird.<br>
+<br>
+Eine Ausnahme bildet hier die Dungeonmauer 01, die nur eine Sorte
+Randteile ben&ouml;tigt, die nur an die linke Seite gesetzt werden
+und sowohl auf als auch neben die Mauer gesetzt werden
+k&ouml;nnen.<br>
+<br>
+Zur Verdeutlichung hier ein Beispiel jeder Dungeonmauer
+<span class="n">(2 Objekte &uuml;ber- und nebeneinander)</span>,
+ohne und mit Randteilen:<br>
+[Unter den Grafiken stehen die Nummern der Objekte die benutzt
+wurden <span class="n">(v.l.n.r.)</span>]<br>
+<br></td>
+</tr>
+<tr>
+<td><br></td>
+<td>Dungeonmauer 04</td>
+<td>Scheinmauer 16 *</td>
+<td>Dungeonmauer 99 **</td>
+<td colspan="1" rowspan="4"><br>
+<br>
+<br>
+<br></td>
+<td colspan="2" rowspan="1">Dungeonmauer 01</td>
+</tr>
+<tr>
+<td>Ohne Randteile:</td>
+<td class="i" bgcolor="#000000"><font color="#FFFFFF"><img style=
+"width: 64px; height: 60px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/Bsp%20DungeonWall%2004.png"><br>
+</font> <font color="#FFFFFF"><small>3B(oder
+21)</small></font></td>
+<td class="i" bgcolor="#000000"><font color="#FFFFFF"><img style=
+"width: 64px; height: 60px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/FakeWall%2016.png"><br>
+</font> <font color="#FFFFFF"><small>36</small></font></td>
+<td class="i" bgcolor="#000000"><font color="#FFFFFF"><img style=
+"width: 64px; height: 60px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/Bsp%20DungeonWall%2099.png"><br>
+</font> <font color="#FFFFFF"><small>3F</small></font></td>
+<td class="i" bgcolor="#000000"><font color="#FFFFFF"><img style=
+"width: 64px; height: 62px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/Bsp%20DungeonWall%2001.png"><br>
+</font> <font color="#FFFFFF"><small>26</small></font></td>
+<td>Ohne Randteile</td>
+</tr>
+<tr>
+<td>Mit Randteilen L1 links und R1 rechts (daneben)</td>
+<td class="i" bgcolor="#000000"><font color="#FFFFFF"><img style=
+"width: 92px; height: 60px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/Bsp%20DungeonWall%2004%20l1r1.png"><br>
+</font> <font color="#FFFFFF"><small>22,3B,23</small></font></td>
+<td class="i" bgcolor="#000000"><font color="#FFFFFF"><img style=
+"width: 92px; height: 60px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/FakeWall%2016%20l1r1.png"><br>
+</font> <font color="#FFFFFF"><small>37,36,38</small></font></td>
+<td class="i" bgcolor="#000000"><font color="#FFFFFF"><img style=
+"width: 92px; height: 60px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/Bsp%20DungeonWall%2099%20l1r1.png"><br>
+</font> <font color="#FFFFFF"><small>40,3F,41</small></font></td>
+<td class="i" bgcolor="#000000"><font color="#FFFFFF"><img style=
+"width: 80px; height: 64px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/Bsp%20DungeonWall%2001%20l1.png"><br>
+</font> <font color=
+"#FFFFFF"><small>44(oder27),26</small></font></td>
+<td>Mit Randteilen links neben der Mauer</td>
+</tr>
+<tr>
+<td>Mit Randteilen L2 links und R2 rechts (auf der Mauer)</td>
+<td class="i" bgcolor="#000000"><font color="#FFFFFF"><img style=
+"width: 60px; height: 60px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/Bsp%20DungeonWall%2004%20l2r2.png"><br>
+</font> <font color="#FFFFFF"><small>3C,3B,3D</small></font></td>
+<td class="i" bgcolor="#000000"><font color="#FFFFFF"><img style=
+"width: 60px; height: 60px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/FakeWall%2016%20l2r2.png"><br>
+</font> <font color="#FFFFFF"><small>39,3B,3A</small></font></td>
+<td class="i" bgcolor="#000000"><font color="#FFFFFF"><img style=
+"width: 60px; height: 60px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/Bsp%20DungeonWall%2099%20l2r2.png"><br>
+</font> <font color="#FFFFFF"><small>42,3F,43</small></font></td>
+<td class="i" bgcolor="#000000"><font color="#FFFFFF"><img style=
+"width: 64px; height: 64px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/Bsp%20DungeonWall%2001%20l2.png"><br>
+</font> <font color=
+"#FFFFFF"><small>44(oder27),26</small></font></td>
+<td>Mit Randteilen links auf der Mauer</td>
+</tr>
+<tr>
+<td colspan="7" rowspan="1">* Die Scheinmauer 16, durch die man
+durchlaufen <small>(oder -fallen)</small> kann benutzt man, um
+versteckte G&auml;nge in die Dungeonmauer 04 zu bauen.<br>
+Wenn man genau hinsieht, erkennt man auch, das sie nicht genau
+gleich aussehen <small>(ich fand das fairer)</small>, aber das
+wei&szlig; nun mal nicht jeder, und in der Hektik des Spiels, kann
+man sowas schonmal &uuml;bersehen.</td>
+</tr>
+<tr>
+<td colspan="7" rowspan="1">** Wenn man die Dungeonmauer 99
+benutzt, sollte man die Multicolours f&uuml;r die Stage gut
+ausw&auml;hlen. Da das Innere der Mauer immer gelb ist, passen hier
+am besten die Farbkombinationen Rot und Rosa (wie hier),
+Braun+Orange oder Braun+Gr&uuml;n (evtl. einige andere, die Ihr
+ausprobieren m&uuml;sst).<br>
+<span class="e">Im Spiel ist es allerdings m&ouml;glich in einer
+einzigen Stage die 3. Multicolour, die hier immer gelb ist, auf
+t&uuml;rkis zu setzen. Dann sehen solche Farbkombinationen wie z.B.
+Hellblau und Dunkelblau f&uuml;r Multicolour 1+2 gut aus. Siehe
+dazu Abschnitt <a href=
+"#Der_Game_Maker">Game-Maker</a>.</span></td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr class="line">
+<br>
+<br>
+<br>
+<a name="Set_Sprites" id="Set_Sprites"></a><br>
+<br>
+<h2>Set Sprites :</h2>
+<br>
+<br>
+<br>
+Hier werden alle Objekte gesetzt die beweglich sind (Sprites), vor
+allem Monster, aber auch Extras und Fahrst&uuml;hle.<br>
+Wie auch bei "Create Stage" kann man hier mittels Joystick
+links/rechts ein Sprite ausw&auml;hlen. (Joystick nach oben =
+Delete Sprite / Joystick nach unten = End with Sprites) Dann FEUER
+dr&uuml;cken,&nbsp; das Sprite an die gew&uuml;nschte Position im
+Level&nbsp; bringen&nbsp; und wieder FEUER um dann das n&auml;chste
+Sprite auszusuchen.<br>
+(Es gibt hier einen kleinen Programmfehler: Die Sprites die im
+ersten Bildschirm gesetzt sind erscheinen im Spiel (bzw."Play
+Stage") 1 Character (8 Pixel) weiter links ,als sie gesetzt wurden.
+Also hier die Sprites einfach 1 Char. weiter rechts setzen, und Ihr
+habt die gew&uuml;nschte Position. F&uuml;r den Rest des Levels (ab
+X-Pos 28) gilt aber: Die Sprites tauchen dort auf, wo sie gesetzt
+wurden.)<br>
+<br>
+HOT-Keys: Commodore-Taste + "Clr/Home" = Alle Sprites l&ouml;schen
+<span class="n">(Im Emulator meist: "Strg"+"Pos1")</span>. Sonst
+gelten die gleichen <a href="#Hot-Keys_im_Main_Menu">Hot-Keys wie
+im Main Menu</a>.<br>
+<br>
+"End with Sprites" ausw&auml;hlen = zur&uuml;ck&nbsp; zum Main
+Menu.<br>
+<br>
+<a name="Delete_Sprite" id="Delete_Sprite"></a>W&auml;hlt man
+"Delete Sprite" und dr&uuml;ckt FEUER kann man einen bestimmtes
+Sprite l&ouml;schen, indem man den dann erscheinenden Cursor auf
+das Sprite bewegt und FEUER dr&uuml;ckt. Bei Sprites die aus
+mehreren zusammengesetzt sind (wie die meisten Endgegner) auf das
+linke Sprite gehen. Hier gibt es auch einen kleinen Bug: wenn
+mehrere Sprites auf der gleichen X-Pos. sind <span class="n">(also
+&uuml;bereinander)</span> wird das zuletzt gesetzte Sprite
+gel&ouml;scht, also k&ouml;nnt Ihr den Cursor auch &uuml;ber oder
+unter ein Sprite setzen, das Ihr l&ouml;schen wollt. <span class=
+"n">(Dies ist noch ein &Uuml;berbleibsel aus alten Zeiten, weil es
+bei Giana I noch nicht m&ouml;glich war mehrere Sprites
+&uuml;bereinander zu setzen.)</span><br>
+<br>
+Setzt m&ouml;glichst nicht mehr als 4 Sprites innerhalb eines
+Bildschirms, sonst k&ouml;nnte es sein das beim Spielen einige
+verschwinden <span class="n">(Weil 4 der 8 C64-Sprites schon
+f&uuml;r Giana und ihren Schu&szlig; benutzt werden)</span>.<br>
+Aus dem gleichen Grund sollte man gro&szlig;e Monster (die aus
+mehreren Sprites bestehen), m&ouml;glichst am Ende der Stage
+verwenden, <small>bzw. wenn keine weiteren Sprites mehr erscheinen.
+Sonst werden diese zerst&ouml;rt und das ganze sieht sehr seltsam
+aus (k&ouml;nnt Ihr ja mal testen). Zudem kommen solche Gegner
+gew&ouml;hnlich nach Verlassen des Bildschirms wieder. Die Spinne
+geht noch, wenn danach nicht mehr als 2 andere Sprites im Bild
+sind.</small><br>
+<br>
+<h4><a name="Liste_Sprites" id="Liste_Sprites"></a>Hier eine Liste
+der einzelnen Sprites:</h4>
+(Die meisten sprechen zwar f&uuml;r sich oder ihr kennt sie schon,
+aber einige haben Eigenschaften, die nicht so einfach ersichtlich
+sind, das gilt besonders f&uuml;r die 10 verschiedenen
+Fahrst&uuml;hle, die sich alle anders bewegen.)<br>
+<br>
+<table style="text-align: left; width: 100%;" border="1"
+cellpadding="2" cellspacing="2">
+<tbody style="vertical-align: top;">
+<tr>
+<td>Nummer &amp; Name</td>
+<td>Aussehen</td>
+<td>Punkte</td>
+<td>Beschreibung</td>
+</tr>
+<tr>
+<td>00 Vogel</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 49px; height: 40px;" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2000%20Vogel.png"
+alt="Wenn hier keine Bilder zu sehen sind,"></td>
+<td class="points">50</td>
+<td>Fliegt nach links oder rechts, bis er auf ein Hindernis
+st&ouml;&szlig;t und umdreht.<br>
+L&auml;sst sich durch draufspringen oder schie&szlig;en
+t&ouml;ten.</td>
+</tr>
+<tr>
+<td>01 Gnom</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 34px;" alt=
+"m&uuml;sst Ihr das Unterverzeichnis" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2001%20Gnom.png"></td>
+<td class="points">500<br></td>
+<td>L&auml;uft nach links oder rechts. Kann von Plattformen
+herunterfallen, wenn er &uuml;ber den Rand l&auml;uft.<br>
+Nicht zu t&ouml;ten ! (Au&szlig;er mit Bombe <small>(wie bei allen
+Monstern bei denen "Nicht zu t&ouml;ten" steht)</small>)</td>
+</tr>
+<tr>
+<td>02 Auge</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 38px;" alt=
+"&quot;Giana-CSet-Instruction(Anleitung) - GRAFIX(BILDER)&quot;"
+src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2002%20Auge2.png"
+height="40" width="48"></td>
+<td class="points">32</td>
+<td>Laufend. Kann von Plattformen fallen.<br>
+T&ouml;tbar, durch 1 Schu&szlig; oder draufspringen.</td>
+</tr>
+<tr>
+<td>03 Schwabbelmonster</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 28px;" alt=
+"in das gleiche Verzeichnis kopieren," src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2003%20Schwabbel.png"></td>
+<td class="points">44</td>
+<td>Laufend. Kann nicht von Plattformen fallen, d.h. es dreht um
+bevor die Plattform zuende ist.<br>
+T&ouml;tbar.</td>
+</tr>
+<tr>
+<td>04 Wurm</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 44px; height: 26px;" alt="in dem auch die Anleitung ist."
+src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2004%20Wurm.png"></td>
+<td class="points">500<br></td>
+<td>Laufend. Kann von Plattformen fallen.<br>
+Nicht zu t&ouml;ten</td>
+</tr>
+<tr>
+<td>05 Eule<br></td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 42px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2005%20Eule.png"
+height="42" width="44"></td>
+<td class="points">50</td>
+<td>Laufend. Kann von Plattformen fallen.<br>
+T&ouml;tbar</td>
+</tr>
+<tr>
+<td>06 T.-K.-Ball</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 40px; height: 34px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2006%20TK-Ball.png"
+height="34" width="40"></td>
+<td class="points">500<br></td>
+<td>Springt (ca. 6 Characters hoch)(nicht zur Seite)<br>
+Achtung: dieser Ball springt einfach nur auf seiner
+Ausgangsposition auf und ab. Er springt dabei auch durch Mauern und
+f&auml;llt nicht runter, wenn er den Boden verliert, weil er keine
+Kollision mit dem Hintergrund abfragt. Daf&uuml;r besser <a href=
+"#24_TFB-Ball_2">T.-K.-Ball 2 (Nr.24)</a> benutzen.<br>
+<small>Im Construction-Kit ist dieser Ball in falscher Farbe
+dargestellt um ihn von dem anderen unterscheiden zu k&ouml;nnen. Im
+Spiel sieht man aber keinen Unterschied.</small><br>
+Diesen Ball kann man z.B. benutzen, wenn der Ball aus einemt Loch
+unter dem Boden des Levels hochspringen soll, wo ja kein Boden ist
+und der T.-K.-Ball 2 einfach runterfallen w&uuml;rde.<br>
+Nicht zu t&ouml;ten !</td>
+</tr>
+<tr>
+<td>07 K&uuml;rbis</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 44px; height: 40px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2005%20Kuerbis.png"
+height="42" width="48"></td>
+<td class="points">70</td>
+<td>H&uuml;pft nach links oder rechts.<br>
+T&ouml;tbar</td>
+</tr>
+<tr>
+<td>08 K&auml;fer</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 44px; height: 24px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2008%20Bug.png"></td>
+<td class="points">99</td>
+<td>Schnell Laufend. Bleibt auf Plattformen.<br>
+T&ouml;tbar</td>
+</tr>
+<tr>
+<td>09 Spazierstock gelb</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 40px; height: 38px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2009%20Spazierstock.png"></td>
+<td class="points">500<br></td>
+<td>Laufend. Kann von Plattformen fallen.<br>
+Nicht zu t&ouml;ten</td>
+</tr>
+<tr>
+<td><a name="0A_Fisch"></a>0A Fisch</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 40px; height: 40px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%200A%20Fish.png"></td>
+<td class="points">500<br></td>
+<td>Springt sehr hoch (ca. 15 Characters)(nicht zur Seite). Wie
+auch TFB-Ball Nr.06 springt er durch Mauern und f&auml;llt auch
+nicht runter, wenn man ihn irgendwo in die Luft setzt. Es
+k&ouml;nnte aber sein, das er oben aus dem Bildschirm springt (und
+nicht mehr wiederkommt), wenn man ihn zu weit nach oben setzt (das
+gilt f&uuml;r alle springenden Monster) F&uuml;r den Fisch darf die
+Y-Pos. beim Setzen daher nicht kleiner als 0D sein.<br>
+Nicht zu t&ouml;ten</td>
+</tr>
+<tr>
+<td>0B Ball</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 40px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%200B%20Ball.png"></td>
+<td class="points">50</td>
+<td colspan="1" rowspan="7"><br>
+Wenn man ein Extra platzieren m&ouml;chte, <b>braucht man nur den
+Ball</b> (auf einen Extrablock) zu setzen damit Giana, wenn sie
+unter einen Extrablock springt, das n&auml;chste ben&ouml;tigte
+Extra bekommt. D.h. es kommt nicht unbedingt der Ball, nur weil man
+einen Ball gesetzt hat. Der Ball steht einfach nur f&uuml;r das
+n&auml;chste Extra in der Reihenfolge <small>(Ball, Blitz,
+Doppelblitz, Erdbeere, Wecker, Bombe, Tropfen, Lolli)</small>.<br>
+Man setzt die Extras am besten direkt auf einen Extrablock (Nr.28
+bei unbewegliche Objekte). Im Spiel sind die Extras ja
+zun&auml;chst inaktiv, und wenn man unter einen Extrablock springt,
+springen die Extras raus. <span class="e">(In manchen F&auml;llen
+kann es auch g&uuml;nstig sein das Extra an anderer Stelle zu
+platzieren, z.B. im Boden unter dem Extrablock, wenn dar&uuml;ber
+kein Platz ist, oder das Extra keine M&ouml;glichkeit hat
+herunterzukommen. Auf jeden Fall mu&szlig; irgendwo innerhalb des
+gleichen Bildschirms ein Extrablock sein, um das Extra zu
+aktiveren.)</span><br>
+Die anderen Extras sind hier eigentlich nur aus programmtechnischen
+Gr&uuml;nden aufgef&uuml;hrt.<span class="e">(Der einzige Grund,
+warum man einen der anderen Objekte ben&ouml;tigt ist
+h&ouml;chstens der, da&szlig; man mehrere Extras in einem
+Bildschirm platzieren m&ouml;chte. Da alle Extras in einem
+Bildschirm durch einen Extrablock aktiviert werden, w&uuml;rden
+alle die auf einmal aktiviert werden gleich aussehen. Wenn man das
+nicht m&ouml;chte, kann man einen der anderen Extra-Sprites setzen.
+Allerdings ist deren Aussehen immer so wie sie gesetzt wurden, d.h.
+wenn man z.B. einen Blitz setzt erscheint auch immer der Bliz und
+nicht etwa das &uuml;bern&auml;chste Extra in der Reihenfolge.
+Spielerisch macht das aber eigentlich keinen Unterschied, weil egal
+wie das Extra aussieht, das man einsammelt, man immer das
+n&auml;chste in der Reihenfolge bekommt.</span><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br></td>
+</tr>
+<tr>
+<td>0C Erdbeere</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 44px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%200C%20Erdbeere.png"></td>
+<td class="points">50</td>
+</tr>
+<tr>
+<td>0D Blitz</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 18px; height: 30px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%200D%20Blitz.png"></td>
+<td class="points">50</td>
+</tr>
+<tr>
+<td>0E Lutscher</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 32px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%200E%20Lutscher.png"></td>
+<td class="points">50</td>
+</tr>
+<tr>
+<td>0F Wecker</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 38px; height: 36px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%200F%20Wecker.png"></td>
+<td class="points">50</td>
+</tr>
+<tr>
+<td>10 Wassertropfen</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 24px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2010%20Tropfen.png"></td>
+<td class="points">50</td>
+</tr>
+<tr>
+<td>11 Bombe</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 32px; height: 35px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2011%20Bombe.png"></td>
+<td class="points">50</td>
+</tr>
+<tr>
+<td>12 Spazierstock blau</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 40px; height: 38px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2030%20Spazierstock%20blau.png"
+height="38" width="40"></td>
+<td class="points">80</td>
+<td>Springt (ca. 6 Characters hoch)(nicht zu Seite)<br>
+Hat keine Hintergrundkollisionsabfrage (wie TFB-Ball Nr.06),
+daf&uuml;r <a href="#30_Spazierstock_blau_2">Spazierstock blau 2
+(Nr.30)</a> nehmen. <small>Im Construction-Kit ist dieser
+Spazierstock hellblau dargestellt, um ihn von dem anderen
+unterscheiden zu k&ouml;nnen. Im Spiel sehen aber beide gleich
+aus.(Die Monster ohne Hintergrundkollision sind hier deswegen an
+erster Stelle, um Kompatibilit&auml;t mit alten Stages zu
+gew&auml;hrleisten, in denen es die neuen Monster noch nicht
+gab)</small><br>
+T&ouml;tbar</td>
+</tr>
+<tr>
+<td>13 Doppelblitz</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 44px; height: 31px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2013%20Doppelblitz.png"></td>
+<td class="points">50</td>
+<td>siehe 0B Ball</td>
+</tr>
+<tr>
+<td>14 Drache</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 144px; height: 42px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2014%20Drache.png"></td>
+<td class="points">5000</td>
+<td>Folgt einem vorgegebenen Weg, der sich immer wiederholt.
+Ausserdem schie&szlig;t er einmal pro Weg einen Feuerball ab.
+(Sollte nicht in einem Start-Bild gesetzt werden.)<br>
+Zu t&ouml;ten mit 11 Sch&uuml;ssen<br>
+<span class="e"><small>Anmerkung: Wenn noch ein anderer Sprite im
+Bild war, verschwindet dieser meistens, es kann aber auch sein, das
+er in den Feuerball des Drachens umgewandelt wird (Y-Pos. bleibt
+gleich, X-Pos. wird evtl. weiter nach rechts
+gesetzt).</small></span><br></td>
+</tr>
+<tr>
+<td>15 Spinne</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 88px; height: 42px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2015%20Spinne.png"></td>
+<td class="points">2000</td>
+<td>Folgt einem vorgegebenen Weg, der sich immer wiederholt. Geht
+dabei immer vor und zur&uuml;ck und arbeitet sich so jedesmal ein
+St&uuml;ck nach links vor. Wenn sie links aus dem Bild l&auml;uft,
+kommt sie einige Zeit sp&auml;ter von rechts wieder rein.<br>
+Zu t&ouml;ten mit 11 Sch&uuml;ssen<br></td>
+</tr>
+<tr>
+<td>16 Fahrstuhl</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 144px; height: 14px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2016%20Fahrstuhl.png"></td>
+<td class="points">1</td>
+<td>Dieser Fahrstuhl ist ein Ausgang. Bewegt sich immer auf und ab.
+Wenn Giana draufspringt hat sie die Stage geschafft. Setzt man am
+besten auf die Fahrstuhls&auml;ule (Objekt Nr.31)(,weil's
+sch&ouml;ner aussieht). (Sollte nicht in einem Start-Bild gesetzt
+werden.)<br>
+Zu t&ouml;ten mit einem Schu&szlig;, also nich wild rumballern am
+Ende der Stage, sonst is euer Ausgang weg.<br>
+Beim testspielen ("Play Stage") funktioniert dieser Fahrstuhl nicht
+richtig ! siehe: <a href="#Fahrstuhlbug">Fahrstuhlbug</a><br>
+<span class="e"><small>Folgende Besonderheit ist noch relevant im
+fertigen Spiel: Wenn&nbsp; noch ein anderer Sprite im Bild ist
+sobald der Fahrstuhl erscheint, kann es passieren, da&szlig; er
+nicht verschwindet sondern gestoppt wird. Wenn man auf so einen
+Sprite springt, ist es das gleiche als w&uuml;rde man den Fahrstuhl
+nehmen.&nbsp;</small></span><br></td>
+</tr>
+<tr>
+<td>17 Riesendiamant</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 43px; height: 84px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2017%20RiesenDiamant.png"></td>
+<td class="points">?</td>
+<td>Wenn Giana diesen einsammelt ist das Spiel geschafft und es
+gibt noch Bonuspunkte f&uuml;r &uuml;brige Leben, Bonus, Extras und
+Zeit. Platziert ihn in der letzten Stage eures Spiels. Im
+Construction-Kit startet nur die Stage neu, wenn man mit "Play
+Stage" den Level testet.<br>
+Was man hierbei beachten mu&szlig;: Man kann den Riesendiamanten
+nicht in den Start-Bildschirm setzen. <small>(kann man schon, aber
+er erscheint erst am rechten Bildschirmrand, wenn weitergescrollt
+wird.)</small><br>
+Au&szlig;erdem, darf er nicht weiter rechts als X-Pos=F6 gesetzt
+werden, weil das Programm dann die Kollision nicht mehr erkennt und
+man einfach durchlaufen kann.<br></td>
+</tr>
+<tr>
+<td>18 Fledermaus</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 42px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2018%20Fledermaus.png"></td>
+<td class="points">500<br></td>
+<td>Schnell Fliegend von rechts nach links.<br>
+Nicht zu t&ouml;ten !</td>
+</tr>
+<tr>
+<td>19 Qualle<br></td>
+<td class="i" bgcolor="#000000"><img alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2019%20Qualle.png"
+height="40" width="44"></td>
+<td class="points">90</td>
+<td>Springt sehr hoch (15 Characters)<br>
+T&ouml;tbar. (Davon abgesehen gelten hier die gleichen
+Eigenschaften, wie bei <a href="#0A_Fisch">0A Fisch</a>)</td>
+</tr>
+<tr>
+<td>1A Schatztruhe</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 34px; height: 18px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%201A%20Schatztruhe.png"></td>
+<td class="points">50</td>
+<td>Sammelt man sie ein bekommt man das n&auml;chste Extra der
+Reihenfolge<small>(Ball,Blitz,Doppelblitz,...).<br>
+Im Gegensatz zu den anderen Extras ist die Schatztruhe immer
+aktiviert und man kann sie einfach einsammeln, ohne da&szlig; man
+unter einen Extrablock springen m&uuml;sste.</small></td>
+</tr>
+<tr>
+<td>1B 7A3-Ball</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 40px; height: 34px;" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%201B%207A3-Ball.png"
+alt=""></td>
+<td class="points">500<br></td>
+<td>Springt (ca. 8 Char. hoch)<br>
+Dieser Ball beachtet die Kollision mit dem Hintergrund, wenn also
+die Mauer zerst&ouml;rt wird, auf der er springt, f&auml;llt er
+herunter, oder er prallt an der Decke ab, wenn er nicht genug Platz
+zum hochspringen hat.<br>
+Nicht zu t&ouml;ten !</td>
+</tr>
+<tr>
+<td>1C Gnom blau</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 34px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%201C%20Gnom%20blau.png"></td>
+<td class="points">500<br></td>
+<td>Laufend. Bleibt auf Plattformen.<br>
+Nicht zu t&ouml;ten !</td>
+</tr>
+<tr>
+<td>1D Spazierstock hellgr&uuml;n</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 40px; height: 38px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%201D%20Spazierstock%20hgruen.png"></td>
+<td class="points">95</td>
+<td>Laufend. F&auml;llt von Plattformen.<br>
+T&ouml;tbar. Das einzig gemeine an diesem Monster ist, da&szlig;
+man es kaum von dem gelben Spazierstock (Nr.09) unterscheiden kann
+und so nicht unbedingt auf den ersten Blick sieht, das man es
+t&ouml;ten kann. <small>(Auf einem Schwarz-Weis-Fernseher kann man
+gelb und hellgr&uuml;n garnicht unterscheiden)</small></td>
+</tr>
+<tr>
+<td>1E Spazierstock t&uuml;rkis</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 40px; height: 38px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%201E%20Spazierstock%20tue.png"></td>
+<td class="points">500<br></td>
+<td>Rasend schnell laufend. F&auml;llt von Plattformen.<br>
+Dieses Monster sollte man nur f&uuml;r Schockeffekte einsetzen, und
+so platzieren, da&szlig; es nicht sofort auf den Spieler zurennt,
+weil man sonst kaum noch die M&ouml;glichkeit hat auszuweichen.
+<small>(Stages, die man erst ein paar Mal gespielt haben mu&szlig;,
+um zu wissen an welcher Stelle man sicher ist finde ich arm. - Dies
+ist Giana-Sisters, nicht Rick Dangerous)</small><br>
+Nicht zu T&ouml;ten !</td>
+</tr>
+<tr>
+<td>1F Turricanfisch</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 40px; height: 36px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%201F%20Turricanfish.png"></td>
+<td class="points">100</td>
+<td>Schwimmend von links nach rechts bis er umdrehen mu&szlig;.
+Au&szlig;erdem folgt er Giana nach oben oder unten.<br>
+Sollte nur im Wasser platziert werden.<br>
+T&ouml;tbar durch 1 Schu&szlig; oder drauftreten. (Um im Wasser ein
+Monster durch Drauftreten zu t&ouml;ten, mu&szlig; man nach unten
+ziehen bevor man es ber&uuml;hrt. Wenn man still stehen bleibt
+stirbt man, auch wenn des Monster von unten kommt.)</td>
+</tr>
+<tr>
+<td>20 Jetpack</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 28px; height: 24px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2020%20Jet-Pack.png"></td>
+<td class="points">50</td>
+<td>Spezialextra: Sammelt man es ein bekommt Giana ein Jetpack und
+kann bis zum Ende der Stage oder bis zum Lebensverlust fliegen.
+Wenn Ihr eine Stage baut, die nur mit Jetpack zu schaffen ist,
+m&uuml;&szlig;t Ihr daran denken auch am 2. Startpunkt der Stage
+ein Jetpack zu platzieren, da man wenn man zum Ende der Stage ein
+Leben verliert, sonst am 2. Startpunkt ohne das Jetpack startet und
+so die Stage nicht mehr schaffen kann.<br>
+Man kann das Jetpack auch genau auf Gianas Startposition
+platzieren, so da&szlig; man von Anfang an fliegt.<br>
+Man kann mit dem Jetpack nicht nach oben aus dem Level fliegen!
+Damit man nicht durch ein Loch in der Decke die gesamte Stage
+&uuml;berfliegen kann.</td>
+</tr>
+<tr>
+<td>21 Fahrstuhl</td>
+<td class="idg"><img style="width: 48px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2021%20Fahrstuhl.png"></td>
+<td class="points">-</td>
+<td>Bewegt sich langsam nach oben oder unten. Dreht an Hindernissen
+um (und am oberen und unteren Bildschirmrand).</td>
+</tr>
+<tr>
+<td>22 Fahrstuhl</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2022%20Fahrstuhl.png">
+<a href="#Farben_von_FS"><big style=
+"color: rgb(51, 204, 0);"><big>*</big></big></a></td>
+<td class="points">-</td>
+<td>Bewegt sich langsam nach rechts oder links. Dreht an
+Hindernissen um.<br>
+Kann auch nach links oder rechts aus dem Bildschirm verschwinden,
+au&szlig;er wenn Giana draufsteht, dann dreht er um oder es wird
+nach rechts weitergescrollt</td>
+</tr>
+<tr>
+<td>23 Fahrstuhl</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2023%20Fahrstuhl.png">
+<a href="#Farben_von_FS"><big style=
+"color: rgb(51, 204, 0);"><big>*</big></big></a></td>
+<td class="points">-</td>
+<td>Springt ca. 6 Char. hoch und langsam zur Seite. Kann auch links
+oder rechts aus dem Bildschirm verschwinden, wenn man nicht
+draufsteht oder unten aus dem Bildschirm fallen <small>(In dem Fall
+w&uuml;rde man sterben, wenn man noch draufsteht)</small>.</td>
+</tr>
+<tr>
+<td><a name="24_TFB-Ball_2"></a>24 T.-K.-Ball 2</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 40px; height: 34px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2024%20TK-Ball.png"
+height="34" width="40"></td>
+<td class="points">-</td>
+<td>Springend (ca. 6 Char. hoch) (nicht nach rechts oder links)<br>
+Dies ist der "richtige" Totenkopf-Ball mit
+Hintergrundkollisionsabfrage, kann also runterfallen oder von der
+Decke abprallen.<br>
+Nicht zu t&ouml;ten !</td>
+</tr>
+<tr>
+<td>25 7A3-Ball grau</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 40px; height: 34px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2025%207A3-Ball%20grau.png"></td>
+<td class="points">200</td>
+<td>Springt ca. 6 Char. hoch. Springt dabei aber nach links oder
+rechts.<br>
+Zu t&ouml;ten durch 3 Sch&uuml;sse (oder 2 Sch&uuml;sse und
+f&uuml;r den letzten Treffer einmal drauftreten)</td>
+</tr>
+<tr>
+<td>26 Spazierstock grau1</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 40px; height: 38px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2026%20Spazierstock%20grau1.png"></td>
+<td class="points">90</td>
+<td>Springt ca. 6 Char. hoch. Springt dabei aber nach links oder
+rechts.<br>
+T&ouml;tbar <small>(1 Treffer reicht)</small></td>
+</tr>
+<tr>
+<td>27 Spazierstock grau3</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 40px; height: 38px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2027%20Spazierstock%20grau3.png"></td>
+<td class="points">500<br></td>
+<td>Laufend. Kann von Plattformen fallen. Folgt Giana nach rechts
+und links (ist aber langsamer)<br>
+Nicht zu t&ouml;ten !</td>
+</tr>
+<tr>
+<td>28 Fledermaus grau</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 42px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2028%20Fledermaus%20grau.png"></td>
+<td class="points">500<br></td>
+<td>Langsam fliegend. Folgt Giana in alle Richtungen.<br>
+Nicht zu t&ouml;ten !</td>
+</tr>
+<tr>
+<td>29 Turricanfisch wei&szlig;</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 40px; height: 36px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2029%20Turricanfish%20weiss.png"></td>
+<td class="points">199</td>
+<td>Schwimmend. Folgt Giana in alle Richtungen
+<small>(,w&auml;hrend der gelbe Turricanfisch (Nr.1F) nur nach oben
+und unten folgt)</small><br>
+Zu t&ouml;ten durch 2 Sch&uuml;sse <small>(oder 1 Schu&szlig; und
+f&uuml;r den letzten Treffer einmal drauftreten)</small></td>
+</tr>
+<tr>
+<td>2A Fahrstuhl</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%202A%20Fahrstuhl.png">
+<a href="#Farben_von_FS"><big style=
+"color: rgb(51, 204, 0);"><big>*</big></big></a></td>
+<td class="points">-</td>
+<td>Bewegt sich schnell nach oben oder unten. Dreht an Hindernissen
+um.</td>
+</tr>
+<tr>
+<td>2B Fahrstuhl</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%202B%20Fahrstuhl.png">
+<a href="#Farben_von_FS"><big style=
+"color: rgb(51, 204, 0);"><big>*</big></big></a></td>
+<td class="points">-</td>
+<td>Bewegt sich schnell nach rechts oder links. Dreht an
+Hindernissen um.<br>
+Kann auch nach rechts oder links aus dem Bildschirm verschwinden,
+wenn Giana nicht draufsteht.</td>
+</tr>
+<tr>
+<td>2C Fahrstuhl</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%202C%20Fahrstuhl.png">
+<a href="#Farben_von_FS"><big style=
+"color: rgb(51, 204, 0);"><big>*</big></big></a></td>
+<td class="points">-</td>
+<td>Dieser Fahrstuhl bewegt sich auch langsam nach links und
+rechts, dreht aber immer am gleichen Punkt um, Hindernisse
+interessieren ihn nicht (bewegt sich also auch durch Mauern). Die
+Strecke innerhalb der er von links nach rechts geht ist etwa 15
+Characters lang.<br>
+Diesen Fahrstuhl kann man z.B. irgendwo in die Luft setzen, wo ein
+Fahrstuhl sonst keine M&ouml;glichkeit zum umdrehen hat.
+<small>Wenn man aus &Uuml;bersichtlichkeitsgr&uuml;nden zeigen
+m&ouml;chte wo der Fahrstuhl umdreht, kann man z.B. rechts und
+links neben die Endpunkte Wolken, B&auml;ume oder &auml;hnliches
+setzen.</small></td>
+</tr>
+<tr>
+<td>2D Fahrstuhl</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%202D%20Fahrstuhl.png">
+<a href="#Farben_von_FS"><big style=
+"color: rgb(51, 204, 0);"><big>*</big></big></a></td>
+<td class="points">-</td>
+<td>Wie Nr.2C nur schnell.</td>
+</tr>
+<tr>
+<td>2E Spike-Star<br>
+up down<br></td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 42px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%202E%20Star.png"
+height="42" width="48"></td>
+<td class="points">100<br></td>
+<td>Bewegt sich immer auf und ab (32 Pixel weit). Zuerst nach
+oben.<br>
+Kann auch hinter Mauern verschwinden. So kann man z.B. Barrieren in
+G&auml;nge bauen, die sich &ouml;ffnen und schlie&szlig;en.<br>
+<small>Ist im C-Kit in anderer Farbe dargestellt, um ihn von Spiked
+Star Nr. 2F und Nr. 36 unterscheiden zu k&ouml;nnen.</small><br>
+Nicht zu t&ouml;ten !</td>
+</tr>
+<tr>
+<td>2F Spike-Star<br>
+down up<br></td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 42px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%202F%20Star.png"
+height="42" width="48"></td>
+<td class="points">100<br></td>
+<td>Wie 2E, aber bewegt sich zuerst nach unten, also
+entgegengesetzt.<br>
+Nicht zu t&ouml;ten !</td>
+</tr>
+<tr>
+<td><a name="30_Spazierstock_blau_2"></a>30 Spazierstock blau
+2</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 40px; height: 38px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2012%20Spazierstock%20blau.png"
+height="38" width="40"></td>
+<td class="points">80</td>
+<td>Springend (ca. 6 Char. hoch) (nicht nach rechts oder links)<br>
+Dies ist der "richtige" Spazierstock blau mit
+Hintergrundkollisionsabfrage, kann also runterfallen oder von der
+Decke abprallen.<br>
+T&ouml;tbar</td>
+</tr>
+<tr>
+<td>31 7A3-Ball braun</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 40px; height: 34px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2031%207A3-Ball%20braun.png"></td>
+<td class="points">100<br></td>
+<td>Dieser Ball springt nicht, er "kreist" <small>(eigentlich ist
+es eher eine 8-eckige Bewegung)</small> um einen Punkt, der sich
+ca. 2 Char. unterhalb und 4 Char. links von seiner Startposition
+befindet.<br>
+Nicht zu t&ouml;ten !</td>
+</tr>
+<tr>
+<td><a name="32_Nachlademonster"></a>32 Nachlademonster</td>
+<td class="i"><big><big><big><big>?</big></big></big></big></td>
+<td class="points">?</td>
+<td>Welches Monster hier erscheint h&auml;ngt davon ab, welches man
+im "Load Menu" unter "Load Load-Monster or Sprite" in den Speicher
+geladen hat. Ihr k&ouml;nnt das Monster auch <small>(im Load
+Menu)</small> &uuml;ber "Directory and Load from Directory" mittels
+Joystick&nbsp; in der Directory ausw&auml;hlen.<small>(Es dauert
+hier einen Moment, bis die Directory geladen ist. In dieser Zeit
+wird ein falsches Bild angezeigt. La&szlig;t Euch dadurch nicht
+irritieren! Das Programm hat sich nicht aufgehangen!)<br></small>
+Die Dateien haben die Endung ".NLM" oder ".SPR". <span class="e">In
+".NLM" stehen die Eigenschafts-Daten eines Monsters, in ".SPR" die
+Grafik f&uuml;r seine Sprites. Man kann sich auch seine eigenen
+Monster mit eigener Grafik erschaffen, is aber kompliziert, mehr
+dazu bei <a href="#Nachlademonster_kreieren">Nachlademonster
+kreieren</a>.</span> Aber egal welche Endung die Datei hat, es
+werden beide Dateien in den Speicher geladen und somit das
+komplette Monster. <small>(Beispiel: Wenn man die Datei "02
+FISH&nbsp;&nbsp;&nbsp;&nbsp; .NLM" l&auml;d wird diese und "02
+FISH&nbsp;&nbsp;&nbsp;&nbsp; .SPR" geladen.)<br>
+<br>
+<big>WICHTIG: Wenn Ihr ein Nachlademonster in eure Stage einbaut,
+m&uuml;&szlig;t Ihr im Main Menu bei "Options" die Nummer des
+Nachlademonsters einstellen.</big> Die Nr. entspricht den ersten
+beiden Zeichen des Dateinamens. <small>(Beispiel: Will man als
+Nachlademonster das Insekt und hat man die Datei "03
+INSECT&nbsp;&nbsp; .NLM" geladen stellt man bei "Options"
+"Nachlademonster" auf 03.)</small> Diese Einstellung mu&szlig;
+gemacht werden damit, wenn Ihr die Stage in ein eigenes Spiel
+einbaut, der richtige Gegner kommt. Stellt "Nachlademonster" auf NO
+damit kein Monster nachgeladen wird. <small>[P.S.: Wenn Ihr eine
+selbstgebaute Stage mit eingestelltem Nachlademonster im
+Construction Kit ladet, m&uuml;sst Ihr (falls Ihr die Stage mit
+"Play Stage" testen wollt) das richtige Nachlademonster per Hand
+nachladen. Automatisch geht das erst sobald die Stage in einem
+Spiel geladen wird.]</small><br>
+<br>
+Als Default <small>(Standardeinstellung)</small> ist hier der "Big
+Merlin-Ball" verf&uuml;gbar.<br>
+Welche Monster man noch laden kann siehe <a href=
+"#Liste_Nachlademonster"><span>Liste
+Nachlademonster</span></a>.</small></td>
+</tr>
+<tr>
+<td>33 Fahrstuhl</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2033%20Fahrstuhl.png">
+<a href="#Farben_von_FS"><big style=
+"color: rgb(51, 204, 0);"><big>*</big></big></a></td>
+<td class="points">-</td>
+<td>Folgt einem vorgegebenem achteckigem Weg. Bewegt sich vom
+Startpunkt zuerst schr&auml;g nach oben links, dann links, dann
+links unten, u.s.w.</td>
+</tr>
+<tr>
+<td>34 Fahrstuhl</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2034%20Fahrstuhl.png">
+<a href="#Farben_von_FS"><big style=
+"color: rgb(51, 204, 0);"><big>*</big></big></a></td>
+<td class="points">-</td>
+<td>Folgt einem vorgegebenem quadratischen Weg (ca 13 Caracters
+weit). Bewegt sich vom Startpunkt zuerst nach oben, dann nach
+links, usw.</td>
+</tr>
+<tr>
+<td>35 Fahrstuhl</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 32px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2035%20Fahrstuhl.png">
+<a href="#Farben_von_FS"><big style=
+"color: rgb(51, 204, 0);"><big>*</big></big></a></td>
+<td class="points">-</td>
+<td>Folgt einem Vorgegebenem Weg: Zuerst bleibt er einige Sekunden
+an der Startposition stehen, geht dann einmal nach links (ca 15
+Characters weit) und wieder nach rechts um dort nochmal zu warten
+usw.</td>
+</tr>
+<tr>
+<td>36 Spike-Star</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 44px; height: 42px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2036%20Star.png"
+height="42" width="48"></td>
+<td class="points">100<br></td>
+<td>Unbeweglich.<br>
+Nicht zu t&ouml;ten !<br></td>
+</tr>
+<tr>
+<td>Delete Sprite</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 42px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%20XX%20Delete%20Sprite.png"></td>
+<td class="points"><br></td>
+<td>Sprite l&ouml;schen <a href="#Delete_Sprite">(s.o.)</a>
+<span class="e">Das dieser Cursor-Sprite im C-Kit etwas fehlerhaft
+aussieht liegt daran, das er sich mit den Interrupt-Pointern bei
+$FFFA &uuml;berschneidet. (Sonst war kein Speicher mehr frei.) Also
+bitte nicht versuchen das zu reparieren!<br></span></td>
+</tr>
+<tr>
+<td>End with Sprites</td>
+<td><br></td>
+<td><br></td>
+<td>Zur&uuml;ck zum Hauptmen&uuml;. <span class="e">(Au&szlig;erdem
+wird ein End-Byte gesetzt.)</span></td>
+</tr>
+<tr>
+<td colspan="4" rowspan="1"><big><big><span style=
+"color: rgb(51, 204, 0);"><a name="Farben_von_FS" id=
+"Farben_von_FS"></a>*</span></big></big> Die Fahrst&uuml;hle haben
+hier nur so seltsame Farben, damit man sie unterscheiden kann. Im
+Spiel und bei "Play Stage" sehen sie normal aus (wie Nr.21).<br>
+Anmerkung: Die Fahrst&uuml;hle <small>(ausser dem Exitfahrstuhl Nr.
+16)</small> haben einen kleinen Programmfehler, der aber zum
+Gl&uuml;ck nur ganz am Ende einer Stage vorkommt. D.h. wenn sich
+ein Fahrstuhl auf X-Position F5 - F7 befindet, f&auml;llt Giana
+durch diesen durch, wenn sie auf der rechten Seite des Fahrstuhls
+steht. Man sollte also auf Fahrst&uuml;hle soweit am Ende der Sage
+verzichten. <small>(Aber meistens kommt ja dann auch schon der
+Ausgang.) Bei Position F8 oder F9 passiert &uuml;brigens genau das
+Gegenteil, d.h. Giana kann vom Fahrstuhl aus durch die Luft laufen.
+<big>Pos. FA - FE ist wieder normal.</big></small><br></td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<h4><a name="Liste_Nachlademonster" id=
+"Liste_Nachlademonster"></a>Liste Nachlademonster:</h4>
+[Solange man im Construction-Kit ist (mit Ausnahme von "Play
+Stage") wird nur der untere linke Sprite des Nachlademonsters
+angezeigt - meistens auch in der falschen Farbe.]<br>
+<br>
+<table style="text-align: left; width: 100%;" border="1"
+cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td>Nummer &amp; Name</td>
+<td>Aussehen</td>
+<td>Punkte</td>
+<td>Beschreibung</td>
+</tr>
+<tr>
+<td>01 Big Merlin Ball</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 80px; height: 68px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%20NLM01%20Big%20M-Ball.png"></td>
+<td class="points">6000</td>
+<td>Springend, ca. 9 Char. hoch und zur Seite.<br>
+Kann den Bildschirm nicht nach rechts oder links verlassen, d.h. er
+dreht am Bildschirmrand um. Verschwindet aber, wenn er unten aus
+dem Bildschirm f&auml;llt.<br>
+Kommt in Giana-Sisters II in Stage 30 vor.<br>
+Zu t&ouml;ten durch 34 Sch&uuml;sse.</td>
+</tr>
+<tr>
+<td>02 Fish</td>
+<td class="iddb"><img style="width: 96px; height: 84px;" alt=""
+src="Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%20NLM02%20Fish.png"></td>
+<td class="points">8000</td>
+<td>Hat einen vorgegebenen Weg : Er kreist zuerst 2 mal an seiner
+Startposition, st&ouml;&szlig;t dann sehr schnell nach links, ein
+wenig nach unten und wieder nach rechts und oben zur&uuml;ck in die
+Startposition.<br>
+Setzt ihn nicht zu weit nach unten, weil er sonst nach unten aus
+dem Bildschirm verschwindet, oder halb verschwindet, was zu
+Grafikfehlern f&uuml;hrt.<br>
+Gute Anwendung f&uuml;r den Fisch: siehe Giana-Sisters II, Stage
+25.<br>
+Zu t&ouml;ten durch 50 Sch&uuml;sse.</td>
+</tr>
+<tr>
+<td>03 Insect</td>
+<td class="ib"><img style="width: 96px; height: 84px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%20NLM03%20Insect.png"></td>
+<td class="points">7000</td>
+<td>Hat einen vorgegebenen Weg: Fliegt erstmal langsam nach links,
+dabei immer ein wenig auf und ab, fliegt dann schnell nach links
+aus dem Bildschirm und kommt rechts wieder rein.<br>
+Kommt in Giana-Sisters II in Stage 33 vor.<br>
+Zu t&ouml;ten durch 25 Sch&uuml;sse.</td>
+</tr>
+<tr>
+<td>04 Demon</td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 42px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%20NLM04%20Demon.png"></td>
+<td class="points">9999</td>
+<td>Hat einen vorgegebenen Weg: Fliegt vom Startpunkt erst
+schr&auml;g nach links oben (&uuml;ber die gesammte H&ouml;he des
+Bildschirms), dann nach links unten und wieder von Vorne. Dabei
+fliegt er immer links aus dem Bildschirm und kommt rechts wieder
+rein.<br>
+Mu&szlig; m&ouml;glichst weit unten in eine Stage gesetzt
+werden(Y-Pos mu&szlig; mind. 16 sein), da er sonst nach oben aus
+dem Bild verschwindet.<small>( Die hohe Punktzahl erkl&auml;rt sich
+&uuml;brigens dadurch, das es bei Giana II sauschwer ist, Stage 39
+mit dem ersten Versuch zu schaffen und somit mit einem Schu&szlig;
+in Stage 40 anzukommen.)</small><br>
+Kommt in Giana-Sisters II in Stage 40 vor.<br>
+Zu t&ouml;ten durch 17 Sch&uuml;sse.</td>
+</tr>
+<tr>
+<td valign="top">05 - 07<br></td>
+<td valign="top"><br></td>
+<td valign="top"><br></td>
+<td valign="top">(noch) nicht belegt - Platz f&uuml;r neue
+Endgegner<br></td>
+</tr>
+<tr>
+<td valign="top">08 Teleport<br></td>
+<td align="center" valign="top">n/a<br>
+<small>(lasst Euch &uuml;berraschen)</small><br></td>
+<td align="right" valign="top">-<br></td>
+<td valign="top">Ein Teleporter, funktioniert &auml;hnlich wie ein
+Fahrstuhl, nur das er sich nicht bewegt, sondern ca. alle 3
+Sekunden 8 Characters weit zuerst nach oben und dann wieder nach
+unten springt und damit Giana mit ihm, wenn sie draufsteht (auch
+durch W&auml;nde).<br></td>
+</tr>
+<tr>
+<td valign="top">09 Bubble<br></td>
+<td align="center" valign="top">n/a<br></td>
+<td align="right" valign="top">60<br></td>
+<td valign="top">Schwebt immer auf und ab. (Sieht nur gut aus bei
+dunklem Hintergrund.)<br>
+T&ouml;tbar (1 Treffer)<br></td>
+</tr>
+<tr>
+<td valign="top">0A Buzzsaw<br></td>
+<td align="center" valign="top">n/a<br></td>
+<td align="right" valign="top">500<br></td>
+<td valign="top">Ein Kreiss&auml;genblatt, da&szlig; diagonal
+durchs Bild fliegt.<br>
+Nicht zu t&ouml;ten<br></td>
+</tr>
+<tr>
+<td valign="top">0B Buzzsaw V<br></td>
+<td align="center" valign="top">n/a<br></td>
+<td align="right" valign="top">500<br></td>
+<td valign="top">Wie 0A, aber bewegt sich nur vertikal.<br></td>
+</tr>
+<tr>
+<td valign="top">0C Jelyfish1<br></td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 48px; height: 42px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/S%2002%20Auge.png"></td>
+<td align="right" valign="top">50<br></td>
+<td valign="top">Das aus Giana-Sisters II bekannte Auge, nur als
+Unter-Wasser-Gegner, weil's sowieso eher wie 'ne Qualle
+aussieht.<br>
+Waagerecht schwimmend/fliegend<br>
+T&ouml;tbar (1 Treffer)</td>
+</tr>
+<tr>
+<td valign="top">0D Jelyfish2<br></td>
+<td align="center" valign="top">wie 0C in hellgr&uuml;n<br></td>
+<td align="right" valign="top">80<br></td>
+<td valign="top">Diagonal schwimmend (nur ins Wasser setzen)<br>
+T&ouml;tbar (1 Treffer)</td>
+</tr>
+<tr>
+<td valign="top">0E Movpeak B<br></td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 50px; height: 49px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2029%20Spitze.png"></td>
+<td align="right" valign="top">500<br></td>
+<td valign="top">Sollte man <b>auf</b> (z.B.) eine Mauer setzen.
+Dann schiebt sich die Spitze immerwieder erst in die Mauer und
+zur&uuml;ck nach oben.<br>
+Zerst&ouml;rbar durch 100 Sch&uuml;sse<br></td>
+</tr>
+<tr>
+<td valign="top">0F Movpeak T<br></td>
+<td class="i" bgcolor="#000000"><img style=
+"width: 50px; height: 49px;" alt="" src=
+"Giana-CSet-Instruction%28Anleitung%29%20-%20GRAFIX%28BILDER%29/T%2035%20Spitze%20u.png"></td>
+<td align="right" valign="top">500<br></td>
+<td valign="top">Wie 0E, aber verschwindet in der Decke anstatt im
+Boden. Muss im Gegensatz dazu <b>in</b> die Mauer gesetzt werden,
+aus der sie herausf&auml;hrt.<br></td>
+</tr>
+<tr>
+<td valign="top">10 - 15<br></td>
+<td valign="top"><br></td>
+<td valign="top"><br></td>
+<td valign="top">Alte Gegner aus Giana-Sisters I<br></td>
+</tr>
+<tr>
+<td valign="top">16 - 1A<br></td>
+<td valign="top"><br></td>
+<td valign="top"><br></td>
+<td valign="top">Alte Gegner aus Giana-Sisters II</td>
+</tr>
+<tr>
+<td valign="top">1B GX Elfant<br></td>
+<td align="center" valign="top">n/a<br></td>
+<td align="right" valign="top">-<br></td>
+<td valign="top">Bonus-Sprite: Der Elefant aus dem ersten
+Giana-Sisters-Construction-Kit von Sandy/Professor Knibble, bzw.
+den daraus entstandenen Hacks.<br>
+Allerdings als Fahrstuhl konzipiert, d.h. Giana kann sich von
+diesem tragen lassen.<br></td>
+</tr>
+<tr>
+<td valign="top">1F Chopliftr<br></td>
+<td align="center" valign="top">n/a<br></td>
+<td align="right" valign="top">500<br></td>
+<td valign="top">Bonus-Gegner<br>
+Zu t&ouml;ten durch 7 Sch&uuml;sse<br></td>
+</tr>
+<tr>
+<td valign="top">1C - 1E<br>
+20 - FF<br></td>
+<td valign="top"><br></td>
+<td valign="top"><br></td>
+<td valign="top">nicht belegt<br></td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr class="line">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h2><a name="Set_Startpoints" id="Set_Startpoints"></a>Set
+Startpoints :</h2>
+<br>
+Hier setzt man Gianas Startposition am Anfang und in der Mitte der
+Stage fest.<br>
+Hat man diesen Punkt ausgew&auml;hlt erscheint Giana und Ihr
+k&ouml;nnt sie mit dem Joystick auf die gew&uuml;nschte Position
+setzen. Dann FEUER dr&uuml;cken und das gleiche f&uuml;r die 2.
+Startposition in der Mitte der Stage.<br>
+<br>
+Die X-Position sollte zwischen 17 und 9A liegen, damit es nicht zu
+Problemen kommt. Y-Position ist egal.<br>
+<span class="n">Die X-Position l&auml;sst sich pixelweise
+einstellen, die Y-Position charakterweise (8 Pixel-Schritte) (Weil
+sie ja auf einem Character stehen soll und nicht halb drin)<br>
+Zum Gl&uuml;ck kann man Giana nicht zu hoch oder zu niedrig (so das
+sie sofort abst&uuml;rtzt) setzen, wohl aber zu weit nach links.
+(bei X-Pos unter 0F h&auml;ngt sie im linken Bildschirmrand fest.
+Am besten mindestens 17 einstellen.) Man sollte sie auch nicht zu
+weit nach rechts setzen (X-Pos &gt; FA = Fehler). Au&szlig;erdem
+f&auml;ngt der Bildschirm normalerweise bei X-Pos &gt; 9A an zu
+scrollen, was bedeutet das w&auml;hrend man nach rechts geht der
+Bildschirm zu sp&auml;t scrollt und man nach rechts nicht soviel
+vom Level sieht. Das normalisiert sich zwar wenn man einmal weit
+genug nach links gegangen ist, bringt aber nur Probleme. So wie in
+Stage 1 bei Giana II : Hier ist der Startpunkt auch zu weit rechts:
+Wenn man einmal hin und her gegangen ist, ist der linke
+Bildschirmrand schon rausgescrollt, wo auch der einzige Ausweg war,
+und man hat sich eingesperrt.</span><br>
+<br>
+Leider werden alle anderen Sprites in der Stage ausgeblendet, wenn
+man Giana's Startposition setzt. Deswegen m&uuml;sst Ihr aufpassen,
+das Ihr sie nicht aus Versehen auf ein Monster setzt, aber das
+merkt Ihr sp&auml;testens, wenn Ihr die Stage testet. Besonders
+st&ouml;rend ist das, wenn man Giana auf einem Fahrstuhl platzieren
+m&ouml;chte. In dem Fall mu&szlig; man sich einfach die Position
+des Fahrstuhls merken und evtl. 'n bi&szlig;chen rumprobieren.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr class="line">
+<br>
+<br>
+<br>
+<br>
+<h2><a name="Play_Stage" id="Play_Stage"></a>Play Stage :</h2>
+<br>
+Habt Ihr genug Zeug in eure Stage gebaut auf dem Giana rumlaufen
+kann oder schon eine richtig fiese Stage zusammengebastelt und
+wollt wissen ob Ihr sie auch schafft ?<br>
+Dann k&ouml;nnt Ihr hier die Stage testspielen. Alles verh&auml;lt
+sich hier wie im richtigen Spiel (abgesehen von kleinen <a style=
+"color: rgb(51, 102, 255);" href=
+"#Unterschiede_zwischen_Play_Stage_und">Ausnahmen</a>).<br>
+&nbsp;<br>
+Um diesen Modus wieder verlassen zu k&ouml;nnen und f&uuml;r etwas
+Hilfe beim testen ben&ouml;tigt Ihr folgende Tasten :<br>
+<br>
+<h4><a name="HotKeys_PlayStage" id="HotKeys_PlayStage"></a>Hot-Keys
+f&uuml;r "Play Stage":</h4>
+<table style="text-align: left; width: 100%;" border="1"
+cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="font-weight: bold; text-align: center;">"Restore"</td>
+<td><span style="font-weight: bold;">Zur&uuml;ck zum Main
+Menu.</span> <span class="n">(im WinVice: Restore = Bild
+hoch)<br></span></td>
+</tr>
+<tr>
+<td style="font-weight: bold; text-align: center;">"Return"</td>
+<td><span style="font-weight: bold;">Stage beenden und von vorne
+spielen.</span></td>
+</tr>
+<tr>
+<td style="font-weight: bold; text-align: center;">"F3"</td>
+<td><span style="font-weight: bold;">Erh&ouml;ht das
+Extra.</span><br>
+Wenn man noch kein Extra hat und einmal "F3" dr&uuml;ckt sollte man
+zur Punkerin werden. Das passiert aber nicht, was nicht
+hei&szlig;t, das man das Extra nicht hat. Nur das Aussehen
+&auml;ndert sich nicht. <small>(Das Programm zum &Auml;ndern des
+Aussehens wird erst aufgerufen, wenn man ein echtes Extra
+einsammelt, oder die Stage schafft.)</small></td>
+</tr>
+<tr>
+<td style="font-weight: bold; text-align: center;">"T"</td>
+<td><span style="font-weight: bold;">Stage als Schatzkammer
+spielen.</span><br>
+Wenn Ihr eine Schatzkammer anstatt einer normalen Stage gebaut habt
+und diese auch spielen wollt wie eine Schatzkammer einfach nach dem
+Start der Stage "T" dr&uuml;cken.<br>
+Leider k&ouml;nnt Ihr die Stage nur einmal als Schatzkammer
+spielen, weil sie so im Speicher bleibt, wie Ihr sie verlassen
+habt. D.h. es fehlen beim 2. Mal spielen Diamanten und
+&auml;hnliches. In dem Fall einfach "Restore" dr&uuml;cken und
+wieder "Play Stage" w&auml;hlen.</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<br>
+<h4><a name="Unterschiede_zwischen_Play_Stage_und" id=
+"Unterschiede_zwischen_Play_Stage_und"></a> Unterschiede zwischen
+"Play Stage" und fertigem Spiel :</h4>
+<big>1.</big> Die Sprite-Kollisionsabfrage ist im Construction-Kit
+h&auml;rter als im Spiel. W&auml;hrend man im Spiel die Monster
+leicht ber&uuml;hren darf , ist die Kollision hier pixelgenau.
+<span class="n">(Leider stirbt man manchmal auch, bevor man einen
+Gegner ber&uuml;hrt. Das kann passieren, wenn sich irgendwo im Bild
+Sprites &uuml;berschneiden.)<br>
+Man sollte allerdings auch keine Stage bauen, die man nur schaffen
+kann, weil man ein paar Pixel mehr Platz hat. Von daher ist dies
+ein guter Test und man kann jede Stage die man hier schafft auch im
+Spiel schaffen. (Vor allem ist die Kollision aber deswegen
+h&auml;rter, weil das bei Giana I auch noch so war, und Ich ein
+paar unwichtige Programmteile aus Giana II noch nicht ins
+Construction-Kit &uuml;bernommen habe, wie auch den n&auml;chsten
+Punkt.)</span><br>
+<br>
+<big>2.</big> Wenn man die Bombe als Extra hat, und mit "Space"
+aktiviert, kann man damit nur Monster t&ouml;ten die nur einen
+Treffer aushalten (wie in Giana I).<br>
+In Giana II und in selbstgebauten Spielen kann man aber alle
+Monster (au&szlig;er Endmonster) damit umbringen, also auch
+B&auml;lle, W&uuml;rmer, etc.<br>
+<span class="e">Als Endmonster gelten alle, die mehr als 4
+Sch&uuml;sse aushalten, aber nicht unsterblich sind.</span><br>
+<br>
+<a name="Fahrstuhlbug" id="Fahrstuhlbug"></a><big>3.</big>
+Fahrstuhlbug: Im C-Kit funktioniert der Ausgangsfahrstuhl (Nr.16)
+oft nicht richtig. Es kann schon passieren, das der Fahrstuhl
+stirbt, wenn man draufspringt, man selbst bei Ber&uuml;hrung stirbt
+oder Sprites des Fahrstuhls fehlen.<br>
+Beim testspielen der Stage st&ouml;rt das aber nur wenig. Wenn man
+hier einen Ausgang ben&ouml;tigt kann man auch "Return"
+dr&uuml;cken.<br>
+Im Spiel funktioniert alles normal.<br>
+<br>
+<big>4.</big> Wenn Giana Punkerin ist und fliegt oder schwimmt
+sieht sie nicht so aus, obwohl sie die F&auml;higkeiten immer noch
+hat. Das war bei Giana II zwar auch so, wurde jetzt aber
+verbessert, so da&szlig; man im Spiel immer das richtige Aussehen
+hat.<br>
+<br>
+<big>5</big>. Wenn man im C-Kit eine Schatzkammer betritt,
+erscheint nur der erste Bildschirm der Stage siehe <a href=
+"#Schatzk">Objekt Nr. 17 Schatzkammereingang.</a><br>
+<br>
+<span class="n">P.S.: Solltet Ihr Euch fragen, warum Objekte wie
+Diamanten, Bonusbl&ouml;cke, Feuer u.s.w. hier im Gegensatz zum
+Spiel nicht animiert sind, oder warum man keinen Sound und keine
+Musik h&ouml;rt, hat das einen einfachen Grund:
+Speicherplatzmangel!<br></span><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr class="line">
+<br>
+<br>
+<br>
+<br>
+<h2><a name="Load_Menu" id="Load_Menu"></a>Load Menu :</h2>
+<br>
+W&auml;hlt man dieses erscheint zun&auml;chst ein Untermen&uuml;
+mit folgenden Punkten:<br>
+&nbsp;<br>
+<h4><a name="Directory_and" id="Directory_and"></a>Directory and
+load from Directory:</h4>
+Der wichtigste Punkt, denn hier kann man Stages sowie <a href=
+"#32_Nachlademonster">Nachlademonster</a> direkt aus der Directory
+ausw&auml;hlen und laden.<br>
+Hat man diesen gew&auml;hlt dauert es zun&auml;chst ein wenig, bis
+die Directory geladen ist. Bis dahin wird ein falsches Bild
+angezeigt, lasst Euch davon nicht irritieren, das Programm hat sich
+nicht aufgehangen und nach einiger Zeit erscheint die Directory auf
+dem Bildschirm.<br>
+Jetzt kann man mit dem Joystick die Datei aussuchen, den man als
+Stage in den Speicher laden m&ouml;chte, oder man w&auml;hlt eine
+Datei mit der Endung ".NLM" oder ".SPR" wenn man keine Stage
+sondern ein <a href="#32_Nachlademonster">Nachlademonster</a> laden
+m&ouml;chte. (In dem Fall bleibt die Stage nat&uuml;rlich im
+Speicher wie sie war.)<br>
+<span class="e">Es kann &uuml;brigens nicht passieren, das man
+versehentlich eine zu gro&szlig;e Datei ausw&auml;hlt, die wenn sie
+in den Speicher geladen wird wichtige Daten &uuml;berschreibt und
+das Programm zum Ausstieg bringt. Zu gro&szlig;e Dateien werden
+erkannt und das Programm kehrt zum Main Menu zur&uuml;ck. Auch wenn
+man eine Datei l&auml;dt, die garkeine Stage-Daten enth&auml;lt,
+hat das selten einen Ausstieg zur Folge <span class="n">(dann sieht
+die Stage aber wahrscheinlich komisch aus)</span>.</span><br>
+Wenn man nichts laden m&ouml;chte, sondern nur die Directory
+ansehen, kann man mit "Space" wieder zum Main Menu
+zur&uuml;ckkehren.<br>
+<br>
+Es ist unter diesem (und dem nächsten) Punkt auch möglich Stages zu
+ laden, die mit dem alten C-Kit von Sandy/Prof. Knibble erstellt 
+wuden, sowie Stages von der Giana-Sisters 2-"New Wave"-Version.
+<br>
+<span class="n">Achtung: Solche Stages müssen evtl. etwas 
+angepasst werden, z.B. weil voher keine Monster im 2. Startbild 
+aufgetaucht sind.<br>
+Die Stages von unserem (The 7A3) Giana II kann man aus technischen 
+Gründen leider nicht laden.</span><br>
+<br>
+<br>
+<h4><a name="Load_Stage" id="Load_Stage"></a>Load Stage:</h4>
+Hier kann man eine Stage in den Speicher laden indem man den
+Datei-Namen &uuml;ber die Tastatur eingibt.<br>
+Abbruch mit Run/Stop<span class="n">.(Im Emulator: Run/Stop =
+Esc)<br>
+Da Stages, die mit dem C-Set gespeichert wurden standardm&auml;ssig 
+16 Zeichen lang sind, sind die Namen, die man hier eingibt auch 
+immer 16 Zeichen lang. (Auch wenn am Ende Leerzeichen stehen)<br>
+Wenn man hier aus irgendeinem Grund Stages laden m&ouml;chte, dessen 
+Dateiname weniger als 16 Zeichen lang ist muss man nach dem Namen 
+ein "*" eingeben. (z.B. bei anderem Format)</span><br>
+<br>
+<br>
+<h4><a name="Load_Load_Monster_or_Sprite" id=
+"Load_Load_Monster_or_Sprite"></a>Load Load-Monster or Sprite:</h4>
+Hier wird ein <a href="#32_Nachlademonster">Nachlademonster</a> in
+den Speicher geladen indem man den Datei-Namen &uuml;ber Tastatur
+eingibt.<br>
+Abbruch mit Run/Stop. <span class="n">"(Im Emulator: Run/Stop =
+Esc)</span><br>
+<span class="e">Tipp: Wenn man den Datei-Namen nicht genau
+wei&szlig;, wohl aber die Nr. des Nachlademonster, kann man z.B.
+"01??????????.NML" eingeben um das Nachlademonster mit der Nr.01 zu
+laden, da jedes Nachlademonster eine andere Nr. haben mu&szlig;, um
+vom Programm identifiziert werden zu k&ouml;nnen.</span><br>
+<br>
+<br>
+<h4>Load V2-Stage:</h4>
+Wird nicht ben&ouml;tigt! <span class="n">[Es sei denn jemand von
+Euch sollte tats&auml;chlich die vorherige Version 2 des
+Construction-Kits haben. Dann k&ouml;nnen hier alte Stages (,die
+ein etwas anderes Format haben als die neuen) in den Speicher
+geladen werden.]<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br></span>
+<hr class="line">
+<br>
+<br>
+<br>
+<br>
+<br>
+<h2><a name="Save_Stage" id="Save_Stage"></a>Save Stage:</h2>
+<br>
+Bevor man die Stage speichern kann mu&szlig; man noch
+ausw&auml;hlen, ob man mittels<br>
+"Save Stage" die Stage mit neuem Datei-Namen speichern will oder
+mit<br>
+"Overwrite Stage" eine Stage mit bereits existierendem Datei-Namen
+&uuml;berschreibt.<br>
+<br>
+Danach gibt man den Datei-Namen mittels Tastatur ein und
+dr&uuml;ckt "Return" um zu speichern oder "Run/Stop" um den Vorgang
+abzubrechen.<span class="n">(Im Emulator: Run/Stop =
+Esc)</span><br>
+Die ersten beiden Zeichen sowie die Endung ".STG" sind schon
+vorgegeben. Die Endung MUSS so bleiben damit das Spiel sp&auml;ter
+die Datei als Stage identifizieren und laden kann. Die ersten
+beiden Zeichen bekommen sp&auml;ter die Nummer der Stage, ist
+f&uuml;rs C-Kit aber unerheblich. Mehr dazu, wie man Stages zu
+einem Spiel zusammenf&uuml;gt beim Abschnitt <a href=
+"#Der_Game_Maker">Game-Maker</a>.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr class="line">
+<br>
+<br>
+<br>
+<br>
+<h2><a name="Options" id="Options"></a>Options:</h2>
+<br>
+Hier werden die Eigenschaften der Stage, wie Farben, Wolken, Musik,
+Zeitlimit, Nachlademonster und Warps eingestellt.<br>
+Hat man diesen Punkt gew&auml;hlt werden all diese Eigenschaften
+&uuml;bereinander aufgelistet.<br>
+Um eine davon zu &auml;ndern bewegt man sich mit dem Joystick
+darauf und dr&uuml;ckt FEUER. Dann kann man mit Joystick
+links/rechts (bzw. Oben/Unten) diese Zahl &auml;ndern und
+dr&uuml;ckt wieder FEUER.<br>
+<br>
+Erkl&auml;rung:&nbsp;&nbsp; (Einige der Werte sind Dezimalzahlen,
+andere hexadezimal: siehe rechte Spalte)<br>
+<table style="text-align: left; width: 100%;" border="1"
+cellpadding="2" cellspacing="2">
+<tbody style="vertical-align: top;">
+<tr>
+<td>Music</td>
+<td>Die Werte, die man hier einstellen kann entsprechen folgender
+Musik:<br>
+<table style=
+"text-align: left; margin-left: auto; margin-right: auto; width: 100%;"
+border="1" cellpadding="2">
+<tbody>
+<tr>
+<td>0</td>
+<td>HiScore-Musik</td>
+</tr>
+<tr>
+<td>1</td>
+<td>normale Musik (wie in Giana I+II z.B. in Stage 1)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Musik f&uuml;r Stages mit Endmonster (wie in Giana I+II z.B. in
+Stage 4)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Titelmusik (komplett) (Die Titelmusik hat beim Spielen leider 1
+Stimme weniger als im Titel, weil diese f&uuml;r den Sound
+ben&ouml;tigt wird)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Titelmusik (nur 2. Teil) (passt besser zum Spiel, da die
+fehlende Stimme hier nicht so ins Gewicht f&auml;llt)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Friedhofsmusik (wie in Giana II z.B. in Stage 17) (passt gut zu
+fiesen Dungeon-Stages)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>keine Musik</td>
+</tr>
+</tbody>
+</table>
+Die Musik wird nat&uuml;rlich erst relevant, wenn die Stage in ein
+Spiel eingef&uuml;gt wird, da im C-Kit keine Musik ist <small>(zu
+wenig RAM daf&uuml;r)</small>.</td>
+<td>&nbsp;0-5;8</td>
+</tr>
+<tr>
+<td>Backgroundcolour</td>
+<td>Hintergrundfarbe [Ist meistens schwarz (0) (in Dungeons) oder
+hellblau (E) (drau&szlig;en). Manchmal passen auch andere
+Farben.]</td>
+<td>hex</td>
+</tr>
+<tr>
+<td>Multicolour 1</td>
+<td colspan="1" rowspan="2">Multicolours f&uuml;r die unbeweglichen
+Objekte. <small>Die einstellbaren Farbwerte entsprechen den
+64er-typischen Werten, die man z.B. mit Poke 53281,[Nr. der Farbe
+(0-15)] in den Hintergrund schreiben kann. (Gilt auch f&uuml;r
+Backgroundcolour)</small><br>
+Damit es gut aussieht sollte man darauf achten, da&szlig;
+Multicolour1 heller ist als Multicolour2.<br>
+<br></td>
+<td>hex</td>
+</tr>
+<tr>
+<td>Multicolour 2</td>
+<td>hex</td>
+</tr>
+<tr>
+<td>Diamondcolour</td>
+<td>Hier kann man 7 verschiedene Farbkombinationen f&uuml;r die
+Diamanten einstellen. <small>(Am Besten Ausprobieren wie es
+aussieht.)</small><br>
+Es gibt auch noch 2 Spezialf&auml;lle: Wenn der Wert 8 ist sind die
+Diamanten komplett dunkelblau. In einer Stage mit dunkelblauem
+Hintergrund <small>(Backgroundcolour = 6)</small> w&auml;ren die
+Diamanten dann unsichtbar. <small>(Und daf&uuml;r ist diese
+Einstellung gedacht.)</small> Ist der Wert 9 gilt das gleiche bei
+schwarzer Farbe.</td>
+<td>1-9</td>
+</tr>
+<tr>
+<td>Time</td>
+<td>Das Einstellen der Zeit funktioniert etwas anders als die
+anderen Werte:<br>
+Bewegt man den Joystick links/rechts blinkt eine andere der 4
+Ziffern.<br>
+Bewegt man den Joystick nach oben/unten &auml;ndert sich die
+blinkende Ziffer.</td>
+<td>dez</td>
+</tr>
+<tr>
+<td>Warps</td>
+<td>Joystick rechts/links = +/- 1 , Joystick oben/unten = +/-
+16<br>
+Falls ein Warp (Objekt Nr.34) in der Stage ist stellt man hier ein
+wieviele Stages man vorw&auml;rts (oder evtl. r&uuml;ckw&auml;rts)
+gewarpt wird.<br>
+Ein P (Plus) vor dem Wert bedeutet, da&szlig; man beim
+Ausl&ouml;sen des Warps die angegebene Zahl an Stages vorw&auml;rts
+gewarpt wird.<br>
+Bei M (Minus) vor dem Wert wird man dementsprechend
+r&uuml;ckw&auml;rts gewarpt. Dies wird aber nur ben&ouml;tigt, wenn
+man vor hat Geheim-Stages (Stages die nur &uuml;ber Warps erreicht
+und auch nur mit Warps wieder verlassen werden k&ouml;nnen) in sein
+Spiel einzubauen.<br>
+Auf keinen Fall darf es passieren, da&szlig; Stages mehr als einmal
+gespielt werden k&ouml;nnen. So k&ouml;nnte man ja unbegrenzt
+Punkte machen.<br>
+<small>Werte &uuml;ber 98 sind nat&uuml;rlich sinnlos, da ein Spiel
+aus max. 99 Stages besteht.</small></td>
+<td>dez</td>
+</tr>
+<tr>
+<td>Wolken</td>
+<td>Stellt man auf "Y" damit &uuml;ber der Stage Wolken sind. "N" =
+keine Wolken</td>
+<td>Y/N</td>
+</tr>
+<tr>
+<td>Nachlademonster</td>
+<td>(Joystick rechts/links = +/- 1 , Joystick oben/unten = +/-
+16)<br>
+Stellt man auf "NO", wenn kein <a href=
+"#32_Nachlademonster">Nachlademonster</a> in der Stage
+vorkommt.<br>
+Ansonsten stellt man hier die Nr. des Nachlademonsters ein, das
+f&uuml;r die Stage vorgesehen ist. Die Nr. entspricht den ersten
+beiden Zeichen des Datei-Namens des Nachlademonsters.</td>
+<td>hex</td>
+</tr>
+<tr>
+<td>Exit</td>
+<td>FEUER dr&uuml;cken = zur&uuml;ck zum Main Menu</td>
+<td><br></td>
+</tr>
+</tbody>
+</table>
+<big><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br></big>
+<hr class="line">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1><a name="Der_Game_Maker" id="Der_Game_Maker"></a>Der Game-Maker
+:</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+Wenn man genug Stages f&uuml;r ein Spiel zusammen hat, kann man
+diese zu einem kompletten Spiel zusammenf&uuml;gen.<br>
+Zun&auml;chst l&auml;dt man den Giana Game-Maker, der sich auf der
+Diskette unter dem Construction-Kit befinden sollte. Mit diesem
+wird eine Game-Datei generiert, die schon ein Titelbild und
+Schatzkammern enth&auml;lt. Alle Stages werden sp&auml;ter von
+dieser generierten Game-Datei nachgeladen (Mehr dazu
+sp&auml;ter).<br>
+<br>
+Bevor ich darauf eingehe, wie man die Game-Datei generiert
+<span class="n">(wof&uuml;r die meisten wahrscheinlich gar keine
+Anleitung brauchen)</span> erstmal <b>das wichtigste</b>:<br>
+Die Game-Datei mu&szlig; auf einer Diskette zusammen mit den
+f&uuml;r Euer Spiel ben&ouml;tigten Endmonstern und den Stages
+sein. Wieviele oder in welcher Reihenfolge die Stages kommen,
+mu&szlig; komfortablerweise nicht erst kompliziert mit dem
+Game-Maker eingestellt werden. Es m&uuml;ssen nur die Dateinamen
+der Stages richtig gew&auml;hlt werden:<br>
+Die Stages, die man mit dem C-Kit abgespeichert hat haben ja
+folgende Namen:
+"XX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .STG" Man
+mu&szlig; jetzt nur "XX" durch die Nr. der Stage ersetzten, die sie
+im Spiel bekommen soll. Die Nummerierung ist von "01" bis "99"
+m&ouml;glich. Die Endung ".STG" mu&szlig; auf jeden Fall bleiben.
+Dazwischen d&uuml;rfen beliebige Zeichen stehen. (Vielleicht
+m&ouml;chte man seinen Stages ja Namen geben, um sie besser
+auseinanderhalten zu k&ouml;nnen.)<br>
+<br>
+Nun zum Generieren der Game-Datei:<br>
+Sobald man den Game-Maker geladen und gestartet hat erscheint
+erstmal der Text "ENTER TEXT FOR TITLE-SCREEN". Der Text den Ihr
+hier eingebt, steht sp&auml;ter in der obersten Zeile des
+Titel-Bildes, z.B. der Name eures Spiels. <small>(Ein Standard-Text
+ist vorgegeben)</small><br>
+<br>
+Als n&auml;chstes erscheint die Meldung "INSERT YOUR STAGE-DISK AND
+PRESS FIRE IN PORT 2".<br>
+Auf der Diskette die man jetzt einlegt sollten die Schatzkammern
+sein, die man vorhat in sein Spiel einzubauen, sowie ein Titelbild
+<span class="n">(Das Titelbild ist die Stage, die nach Start des
+Spiels immer wieder durch den Bildschirm scrollt, w&auml;hren die
+Titelmusik zu h&ouml;ren ist. Also bevor man anf&auml;ngt zu
+spielen.)</span>, auf das man aber auch verzichten kann.
+<span class="n">(In dem Fall ist der Teil des Bildschirms in dem
+die Titel-Stage scrollt einfach schwarz.)<br></span> Auf der
+Construction-Set-Diskette sind &uuml;brigens alle Schatzkammern von
+Giana I + II <span class="n">(mit Endung ".TRA")</span>, die man in
+sein Spiel einbauen kann, falls man selber keine Ideen f&uuml;r
+Schatzkammern hat und die Titel-Stage von Giana I <span class=
+"n">(Filename: "TI GIANA I&nbsp; .STG")</span>.<br>
+Sobald Ihr die richtige Diskette eingelegt habt, dr&uuml;ckt Ihr
+FEUER auf dem Joystick in Port 2. Dann wird die Directory geladen.
+Das dauert einige Zeit, je nachdem wie gro&szlig; die Directory
+ist.<br>
+<br>
+Nachdem die Directory geladen ist erscheint sie auf dem Bildschirm
+und Ihr k&ouml;nnt mit Joystick oben/unten darin rumscrollen.<br>
+Unten im Bildschirm steht unter anderem die Meldung: "SELECT YOUR
+TITLESCREEN AND PRESS FIRE OR SPACE IF YOU WANT A BLACK SCREEN".
+Also bewegt ihr jetzt die Stage, die Ihr als Titel f&uuml;r euer
+Spiel wollt auf den wei&szlig;en Auswahl-Balken und dr&uuml;ckt
+FEUER, oder Ihr dr&uuml;ckt "Space", wenn Ihr keine Titel-Stage
+wollt.<br>
+<br>
+Als n&auml;chstes erscheint unten die Meldung: "SELECT TREASURIE TO
+LOAD OR PRESS SPACE WHEN YOU HAVE ENOUGH".<br>
+D.h. ihr k&ouml;nnt jetzt die erste Schatzkammer f&uuml;r euer
+Spiel ausw&auml;hlen und dr&uuml;ckt dann FEUER. Danach w&auml;hlt
+Ihr auf gleiche Weise die zweite, die dritte u.s.w.<br>
+Wenn Ihr genug Schatzkammern zusammen habt, dr&uuml;ckt "Space".
+Wie viele Schatzkammern Ihr schon habt, wird ganz unten rechts bei
+"NUMBER OF TREASURIES" angezeigt. (Eine Schatzkammer ist Minimum
+f&uuml;r ein Spiel, nach oben wird die Anzahl nur durch den
+Speicher begrenzt.)<br>
+<br>
+Danach verschwindet die Directory und Ihr m&uuml;sst noch einige
+Einstellungen bei den nun folgenden Eingabeaufforderungen
+vornehmen:<br>
+<ol>
+<li>"ENTER LAST STAGE POSSIBLE TO PLAY IN TRAINERMODE : " (eine
+2-stellige Zahl eingeben)<br>
+Hier stellt Ihr ein, welche die h&ouml;chste Stage eures Spiels
+sein soll, die man im Trainermodus (zum &Uuml;ben einer einzigen
+Stage) spielen kann.<br>
+<span class="n">(Wer nicht wei&szlig; was der Trainermodus ist,
+sollte sich folgendes durchlesen: Wenn Ihr ein Spiel eine Zeitlang
+gespielt habt und wieder neu anfangt, k&ouml;nnt Ihr bevor Ihr
+startet eine Stage ausw&auml;hlen, die Ihr mit unendlich Leben
+spielen wollt. Dabei k&ouml;nnt Ihr von Stage 1 bis zu der Stage,
+die Ihr im Spiel erreicht habt, jede Stage im Trainermodus
+anw&auml;hlen. D.h., da&szlig; man aber nur die ausgew&auml;hlte
+Stage immer wieder spielen und so &uuml;ben kann. Zum Beenden
+einfach "Restore" dr&uuml;cken, um zum Titelbild
+zur&uuml;ckzukehren.)</span><br>
+Die h&ouml;chste Stage, die man einstellen kann, sollte max. die
+zweitletzte Stage sein. Also die vor der Stage mit dem
+Riesendiamanten. Wenn man den Riesendiamanten im Trainermode
+einsammelt, wird das Spiel n&auml;mlich beendet und man k&ouml;nnte
+sich in die High-Score eintragen - mit einer nicht fair erspielten
+Punktzahl.</li>
+<li>"MAKE SOME STAGES SPECIAL ?" (Eingabe: "Y" oder "N")<br>
+Wenn man besondere Einstellungen (wie z.B. Auf Wolken laufen,
+andere Schatzkammereingangsfarbe, Ob der Drache Giana verfolgt oder
+&auml;hnliches) f&uuml;r bestimmte Stages vornehmen m&ouml;chte
+dr&uuml;ckt man "Y". Darauf kann man aber auch verzichten, in dem
+Fall "N" dr&uuml;cken und es geht weiter bei 3.<br>
+Bei den sonst folgenden Unterpunkten kann man diese Einstellungen
+vornehmen: (alle Eingaben sind 2-stellige Zahlen) <small>(Wenn man
+eine der Einstellungen nicht m&ouml;chte, kann man auch 00 f&uuml;r
+die Stage eingeben.)</small><br>
+<ol>
+<li>"LAVA INSTEAD OF WATER IN STAGE :"<br>
+Man gibt eine Stage ein, in der das Wasser rot anstatt blau
+dargestellt wird, und so wie Lava aussieht.</li>
+<li>"WHITE PEAKS I. STG :"<br>
+In der einzugebenden Stage sind die sonst roten Spitzen
+wei&szlig;.</li>
+<li>"WALK ON CLOUDS I. S."<br>
+Hier gibt man eine Stage an, in der Giana auf Wolken laufen kann.
+(siehe Giana II, Stage 33) Dabei sollten in einer solchen Stage
+keine Wolken &uuml;ber der Stage sein, da man auf diesen auch
+laufen k&ouml;nnte. Das w&uuml;rde einiges durcheinander bringen.
+(Also f&uuml;r so eine Stage im C-Kit Wolken auf "N" stellen.)</li>
+<li>"TREASURY-ENTRANCE AS STAGE-EXIT :"<br>
+Eine Stage eingeben, in der man durch den Schatzkammereingang
+(Objekt Nr.17) anstatt in eine Schatzkammer in die n&auml;chste
+Stage kommt. (Bsp.: Siehe Giana I, Stage 32 oder Giana II, Stage
+33)</li>
+<li>"DRAGON FOLLOWS :"<br>
+Hier gibt man die Stage an, in der der Drache (Sprite Nr.14) Giana
+nach links und rechts folgt (wie in Giana I, Stage 33 ; Giana II,
+Stage 39). Ein Drache mit dieser Einstellung vertr&auml;gt
+au&szlig;erdem ca. doppelt soviele Sch&uuml;sse wie sonst und hat
+eine etwas andere Farbe.</li>
+<li>"CYAN AS 3RD COLOR FOR DUNGEONWALL 99 :"<br>
+Hier kann man die dritte Multicolor der Dungeonmauer 99 in einer
+einzigen Stage auf t&uuml;rkis setzen, damit man sie mit kalten
+Farben wie z.B. Blau und hellblau als Multicolor 1+2 kombinieren
+kann. Normalerweise ist Multicolor 3 hier immer gelb.</li>
+<li>"DIFFERENT TREASURYENTR.COLOR I S :"<br>
+F&uuml;r eine bestimmte Stage die Schatzkammereingangsfarbe (Objekt
+Nr. 17, normal = blau) &auml;ndern. Gebt hier die Nr. der Stage
+ein.<br></li>
+<li>"COLOR :" Hier stellt man die Farbe des Schatzkammereingangs
+f&uuml;r die bei 7. angegebene Stage ein. Kann man z.B. auf 00
+(schwarz) setzen, damit sie in einer Stage mit schwarzem
+Hintergrund nicht zu sehen ist. (Sinnvoll sind nur Werte von 00 -
+07 .)<br></li>
+<li>"2ND STAGE DIFFERENT COLOR :"<br>
+Das gleiche wie bei 7. f&uuml;r eine zweite Stage.</li>
+<li>"COLOR :" Hier stellt man die Farbe des Schatzkammereingangs
+f&uuml;r die bei 9. angegebene Stage ein. <span class="n">Kann man
+auch auf 01 (wei&szlig;) setzen um den S.K.-Eingang auf Wasser zu
+verstecken.<br>
+<big>Anmerkung: Wenn man bei einer dieser Spezial-Abfragen
+"Shift"+"Clr/Home" dr&uuml;ckt f&auml;ngt man wieder bei der ersten
+an ("LAVA INSTEAD ...</big>" ) Ist f&uuml;r den Fall, da&szlig; man
+einen Fehler gemacht hat.<br></span></li>
+</ol>
+</li>
+<li>REPLACE BIRD WITH BEE ? (Y/N)"<br>
+Wenn Ihr anstatt dem Vogel lieber die h&auml;ssliche Biene aus
+Gian-Sisters I als Grafik wollt, dr&uuml;ckt "Y". <small>(Die
+Eigenschaften des Gegners bleiben gleich.)<br>
+<big>Anmerkung: Bis zu diesem Punkt kann man, falls eine Eingabe
+falsch war "Shift"+"Clr/Home" dr&uuml;cken, um wieder mit Punkt 1
+(Trainermode) zu beginnen. <small>(Nach dieser Eingabe ist das
+nicht mehr m&ouml;glich, dann mu&szlig; man den Game-Maker neu
+laden.)</small></big><br></small></li>
+<li>"MAKE A TRAINERVERSION ? (Y/N)"<br>
+Hier dr&uuml;ckt Ihr "Y", wenn man bei Eurem selbstgebauten Spiel
+auch cheaten darf.<br>
+High-Scores werden aber zum Gl&uuml;ck nicht gespeichert, wenn
+jemand den Cheat benutzt.</li>
+<li>"PRE-CRUNCH PROGRAM ?" ....."(Y/N)"<br>
+Hier k&ouml;nnt Ihr angeben, ob das Spiel, welches Ihr durch die
+bisherigen Eingaben generiert habt, schon komprimiert werden soll,
+bevor es gespeichert wird.<br>
+WICHTIG: Es MUSS komprimiert werden, wenn man kein Modul oder ein
+Modul, das den RAM-Speicher von $D000 - $FFFF nicht speichern kann,
+benutzt.<br>
+Mit einem Action-Replay z.B. kann man ruhig "N" dr&uuml;cken.<br>
+Aber egal, wie Ihr Euch entscheidet: Es kann sp&auml;ter mit einem
+normalen Pack-Programm weiter komprimiert werden. <span class=
+"n">(Der Packer, der hier verwendet wird ist etwas
+primitiv)</span></li>
+</ol>
+<br>
+Damit sind alle notwendigen Einstellungen getan und Ihr werdet als
+n&auml;chstes aufgefordert einen Datei-Namen f&uuml;r Euer Spiel
+einzugeben.<br>
+Habt Ihr das getan, wird noch einmal von der
+Construction-Set-Diskette nachgeladen, und als n&auml;chstes
+erscheint die Meldung :<br>
+"INSERT SAVE-DISK AND PRESS FIRE".<br>
+Also legt Ihr jetzt die Diskette ein, auf der Ihr euer Spiel
+speichern wollt <span class="n">(darauf sollten mindestens 190
+Blocks frei sein, wenn Ihr nicht gepackt habt 250)</span> und
+dr&uuml;ckt FEUER.<br>
+Jetzt wird das Spiel gespeichert (evtl. vorher noch komprimiert)
+und das Programm beendet.<br>
+<br>
+Das war's. Ihr habt damit Euer eigenes Giana-Spiel. Viel Spa&szlig;
+beim Spielen, bzw. beim Zugucken, wie sich andere die Z&auml;hne an
+Eurem Spiel ausbeissen! <span class="n">(Man sollte nat&uuml;rlich
+schon in der Lage sein, sein eigenes Spiel zu schaffen.)</span><br>
+<br>
+<br>
+P.S: Unter den Game-Maker-Dateien befindet sich noch die Datei
+"HI!". Diese enth&auml;lt eine High-Score-Tabelle mit
+vor-eingestellten Punktzahlen, damit man nicht schon mit 50 Punkten
+in die High-Score kommt.<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Diese kann man mit auf seine
+Spiel-Diskette kopieren, muss man aber nicht. In letzterem Fall ist
+die obere Highscore-Tabelle leer (also alles 0 Punkte). Es wird
+dann eine neue "HI!"-Datei gespeichert, sobald sich jemand das
+erste Mal eingetragen hat und "F1" f&uuml;r Speichern
+dr&uuml;ckt.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr class="line">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="e">
+<h2><a name="Das_Programm:" id="Das_Programm:"></a>Das
+Programm:</h2>
+<br>
+<br>
+<br>
+<br>
+<br>
+Der folgende Abschnitt richtet sich an Fortgeschrittene und
+Programmierer, denen die M&ouml;glichkeiten des Construction-Sets
+nicht ausreichen.<br>
+Zuerst das Einfachste: Es wird beschrieben, wie man eigene
+Nachlademonster konstruiert. Dazu braucht man nur ein paar Bytes
+einzugeben und ben&ouml;tigt passende Spritegrafiken f&uuml;r das
+Monster.<br>
+Sp&auml;ter gehe ich dann noch grob auf den Programm- und
+Speicheraufbau der Game-Datei ein, um Euch einen Anhaltspunkt zu
+geben, wo Ihr Daten und Programmteile findet, die Ihr vielleicht
+ver&auml;ndern wollt.<br>
+<br>
+<br>
+<br>
+<br>
+<h3><a name="Nachlademonster_kreieren" id=
+"Nachlademonster_kreieren"></a>Nachlademonster kreieren:</h3>
+<br>
+<br>
+Um ein neues Nachlademonster zu kreieren m&uuml;&szlig;t Ihr zum
+einen eine Datei erstellen, welche die Spritegrafiken enth&auml;lt
+(maximal 12 Sprites). Der Dateiname mu&szlig; mit der
+gew&uuml;nschten Nr. des Nachlademonsters beginnen und mit ".SPR"
+enden.<br>
+<br>
+Zweitens und letztens m&uuml;&szlig;t Ihr eine Datei mit der
+gleichen Nr. und der Endung ".NLM" erstellen, welche die
+Eigenschaften des Monsters enthalten. Dies sind nur 21 Bytes. (Bei
+Monstern mit vorgegebenem Weg mehr, aber dazu sp&auml;ter.)<br>
+<br>
+Diese haben die folgende Bedeutung: <span class="n">(Die Bytes sind
+nummeriert, alle Werte hexadezimal)</span><br>
+<br>
+<span style="color: rgb(102, 0, 0);">Empfehlung: Da diese Daten
+recht kompliziert aufgebaut sind und einige Bytes oder Werte
+mehrere Bedeutungen haben, rate ich Euch die Sprite-Daten der
+anderen Monster und Sprites anzuschauen. So k&ouml;nnt Ihr euch
+Daten von Sprites, dessen Eigenschaften Ihr kennt, anschauen, mit
+dieser Tabelle vergleichen und so besser verstehen.</span><br>
+<br>
+<table class="e" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr class="i">
+<td>00</td>
+<td>01</td>
+<td>02</td>
+<td>03</td>
+<td>04</td>
+<td>05</td>
+<td>06</td>
+<td>07</td>
+</tr>
+<tr class="i">
+<td>Nr. des Sprites, der zuerst im Bildschirm erscheint.<br>
+(normalerweise der gleiche Wert wie bei Byte 06)<br></td>
+<td>Bit 7 = 1: Animationsphase vor und zur&uuml;ck<br>
+Bit 7 = 0: Animation l&auml;uft von vorne nach hinten durch und
+beginnt wieder mit dem 1. Sprite<br>
+Bit 6 = 1: Sprite kann nicht nach oben aus Wasser<br>
+Bit 1 = 1 Sprite ist hinter Character-Grafik<br>
+Bit 0 = 1: Single-Color<br></td>
+<td>Farbe des Sprites<br>
+<br>
+Bit 7 = 1: Sprite blinkt<br>
+<br></td>
+<td style="text-align: left;">Bewegung:<br>
+00 = normal<br>
+01 = springen/vertikal<br>
+02 = vorgegebener Weg<br>
+03 = Spezial-Prg. (Drache, Exitfahrstuhl)<br>
+04 = Riesendiamant<br></td>
+<td>Animationsphase:<br>
+1. Sprite-Nr. bei Bewegung nach rechts<br>
+<a href="#Animationsphaseninstuktion"><big style=
+"color: rgb(0, 153, 0);">*</big></a><br>
+<br></td>
+<td>Animationsphase:<br>
+letzte Sprite-Nr. bei Bewegung nach rechts<br>
+<a href="#Animationsphaseninstuktion"><big style=
+"color: rgb(0, 153, 0);">*</big></a><br>
+<br></td>
+<td>Animationsphase:<br>
+1. Sprite-Nr. bei Bewegung nach links<br>
+<a href="#Animationsphaseninstuktion"><big style=
+"color: rgb(0, 153, 0);">*</big></a><br>
+<br></td>
+<td>Animationsphase:<br>
+letzte Sprite-Nr. bei Bewegung nach links<br>
+<a href="#Animationsphaseninstuktion"><big style=
+"color: rgb(0, 153, 0);">*</big></a><br></td>
+</tr>
+<tr class="i">
+<td>08</td>
+<td>09</td>
+<td>0A</td>
+<td>0B</td>
+<td>0C</td>
+<td>0D</td>
+<td>0E</td>
+<td>0F</td>
+</tr>
+<tr class="i">
+<td>Wert f&uuml;r Treffer-Punkte:<br>
+<div style="text-align: left;">-x&nbsp; = x+1 Treffer<br>
+00 = 1 Treffer<br>
+01 = nicht zu t&ouml;ten<br>
+02 = Extra (z.B. Ball)<br>
+12 = aktiviertes Extra (z.B. Schatztruhe)<br>
+7F = Fahrstuhl<br></div>
+<br>
+<br></td>
+<td>Punkte (Low-Byte) (BCD-Wert)<br>
+(00-99)<br>
+<br></td>
+<td>Y-Speed (Bit 7 = 1: verfolgend)<br>
+<br>
+oder<br>
+<br>
+Pointer auf vorgegebenen Weg<br>
+(Low-Byte)<br>
+<br></td>
+<td>Sprungh&ouml;he<br>
+<small>(bei linearer vertikaler<br>
+Bewegung = 0 )</small><br>
+<br>
+oder<br>
+<br>
+Pointer auf vorgegebenen Weg (High-Byte)<br>
+<br></td>
+<td>&nbsp;Sprite-Nr.<br>
+totes Sprite<br>
+rechts<br>
+<br></td>
+<td>Sprite-Nr.<br>
+totes Sprite<br>
+links<br>
+<br></td>
+<td>X-Speed (Bit 7 = 1: verfolgend)<br>
+<br></td>
+<td>Animations-<br>
+geschwindigkeit<br>
+<br></td>
+</tr>
+<tr class="i">
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+<td><br></td>
+<td><br></td>
+<td><br></td>
+</tr>
+<tr class="i">
+<td style="text-align: left;">Bewegung:<br>
+00 = normal<br>
+01 = geht nicht von Plattformen oder bewegt sich vertikal<br>
+02 = fliegend oder Sprung ohne Kollision mit Hintergrund<br>
+<br>
+(Bei vorgegebenem Weg ist dieser Wert irrelevant)<br>
+<br></td>
+<td>00 = normal (Sprite verschwindet nach links oder rechts aus dem
+Bildschirm)<br>
+<br>
+01 - 7F = bleibt im Bildschirm (dreht an linkem oder rechtem Rand
+um)<br>
+<br>
+80 - FF = kommt nach Verlassen des Bildschirms wieder<br>
+<br></td>
+<td>Punkte (High-Byte) (BCD-Wert)<br>
+(00-99)<br>
+<br></td>
+<td>Anzahl der Sprites -1 aus denen das Monster besteht<br>
+(00=1,...,03=4 Sprites)<br>
+(03 ist Maximum)<br>
+<br></td>
+<td>Anzahl der Sprites -1 &uuml;bereinander<br>
+<small>(Da das Programm hierf&uuml;r leider<br>
+noch nicht ausgereift ist,<br>
+&nbsp;funktionieren Sprites &uuml;bereinander<br>
+nur in der Kombination 2 x 2, sonst kommt es zu
+Fehlern.)</small><br></td>
+<td><br>
+<br></td>
+<td><br>
+<br></td>
+<td><br>
+<br></td>
+</tr>
+</tbody>
+</table>
+<br>
+<big style="color: rgb(0, 153, 0);"><a name=
+"Animationsphaseninstuktion" id=
+"Animationsphaseninstuktion"></a>*</big> Die Sprites, die die
+Animationsphasen eines Monsters darstellen m&uuml;ssen
+hintereinander im Speicher stehen. Die Sprites der Nachlademonster
+k&ouml;nnen zwischen $FB80 und $FE80 stehen, das sind 12 Sprites
+mit den Nummern&nbsp; EE - F9, f&uuml;r Animationsphasen nach links
+und rechts und das get&ouml;tete Monster.<br>
+Bei Monstern, die aus mehreren Sprites zusammengesetzt sind,
+m&uuml;ssen die Grafiken einer Animationsphase hintereinander im
+Speicher stehen, beginnend mit dem linken unteren Sprite
+<span class="n">(dann das linke obere, das rechte obere und das
+rechte untere, bei 2 x 2 Sprites. Befinden sich die Sprites nur
+&uuml;ber- oder nebeneinander, beginnt man mit dem unteren oder dem
+linken)</span>.<br>
+Bei den Spritenummern f&uuml;r die erste und letzte Animationsphase
+tr&auml;gt man immer die Nr. des ersten Sprites einer
+Animationsphase ein.<br>
+Die Spritegrafiken befinden sich in der letzten Video-Bank ab
+$C000. Jedes Sprite ben&ouml;tigt $40 Bytes (dezimal: 64). Also ist
+die Adresse f&uuml;r die Grafik $C000 + $40 * Sprite-Nr.<br>
+Ein Action-Replay-Cartridge ist &uuml;brigens verdammt hilfreich um
+sich Sprites anzusehen, zu laden und zu speichern. (Im
+Freezermen&uuml;: View Sprites)<br>
+<br>
+Die Datei sollte ab Adresse $7505 gespeichert werden, an die im
+C-Kit, sowie auch im konstruierten Spiel die Nachlademonsterdaten
+geladen werden.<br>
+<br>
+<br>
+<h4><a name="NLM_vorgegebener_Weg" id=
+"NLM_vorgegebener_Weg"></a>Nachlademonster mit vorgegebenem
+Weg:</h4>
+<br>
+<br>
+Soll ein Sprite einem vorgegebenen Weg folgen, mu&szlig; eine
+Byte-Folge im Speicher stehen, die diesen Weg beschreibt. Diese
+Daten bestehen aus 3-Byte-Bl&ouml;cken:<br>
+<br>
+1. Byte: Gibt an, wie oft die Bewegung, die in den beiden folgenden
+Bytes steht wiederholt werden soll. Der Wert FF ist hier das
+End-Byte und die Bewegung beginnt wieder von Vorne bei dem ersten
+3-Byte-Block.<br>
+2. Byte: Ist dieser Wert positiv, gibt er an, wieviele Pixel pro
+50stel Sekunde das Sprite nach rechts bewegt wird.<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; Ist dieser Wert
+negativ, gibt er an, wieviele Pixel pro 50stel Sekunde das Sprite
+nach links bewegt wird. <span class="n">(FF = -1 , FE = -2 ,
+...)</span><br>
+3. Byte: Ist dieser Wert positiv, gibt er an, wieviele Pixel pro
+50stel Sekunde das Sprite nach unten bewegt wird.<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; Ist dieser Wert
+negativ, gibt er an, wieviele Pixel pro 50stel Sekunde das Sprite
+nach oben bewegt wird. <span class="n">(FF = -1 , FE = -2 ,
+...)</span><br>
+<br>
+Diese Bewegungsdaten sollte man sinnvollerweise direkt hinter die
+Eigenschaftsdaten schreiben, bei $751A. Somit mu&szlig; den Pointer
+f&uuml;r den vorgegebenen Weg auch auf diese Adresse setzen.<br>
+<br>
+<br>
+<br>
+Alle anderen Monster sind nat&uuml;rlich genau so aufgebaut wie die
+Nachlademonster. Pointer auf deren Sprite-Eigenschaften befinden
+sich im Spiel ab $21D8. <span class="n">[Low-Byte , High-Byte
+f&uuml;r das 0. Sprite (Vogel) ;dann Low-Byte , High-Byte f&uuml;rs
+1. Sprite (Gnom) ; u.s.w.]</span> Wenn man diese modifizieren
+m&ouml;chte, mu&szlig; man das Spiel selber modifizieren.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h3><a name="Speicheraufbau:" id=
+"Speicheraufbau:"></a>Speicheraufbau:</h3>
+<br>
+<br>
+Hier gebe ich Euch eine grobe &Uuml;bersicht &uuml;ber den
+Speicheraufbau des Spiels. (Also die Datei, die man mit dem
+Game-Maker erstellt hat.) Im C-Kit ist der Speicher teilweise
+genauso aufgebaut, es gibt aber auch viele Teile, die an komplett
+anderen Adressen stehen, vor allem Programmteile. Au&szlig;erdem
+beinhaltet das C-Kit praktisch 2 v&ouml;llig verschiedene
+Programme, n&auml;mlich ein Programm zum Editieren und ein anderes
+zum Spielen der Stage.<br>
+Die Text-Daten sind grunds&auml;tzlich in Bildschirmcode, bis auf
+einige Ausnahmen in ASCII-Code, die auch so beschrieben sind.<br>
+<br>
+<br>
+<br>
+<table class="e" border="1" cellpadding="2" cellspacing="2">
+<tbody style="vertical-align: top;">
+<tr>
+<td>Speicherbereich:</td>
+<td>Beschreibung:</td>
+</tr>
+<tr>
+<td>0000 - 0100</td>
+<td>Diese Adressen enthalten Werte die beim Spielen ben&ouml;tigt
+werden. Z.B.:<br>
+<span class="n">0020&nbsp; Stage, die gerade gespielt wird<br>
+0021&nbsp; Scrollposition des rechten Bildschirmrands<br>
+0022&nbsp; Nr. des aktuellen Extras<br>
+nicht alle Bytes in diesem Bereich werden benutzt<br></span></td>
+</tr>
+<tr>
+<td>0400 - 0800</td>
+<td>Auch diese Adressen enthalten Werte die beim Spielen
+ben&ouml;tigt werden. Z.B.:<br>
+0435-0437 Punktzahl<br>
+043C&nbsp; Anzahl der Leben<br>
+05F4-0604 Sprite X- und Y-pos., werden nach D000-D010 geschrieben
+bei Raster-Interupt<br>
+0720-0723 Eigenschafts-Daten f&uuml;r Nicht-Giana-Sprites im Bild
+(aus Byte 03 der Sprite-Eigenschafts-Daten.)<br>
+In diesem Speicherbereich werden nur Teile desselben benutzt.<br>
+<br>
+<br></td>
+</tr>
+<tr>
+<td>0810 - 08BF</td>
+<td>Text</td>
+</tr>
+<tr>
+<td>08BF</td>
+<td>Start des Hauptprogramms (Hi-Score laden, Titel-Sequenz
+starten)<br>
+<br>
+<br>
+<br></td>
+</tr>
+<tr>
+<td>0C89</td>
+<td>Sub-Routines<br>
+<br>
+<br>
+<br>
+<br></td>
+</tr>
+<tr>
+<td>1269</td>
+<td>Interrupts<br>
+<br>
+<br></td>
+</tr>
+<tr>
+<td>1413</td>
+<td>Sub-Routines</td>
+</tr>
+<tr>
+<td>1568</td>
+<td>?</td>
+</tr>
+<tr>
+<td>1582</td>
+<td>Titel-Bild-Text</td>
+</tr>
+<tr>
+<td>15FA</td>
+<td>Text: "Time,Bonus,Score,..."</td>
+</tr>
+<tr>
+<td>1639</td>
+<td>Filename der Hi-Score-Datei als ASCII (beim Laden)</td>
+</tr>
+<tr>
+<td>163C</td>
+<td>Sub-Routines<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br></td>
+</tr>
+<tr>
+<td>2168</td>
+<td>Bewegungs-Daten f&uuml;r Drachen</td>
+</tr>
+<tr>
+<td>21D8</td>
+<td>Pointer auf Sprite-Eigenschafts-Daten</td>
+</tr>
+<tr>
+<td>2246</td>
+<td>Eigenschafts-Daten der Sprites<br>
+<br>
+<br>
+<br></td>
+</tr>
+<tr>
+<td>26B4</td>
+<td>Bewegungs-Daten f&uuml;r weitere Sprites (haupts&auml;chlich
+Fahrst&uuml;hle)</td>
+</tr>
+<tr>
+<td>2704</td>
+<td>Teil einer Sub-Routine</td>
+</tr>
+<tr>
+<td>2720</td>
+<td>nicht ben&ouml;tigte Daten (?)</td>
+</tr>
+<tr>
+<td>2753</td>
+<td>Programmstart f&uuml;r Trainer<br>
+<small>Hat man das Spiel als Trainerversion gespeichert, startet
+hier das Programm, ruft dann die Trainersubroutine bei AFE8 (die
+sp&auml;ter &uuml;berschrieben wird, weil der Speicher dort
+f&uuml;r die Stagedaten benutzt wird) auf und springt danach zum
+normalen Programmstart bei&nbsp; 08BF.</small></td>
+</tr>
+<tr>
+<td>2768</td>
+<td>freier Speicher<br>
+<br>
+<br>
+<br></td>
+</tr>
+<tr>
+<td>2C55</td>
+<td>Text: "SAVING END-SEQUENCE" (nicht ben&ouml;tigt)</td>
+</tr>
+<tr>
+<td valign="top">2C68</td>
+<td valign="top">Filename: "ENDING PART 1" (ASCII) (nicht
+ben&ouml;tigt)</td>
+</tr>
+<tr>
+<td>2C75</td>
+<td>nicht ben&ouml;tigter Programmteil um eine Endsequenz zu
+speichern (kann man evtl. verwenden, falls man eine Endsequenz
+programmieren m&ouml;chte.)</td>
+</tr>
+<tr>
+<td>2D14</td>
+<td>?</td>
+</tr>
+<tr>
+<td>2D2D</td>
+<td>Programm</td>
+</tr>
+<tr>
+<td>2D38</td>
+<td>Daten</td>
+</tr>
+<tr>
+<td>2D4A</td>
+<td>Programme f&uuml;r "Game Completed Bonus", "Trainermode" und
+Abfragen zwischen den Stages<br>
+<br>
+<br>
+<br></td>
+</tr>
+<tr>
+<td valign="top">3155<br></td>
+<td valign="top">Nachtr&auml;glich eingef&uuml;gte Prg-Teile
+f&uuml;r Hintergrund-Kollisions-Abfrage, Sprite-Daten-Transfer von
+Ersatz-Sprites und Spezial-Prg. f&uuml;r
+Drache/Exit-Fahrstuhl<br></td>
+</tr>
+<tr>
+<td>319A</td>
+<td>frei</td>
+</tr>
+<tr>
+<td>3200</td>
+<td>Daten</td>
+</tr>
+<tr>
+<td>325D</td>
+<td>Hi-Score-List-Sub-Routine<br>
+<br>
+<br></td>
+</tr>
+<tr>
+<td>3590</td>
+<td>Interrupt-Routine bei Hi-Score-List</td>
+</tr>
+<tr>
+<td>3614</td>
+<td>Daten und Text f&uuml;r Hi-Score-Routine</td>
+</tr>
+<tr>
+<td>36F7</td>
+<td>Speicher f&uuml;r Hi-Score-List als Text</td>
+</tr>
+<tr>
+<td>37E7</td>
+<td>letzte Score (6 Zeichen Bildschirmcode) und andere Daten</td>
+</tr>
+<tr>
+<td>37F2</td>
+<td>Filename der Hi-Score-Datei als ASCII (beim Speichern)</td>
+</tr>
+<tr>
+<td>37F5</td>
+<td>Daten</td>
+</tr>
+<tr>
+<td>3800</td>
+<td>Grafiken f&uuml;r animierte Characters<br>
+<br>
+<br></td>
+</tr>
+<tr>
+<td>3BD8</td>
+<td>Text: "Restore exits Trainermode"</td>
+</tr>
+<tr>
+<td>3BF1</td>
+<td>Pointer auf Stagedaten f&uuml;r Titel-Stage und Schatzkammern
+(Low-Byte , High-Byte)</td>
+</tr>
+<tr>
+<td>3C58</td>
+<td>Grafiken f&uuml;r animierte Characters</td>
+</tr>
+<tr>
+<td valign="top">3D18<br></td>
+<td valign="top">Gianas neue Ersatz-Sprites f&uuml;r
+Fliegen/Schwimmen (siehe auch: Bei $A080)<br></td>
+</tr>
+<tr>
+<td>3E18</td>
+<td>freier Speicher<br>
+<br>
+<br></td>
+</tr>
+<tr>
+<td>41C0</td>
+<td>Sound&amp;Musik-Subroutines und Sound&amp;Musik-Daten<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br></td>
+</tr>
+<tr>
+<td>6000</td>
+<td>Stage-Daten: Titelbild , Schatzkammern (Pointer bei 3BF1)<br>
+<small>(siehe auch: <a href=
+"#Stage-Aufbau_im_Speicher_:">Stage-Aufbau im
+Speicher</a>)</small><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br></td>
+</tr>
+<tr>
+<td>6DFD</td>
+<td>Stage-Daten der aktuellen Stage (wird vor Start jeder neuen
+Stage geladen)<br>
+(siehe auch: <a href="#Stage-Aufbau_im_Speicher_:">Stage-Aufbau im
+Speicher</a>)<br>
+<br>
+<br>
+<br>
+<br>
+<br></td>
+</tr>
+<tr>
+<td>7505</td>
+<td>Daten f&uuml;r Nachlademonster</td>
+</tr>
+<tr>
+<td>774C</td>
+<td>Subroutines f&uuml;r Spritesteuerung und Daten<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br></td>
+</tr>
+<tr>
+<td>8F11</td>
+<td>Daten f&uuml;r Char-Objekte (Pointer bei 9200)</td>
+</tr>
+<tr>
+<td>8F99</td>
+<td>Tabelle f&uuml;r BCD-Zahlen von 00 bis 99</td>
+</tr>
+<tr>
+<td>8FFD</td>
+<td>Aktuelle Werte f&uuml;r: geladene Stage , Stage die im
+Trainermode gespielt wird , h&ouml;chste Stage die erreicht
+wurde</td>
+</tr>
+<tr>
+<td>9000</td>
+<td>Daten</td>
+</tr>
+<tr>
+<td>9010</td>
+<td>Subroutines bei Stage-Wechsel</td>
+</tr>
+<tr>
+<td>9179</td>
+<td>frei</td>
+</tr>
+<tr>
+<td>91C5</td>
+<td>Filename f&uuml;r aktuelle Stage als ASCII</td>
+</tr>
+<tr>
+<td>91D5</td>
+<td>Filename f&uuml;r aktuelles Nachlademonster</td>
+</tr>
+<tr>
+<td>91E5</td>
+<td>Tabellen f&uuml;r Diamantenfarben</td>
+</tr>
+<tr>
+<td>9200</td>
+<td><span style="font-weight: bold;">Pointer auf
+Char-Objekte:</span><br>
+Die Daten auf die die Pointer zeigen sind folgenderma&szlig;en
+aufgebaut:<br>
+1. und 2. Byte sind Breite-1 und H&ouml;he -1 des Objekts<br>
+ab 3.Byte die Bildschirmcodes der verwendeten Characters von links
+nach rechts und oben nach unten<br>
+<br></td>
+</tr>
+<tr>
+<td>928E</td>
+<td>Daten f&uuml;r Char-Objekte<br>
+<br>
+<br></td>
+</tr>
+<tr>
+<td>94AC</td>
+<td>freier Speicher (bei 94FA stehen nicht ben&ouml;tigte
+Daten:&nbsp; Der Filename der zuletzt eingebauten Schatzkammer)<br>
+&nbsp;<br>
+<br></td>
+</tr>
+<tr>
+<td>963B</td>
+<td>Scrollroutine<br>
+<br>
+<br></td>
+</tr>
+<tr>
+<td>9881</td>
+<td>Sub-Routines</td>
+</tr>
+<tr>
+<td>9A2C</td>
+<td>Daten (u.a. Sprung- und Anlaufkurven)</td>
+</tr>
+<tr>
+<td>9C20</td>
+<td>Kollisions-Daten der Characters von Char 00 - FF<br>
+00 = keine Kollision<br>
+01 = festes Objekt<br>
+02 = Wasser<br>
+40 = t&ouml;dlich (N&auml;gel &amp; umgedrehte Spitzen - Achtung:
+Die roten Spitzen geh&ouml;ren nicht hierzu, da dort die Characters
+direkt abgefragt werden. Darum ist deren Wert 00. Dort wird
+&uuml;brigens die Kollision fast pixelgenau abgefragt, aber nur
+w&auml;hrend des Fallens (bei normalen Spitzen) oder w&auml;hrend
+Bewegung nach oben (bei umgedrehten Spitzen), deswegen kann man
+seitlich dagegen laufen.)<br>
+60 = Feuer<br>
+80 = Diamanten<br>
+<br></td>
+</tr>
+<tr>
+<td>9D20</td>
+<td>Daten ?</td>
+</tr>
+<tr>
+<td>9DE9</td>
+<td>Sub-Routines</td>
+</tr>
+<tr>
+<td>9FAE</td>
+<td>Daten ?</td>
+</tr>
+<tr>
+<td>A080</td>
+<td>Gianas Ersatz-Sprites: Je nachdem ob Giana (oder Maria)
+Punkerin ist oder nich, befinden sich hier die Grafiken der gerade
+nicht ben&ouml;tigten Sprites. Da nur ein $4000 Bytes gro&szlig;er
+Speicherbereich als Grafik-Speicher genutzt werden kann ist in der
+Video-Bank ab C000 nicht genug Platz f&uuml;r alle Sprites.<br>
+Die Grafiken werden jedes Mal umkopiert, wenn Giana sich verwandelt
+(,weswegen es auch Grafikfehler in der Spielfigur erzeugt, wenn man
+w&auml;hrend einer Verwandlung "RESTORE" dr&uuml;ckt).<br>
+<br></td>
+</tr>
+<tr>
+<td>AB00</td>
+<td>Farb-Tabelle f&uuml;r die Characters von 00 - FF&nbsp; ( Jeder
+einzelne Char. hat eine f&uuml;r sich festgelegte Farbe. )<br>
+<br></td>
+</tr>
+<tr>
+<td>AC00</td>
+<td>Komplette Stage als Bildschirmcodes<br>
+Hier werden beim Bildschirmaufbau und beim Scrolling die Char-Daten
+geholt, um sie in den Bildschirm-Speicher zu schreiben.<br>
+(Jeweils $100 Bytes bilden von links nach rechts eine Zeile der
+Stage, die aus $14 Zeilen besteht, beginnend mit der obersten)<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br></td>
+</tr>
+<tr>
+<td>C000</td>
+<td>Character-Set-Grafiken<br>
+<br>
+<br>
+<br>
+<br></td>
+</tr>
+<tr>
+<td>C800 - CBE8</td>
+<td>Bildschirm-Speicher<br>
+<br>
+<br></td>
+</tr>
+<tr>
+<td>CBF8</td>
+<td>Nummern f&uuml;r die Grafiken der Sprites</td>
+</tr>
+<tr>
+<td>CC00</td>
+<td>Spritegrafiken<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br></td>
+</tr>
+<tr>
+<td>FC80</td>
+<td>Spritegrafiken f&uuml;r Nachlademonster<br>
+<br>
+<br>
+<br></td>
+</tr>
+<tr>
+<td>FE80</td>
+<td>Spritegrafiken: Schu&szlig; und Explosion<br>
+<br>
+<br></td>
+</tr>
+<tr>
+<td>FFBF</td>
+<td>Sub-Routines</td>
+</tr>
+<tr>
+<td>FFFA , FFFB</td>
+<td>Sprung-Vektor f&uuml;r "RESTORE" (Low-Byte , High-Byte)</td>
+</tr>
+<tr>
+<td>FFFC , FFFD</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>FFFE , FFFF</td>
+<td>IRQ-Sprung-Vektor (Raster-Interrupts) (Low-Byte ,
+High-Byte)</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<br>
+<br>
+<h3><a name="Stage-Aufbau_im_Speicher_:" id=
+"Stage-Aufbau_im_Speicher_:"></a>Stage-Aufbau im Speicher :</h3>
+<br>
+<br>
+Wenn Ihr eine Stage im Construction-Kit zusammensetzt funktioniert
+das ja in 3 Schritten, in denen folgendes definiert wird :<br>
+<table class="e" border="1" cellpadding="2" cellspacing="2">
+<tbody style="vertical-align: top;">
+<tr style="font-size: smaller;">
+<td>1. Byte</td>
+<td>2. Byte</td>
+<td>3. Byte</td>
+<td>4. Byte</td>
+<td>5. Byte</td>
+</tr>
+<tr>
+<td>
+Objekt-Nr.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+X-Pos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+Y-Pos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Anzahl Objekte nebeneinander</td>
+<td>Anzahl Objekte &uuml;bereinander</td>
+</tr>
+</tbody>
+</table>
+<br>
+Diese 5 Werte stehen auch in dieser Reihenfolge im Speicher
+f&uuml;r die Stagedaten, gefolgt von der n&auml;chsten 5er-Gruppe
+u.s.w. bis ein FF als End-Byte gefunden wird. Diese Daten stehen im
+Construction-Kit ab 8400, im Spiel (falls es sich um eine zu
+ladende Stage und nicht eine Schatzkammer oder die Titelstage
+handelt) ab 6E0D.<br>
+Vor den Daten der ersten Objektgruppe stehen bei jeder Stage noch
+$10 Bytes, die deren Eigenschaften definieren, welche bei Options
+eingestellt wurden, also im Construction-Kit ab 83F0
+:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (6DFD bei
+Stages im Spiel)<br>
+<br>
+<table class="e" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td>83F0</td>
+<td>83F1</td>
+<td>83F2</td>
+<td>83F3</td>
+<td>83F4</td>
+<td>83F5</td>
+<td>83F6</td>
+<td>83F7</td>
+</tr>
+<tr>
+<td>Nr. Nachlademonster<br>
+0 = kein NLM<br>
+<br></td>
+<td>Diamantenfarbe</td>
+<td>
+Warps&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>
+Musik&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Zeit<br>
+(untere Ziffern)<br>
+<br></td>
+<td>Zeit<br>
+(obere Ziffern)<br>
+<br></td>
+<td colspan="2" rowspan="1" class="i">Pointer auf Sprite-Daten<br>
+(Low-Byte)&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; ||
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(Hi-Byte)<br>
+(sollte hinter die Stage-Daten zeigen)<br>
+<br></td>
+</tr>
+<tr>
+<td>83F8</td>
+<td>83F9</td>
+<td>83FA</td>
+<td>83FB</td>
+<td>83FC</td>
+<td>83FD</td>
+<td>83FE</td>
+<td>83FF</td>
+</tr>
+<tr>
+<td>Wolken<br>
+(nicht 0 = keine Wolken)<br></td>
+<td>Hintergrundfarbe<br></td>
+<td>Multicolor 1<br></td>
+<td>Multicolor 2<br></td>
+<td>Gianas Startposition Stage-Anfang<br>
+X-Pos<br>
+<br></td>
+<td>Gianas Startposition Stage-Anfang<br>
+Y-Pos<br>
+<br></td>
+<td>Gianas Startposition &nbsp;&nbsp; 2.Stage-Abschnitt<br>
+X-Pos<br>
+<br></td>
+<td>Gianas Startposition &nbsp; &nbsp;&nbsp; 2.Stage-Abschnitt<br>
+Y-Pos<br>
+<br></td>
+</tr>
+</tbody>
+</table>
+<br>
+Bevor eine Stage gespielt wird, werden die recht kompakten Daten,
+die in Objektgruppen aufgebaut sind an die richtige Position in den
+Stage-Speicher bei $AC00 geschrieben. Dort wird die Stage als Feld
+von 256 x 20 ($100 x $14) Charakters im Bildschirmcode gespeichert
+(von links nach rechts und oben nach unten).<br>
+<br>
+<br>
+<h4><a name="Aufbau_Sprite-Daten" id=
+"Aufbau_Sprite-Daten"></a>Aufbau der Sprite-Daten:</h4>
+<br>
+<br>
+Die Sprite-Daten, die im C-Kit ab 8C00 bis max. 8D00 abgelegt
+werden und beim Speichern einer Stage hinter die Stage-Daten
+transferiert werden - daher der Pointer bei 83F6 - , sind etwas
+anders aufgebaut. <span class="n">(Da sie ja auch nicht in Gruppen
+gesetzt werden.)</span> Von diesem Pointer wird im Spiel
+&uuml;brigens 15F3 abgezogen, weil die Stageadresse um diesen
+Betrag weiter unten steht.<br>
+<br>
+Diese Daten sind in 3-er-Gruppen aufgebaut:<br>
+X-Pos innerhalb der Stage<br>
+Y-Pos<br>
+Nr. des Sprites<br>
+<br>
+Dabei darf in der folgenden Gruppe die X-Pos nicht kleiner sein als
+bei der Vorherigen (,was das C-Kit nat&uuml;rlich automatisch
+macht). Ist das erste Byte einer Gruppe = FF, signalisiert es das
+Ende der Daten.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br></div>
+<hr class="line">
+<br>
+<br>
+<h2 style="text-align: center;"><font color="#666666">- ENDE
+-</font></h2>
+<br>
+<br>
+<br>
+<hr class="line">
+<br>
+<br>
+<br>
+</body>
+</html>

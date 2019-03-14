@@ -1,0 +1,102 @@
+
+The Great Giana-Sisters Construction-Set V 3.1:
+
+===============================================================================
+INSTRUCTIONS:
+-------------------------------------------------------------------------------
+There is a detailed html-manual included in the ZIP-file named:
+"Giana-Sisters C-Set-Manual (english).html"
+And the same in german language:
+"Giana-Sisters C-Set-Anleitung (deutsch).html"
+Additionally a short-instruction-file for those who are too lazy to read long manuals.
+===============================================================================
+
+===============================================================================
+CREDITS:
+-------------------------------------------------------------------------------
+Game-Concept:		Time-Warp
+Program:		Merlin, Armin Gessert & Chrille
+Artwork:		Manfred Trenz & Merlin
+Sound & Music:		Chris Hülsbeck
+===============================================================================
+
+===============================================================================
+PROGRAM INFO:
+-------------------------------------------------------------------------------
+Name:			Merlin's Great Giana-Sisters Construction-Set V 3.1
+Year:			1992 - 1995, 2016 (released: 2016)
+Language:		English (+ some german words)
+Genre:			Construction-Set / Level-Editor
+                        Arcade - Platformer (Scrolling Screen)
+Players:		1 - 2 (not 2 at once)
+Control:		Joystick Port 2 (+ Keyboard for creating a game)
+===============================================================================
+
+===============================================================================
+VERSION INFO:
+-------------------------------------------------------------------------------
+Cracked/Crunched:	(None)
+Trainers:		(0/13) (optional for your self-made game) 
+High Score Saver:	Yes
+Game Length:		1 Disk-Side
+True Drive Emulation:	No
+Pal/NTSC:		PAL
+Included Docs:		Yes (html)
+Loading Screen:		No
+Comment:		
+===============================================================================
+
+===============================================================================
+NOTES:
+-------------------------------------------------------------------------------
+Many things have been improved and some changed compared to Giana-Sisters I:
+(Most of them have been used already in "The Great Giana-Sisters II" by The 7A3 (1993).)
+-------------------------------------------------------------------------------
+- 1 to 99 Stages are possible
+- up to 40 Treasuries (instead of only 5 in Giana I)
+- New Sprite-Control-Program (was a huge Part in the Program, done by Chrille). That means:
+ - Giana can jump on moving platforms (Elevators)
+ - Giana can swim in water
+ - Giana can fly by collecting the Jet-Pack-Extra
+ - If the maximum of sprites is in the screen one of them can disappear when a new one comes in (in Giana I no new sprite could appear in this case). If possible dead sprites will be deleted first.
+ - Treasure-Chests which contain the same extras like the extra-blocks but Giana can collect them without jumping under a block
+ - many new small enemies (some of them must be shot 2 or 3 times to kill them) and some new (big) end-bosses
+ - Some enemies can follow Giana
+ - Jumping enemies fall down when they loose the ground and bounce against the ceiling when there is not enough space.
+ - Some jumping enemies can also jump to the left and to the right
+ - Enemies also appear in the first screen (in Giana 1 they had to scroll in)
+ - The Dragon spits fire now
+ - You'll get thousands of points when you kill an end-monster (instead of nothing :-( in Giana I)
+ - Softer collision-detection with monsters (in game only, not in C-Kit/Level-editor)
+ - Issue (Bug) cleared : Giana won't die any more BEFORE she touches an enemy (in game only, not in C-Kit)
+ - Replaced the annoying fast bug/turtle/mouse(whatever) with a real monster so Gianas Bullet cannot be caught by that monster
+ - The exit-elevator has the right look now (not in multi-color)
+ - The Bomb-Extra kills all small monsters now (also like worms or balls) and not only the ones who can also be shot (Who needs a Bomb when you just as well can shoot the same enemies). But this won't work for End-Monsters (This would be almost too easy). (in game only, not in C-Kit)
+- New Stage-Initialisation-Program (done by Merlin) That means:
+ - You are able to train a special stage that you already have played, even without using a cheat
+ - All stages (and load-monsters) will be loaded from Disk, so the number of stages is not restricted by the RAM.
+ - Timelimit can be set different for each Stage between 1 and 9999 seconds
+ - Warps do not simply teleport Giana 3 Stages forward but also less or more
+ - Diamonds (and some other objects) have different colours in different Stages
+ - You can make special settings for single stages, e.g. walk on clouds
+- Faster and shorter scroll-routine (by Merlin)
+- Also fixed an issue (bug) in the scroll-routine that made Giana slip from an edge when she just landed on it while scrolling
+- New Stage-Build-up-Routine (by Merlin)
+- New objects like new walls or upside down turned peaks
+- Giana cannot "cheat" any more by standing on the red peaks
+- hidden corridors, extras, bonus and invisible bridges are possible
+- start with 5 Lives instead of 3
+- You can always view the high-score-list by pressing "H" in the Title-Screen
+- Also the hidden Song of Giana-Sisters can be used (graveyard-music)
+-------------------------------------------------------------------------------
+You had to wait a long time for this one, since I annunciated the C-Set in 2005 already.
+Although it was finished yoear ago, it never came to a release for several reasons.
+But now  it's out and some things were even improved.
+Maybe there will also be updates in the future with further improvments.
+Have fun with creating new stages!
+-------------------------------------------------------------------------------
+
+-Merlin [The 7A3] / [The7thSign]
+
+
+
