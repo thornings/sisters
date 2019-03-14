@@ -1,0 +1,1 @@
+metalslug_01.png.png 3 0, metalslug_02.png.png 42 1, metalslug_03.png.png 79 2, metalslug_04.png.png 116 1, metalslug_05.png.png 151 46, metalslug_06.png.png 5 45, metalslug_07.png.png 42 45, metalslug_08.png.png 153 0, metalslug_09.png.png 0 92, metalslug_10.png.png 40 91, metalslug_11.png.png 153 90, metalslug_12.png.png 5 135.

@@ -1,0 +1,52 @@
+
+The Great Giana-Sisters Construction-Set V 3.1:
+
+===============================================================================
+SHORT INSTRUCTIONS
+For all too lazy to read the whole manual, the most important:
+===============================================================================
+
+===============================================================================
+CONSTRUCTION-KIT / LEVEL-EDITOR:
+-------------------------------------------------------------------------------
+Hot-Keys (Main-Menu):
+
+"," "." or Joystick 1 (left/right) = Scroll Stage 
+"F1" = Change background-color
+"F3" = Change Multi-color 1
+"F5" = Change Multi-color 2
+-------------------------------------------------------------------------------
+Hot-Keys (Create Stage):
+
+Same as in main-menu and
+"Ctrl"+"d"        = Delete last placed object
+"CTrl"+"Clr/Home" = Delete all objects (in emulator probably "tab"+"home")
+(Select "Delete any Object" by joystick to delete a single object.)
+-------------------------------------------------------------------------------
+Hot-Keys (Set Sprites):
+
+Same as in main-menu and
+"Commodore"+"Clr/Home" = Delete all Spries (in emulator "commodore" = "Ctrl")
+(To delete a single sprite choose "Delete Sprite" by joystick.)
+-------------------------------------------------------------------------------
+Hot-Keys (Play Stage):
+
+"Restore" = Return to main-menu (in emu: "pg up")
+"Return"  = Finish/Restart Stage
+"F3"      = Increase extra-item (weapon)
+"t"       = test stage as treasury
+
+===============================================================================
+
+GAME-MAKER:
+-------------------------------------------------------------------------------
+Is easy to use.
+VERY IMPORTANT here:
+Once you created a game with it ALL stages for the game must be coppied on the same disk in the following format (file-name):
+"XX??????????.stg" Replace "XX" with the number of the stage appearing in the game. For "?" you can use any character.
+Also all Load-Monsters you use have to be on the disk. 
+===============================================================================
+
+
+P.S.: Even if you don't read the whole manual, it's helpful to take a look on it to get an overview of all the objects and sprites. (There are pictures, too ;)
+
